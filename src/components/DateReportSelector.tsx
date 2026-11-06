@@ -3,7 +3,6 @@ import {
   Calendar, 
   MapPin, 
   FileText, 
-  Copy, 
   Maximize2, 
   X,
   Sparkles,
@@ -15,14 +14,12 @@ interface DateReportSelectorProps {
   reports: BiDailyReport[];
   selectedReportId: string;
   onSelectReport: (reportId: string) => void;
-  onCopyWhatsApp: () => void;
 }
 
 export const DateReportSelector: React.FC<DateReportSelectorProps> = ({
   reports,
   selectedReportId,
   onSelectReport,
-  onCopyWhatsApp,
 }) => {
   const [activePhotoModal, setActivePhotoModal] = useState<ProgressPhoto | null>(null);
 
@@ -124,18 +121,6 @@ export const DateReportSelector: React.FC<DateReportSelectorProps> = ({
                 <span>Tahapan: <strong className="text-slate-700">{selectedReport.pipelineStageLabel}</strong></span>
               </div>
             </div>
-          </div>
-
-          {/* Share Action */}
-          <div className="flex items-center gap-2.5 self-start lg:self-auto">
-            <button
-              onClick={onCopyWhatsApp}
-              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition active:scale-95 shadow-2xs"
-              title="Salin pesan siap kirim WhatsApp untuk grup koordinasi PLN"
-            >
-              <Copy className="w-3.5 h-3.5 text-slate-500" />
-              <span>Salin Teks WA</span>
-            </button>
           </div>
         </div>
 

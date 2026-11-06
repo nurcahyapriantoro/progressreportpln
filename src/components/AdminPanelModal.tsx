@@ -259,11 +259,11 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               <div className="flex flex-wrap items-center gap-2">
                 <button
                   onClick={onCopyWhatsApp}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-800 text-xs font-bold transition"
-                  title="Copy formatted WhatsApp text"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition shadow-xs active:scale-95"
+                  title="Salin pesan laporan siap kirim WhatsApp untuk grup koordinasi PLN"
                 >
                   <Copy className="w-3.5 h-3.5" />
-                  <span>Copy WA</span>
+                  <span>Salin Teks WA</span>
                 </button>
                 <button
                   onClick={onDownloadPdf}

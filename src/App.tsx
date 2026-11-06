@@ -149,7 +149,6 @@ export function App() {
           reports={reports}
           selectedReportId={selectedReportId}
           onSelectReport={(id) => setSelectedReportId(id)}
-          onCopyWhatsApp={handleCopyWhatsApp}
         />
 
         {/* Interactive S-Curve (Recharts) & Master Time Table (17 Packages) */}
