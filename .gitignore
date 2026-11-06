@@ -1,0 +1,32 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Node modules
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Raw reference files (kept safe locally, not needed in lightweight static Vercel build)
+*.xlsx
+GH Galvanis 8x25 (Drip dan NFT).pdf
+Dok03Nov/
+Dokumentasi05Nov/
+logopln.png
+brain-ipb.webp
+spesifikasi_dan_master_prompt_*.md
