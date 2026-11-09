@@ -92,23 +92,26 @@ export const PdfOnePageTemplate: React.FC<PdfOnePageTemplateProps> = ({ report }
                 </div>
               </div>
 
-              {/* Row 2: Location, Weather, and Manpower */}
-              <div className="flex items-center justify-between text-[9.5px]">
-                <div className="flex items-center gap-1.5 truncate max-w-[430px]">
+              {/* Row 2: Location, Weather, and Manpower (Clean Single Row, No Clipping) */}
+              <div className="flex items-center justify-between text-[9.5px] leading-normal pt-0.5">
+                <div className="flex items-center gap-1.5 text-slate-700">
                   <span className="text-slate-500 font-medium shrink-0">Lokasi:</span>
-                  <strong className="text-slate-900 font-bold truncate">{report.location}</strong>
+                  <strong className="text-slate-900 font-bold">{report.location}</strong>
                 </div>
 
-                <div className="flex items-center gap-2 shrink-0 text-[8.5px]">
+                <div className="flex items-center gap-2.5 shrink-0 text-[9px] text-slate-700">
                   {report.weather && (
-                    <div className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-50 border border-amber-200 text-amber-900 font-bold">
-                      <span>Cuaca: {report.weather.morning} / {report.weather.afternoon}</span>
-                    </div>
+                    <span className="font-semibold text-slate-600">
+                      Cuaca: <strong className="text-slate-900 font-bold">{report.weather.morning} / {report.weather.afternoon}</strong>
+                    </span>
                   )}
                   {report.manpowerCount !== undefined && (
-                    <div className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-sky-50 border border-sky-200 text-[#003366] font-bold">
-                      <span>Tenaga Kerja: {report.manpowerCount} Orang</span>
-                    </div>
+                    <>
+                      <span className="text-slate-300">•</span>
+                      <span className="font-semibold text-slate-600">
+                        Tenaga Kerja: <strong className="text-[#003366] font-bold">{report.manpowerCount} Orang</strong>
+                      </span>
+                    </>
                   )}
                 </div>
               </div>
@@ -159,12 +162,12 @@ export const PdfOnePageTemplate: React.FC<PdfOnePageTemplateProps> = ({ report }
               <span className="text-[8.5px] font-normal text-slate-400">Workshop Pra-Fabrikasi & Tapak Pengerjaan</span>
             </div>
 
-            {/* 4 Photos: 2x2 Grid - Natural Aspect Ratio (Tidak Gepeng & Tidak Terlalu Kecil) */}
+            {/* 4+ Photos: 2x2 Grid */}
             {photoCount >= 4 && (
               <div className="grid grid-cols-2 gap-2.5">
                 {report.photos.slice(0, 4).map((p, idx) => (
-                  <div key={p.id} className="bg-slate-50 rounded-xl p-2.5 border border-slate-200 flex flex-col justify-between">
-                    <div className="h-[195px] w-full rounded-lg overflow-hidden bg-slate-100 border border-slate-200/60 shrink-0 flex items-center justify-center">
+                  <div key={p.id} className="bg-slate-50 rounded-xl p-2 border border-slate-200 flex flex-col justify-between">
+                    <div className="h-[180px] w-full rounded-lg overflow-hidden bg-slate-100 border border-slate-200/60 shrink-0 flex items-center justify-center">
                       <img
                         src={p.url}
                         alt={p.caption}
@@ -172,12 +175,11 @@ export const PdfOnePageTemplate: React.FC<PdfOnePageTemplateProps> = ({ report }
                         style={{ width: '100%', height: 'auto', minHeight: '100%', display: 'block' }}
                       />
                     </div>
-                    <div className="mt-2 px-0.5">
+                    <div className="mt-1.5 px-0.5">
                       <div className="text-[10px] font-bold text-slate-900 leading-tight">
                         {idx + 1}. {p.caption}
                       </div>
-                      {/* Fully visible technical narrative without clipping */}
-                      <div className="text-[8.5px] text-slate-600 leading-snug mt-1">
+                      <div className="text-[8px] text-slate-600 leading-snug mt-0.5">
                         {p.narrative}
                       </div>
                     </div>
@@ -186,12 +188,38 @@ export const PdfOnePageTemplate: React.FC<PdfOnePageTemplateProps> = ({ report }
               </div>
             )}
 
-            {/* 2 Photos: 2 Columns Side by Side - Natural Aspect Ratio */}
+            {/* 3 Photos: 3 Columns Side by Side */}
+            {photoCount === 3 && (
+              <div className="grid grid-cols-3 gap-2.5">
+                {report.photos.map((p, idx) => (
+                  <div key={p.id} className="bg-slate-50 rounded-xl p-2 border border-slate-200 flex flex-col justify-between">
+                    <div className="h-[210px] w-full rounded-lg overflow-hidden bg-slate-100 border border-slate-200/60 shrink-0 flex items-center justify-center">
+                      <img
+                        src={p.url}
+                        alt={p.caption}
+                        className="w-full h-auto min-h-full object-cover object-center"
+                        style={{ width: '100%', height: 'auto', minHeight: '100%', display: 'block' }}
+                      />
+                    </div>
+                    <div className="mt-1.5 px-0.5">
+                      <div className="text-[10px] font-bold text-slate-900 leading-tight">
+                        {idx + 1}. {p.caption}
+                      </div>
+                      <div className="text-[8px] text-slate-600 leading-snug mt-0.5">
+                        {p.narrative}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* 2 Photos: 2 Columns Side by Side */}
             {photoCount === 2 && (
               <div className="grid grid-cols-2 gap-3.5">
                 {report.photos.map((p, idx) => (
                   <div key={p.id} className="bg-slate-50 rounded-xl p-2.5 border border-slate-200 flex flex-col justify-between">
-                    <div className="h-[240px] w-full rounded-lg overflow-hidden bg-slate-100 border border-slate-200/60 shrink-0 flex items-center justify-center">
+                    <div className="h-[235px] w-full rounded-lg overflow-hidden bg-slate-100 border border-slate-200/60 shrink-0 flex items-center justify-center">
                       <img
                         src={p.url}
                         alt={p.caption}
@@ -203,12 +231,34 @@ export const PdfOnePageTemplate: React.FC<PdfOnePageTemplateProps> = ({ report }
                       <div className="text-[11px] font-bold text-slate-900 leading-tight">
                         {idx + 1}. {p.caption}
                       </div>
-                      <div className="text-[9.5px] text-slate-600 leading-relaxed mt-1">
+                      <div className="text-[9px] text-slate-600 leading-relaxed mt-1">
                         {p.narrative}
                       </div>
                     </div>
                   </div>
                 ))}
+              </div>
+            )}
+
+            {/* 1 Photo: Centered Hero Showcase (High Impact, Zero Distortion) */}
+            {photoCount === 1 && (
+              <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200 max-w-2xl mx-auto flex flex-col">
+                <div className="h-[275px] w-full rounded-xl overflow-hidden bg-slate-100 border border-slate-200/60 shrink-0 flex items-center justify-center">
+                  <img
+                    src={report.photos[0].url}
+                    alt={report.photos[0].caption}
+                    className="w-full h-auto min-h-full object-cover object-center"
+                    style={{ width: '100%', height: 'auto', minHeight: '100%', display: 'block' }}
+                  />
+                </div>
+                <div className="mt-3 px-1">
+                  <div className="text-[12px] font-black text-slate-900 leading-tight">
+                    1. {report.photos[0].caption}
+                  </div>
+                  <div className="text-[9.5px] text-slate-600 leading-relaxed mt-1 font-normal">
+                    {report.photos[0].narrative}
+                  </div>
+                </div>
               </div>
             )}
 
@@ -265,12 +315,7 @@ export const PdfOnePageTemplate: React.FC<PdfOnePageTemplateProps> = ({ report }
 
           {/* Manpower & Operational Deployment Indicator */}
           <div className="mt-1.5 flex items-center justify-between text-[8px] text-slate-400">
-            <span>
-              Tenaga Kerja: <strong className="text-slate-600">10 Personel Lapangan (Achmad Widodo, dkk.)</strong>
-              {report.localPurchases && (
-                <span className="ml-2 text-slate-500">• Beli Lokal: <strong>{report.localPurchases.slice(0, 4).join(', ')}</strong></span>
-              )}
-            </span>
+            <span>Tenaga Kerja: <strong className="text-slate-600">10 Personel Lapangan Terdaftar (Achmad Widodo, dkk.)</strong></span>
             <span>Kualifikasi K3: <strong className="text-emerald-700">Terverifikasi SMK3 • Siap Erection</strong></span>
           </div>
 
