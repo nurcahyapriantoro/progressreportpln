@@ -401,6 +401,41 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               </div>
             </div>
 
+            {/* Daily Weather & Manpower Settings */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-3.5 bg-slate-50/80 rounded-2xl border border-slate-200">
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1">Cuaca Pagi (08:00 - 12:00)</label>
+                <input
+                  type="text"
+                  value={formData.weather?.morning || ''}
+                  onChange={(e) => handleFieldChange('weather', { morning: e.target.value, afternoon: formData.weather?.afternoon || 'Cerah' })}
+                  placeholder="Cerah / Berawan"
+                  className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs bg-white text-slate-900 focus:outline-none focus:ring-2 focus:ring-pln-blue"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1">Cuaca Siang/Sore (13:30 - 17:00)</label>
+                <input
+                  type="text"
+                  value={formData.weather?.afternoon || ''}
+                  onChange={(e) => handleFieldChange('weather', { morning: formData.weather?.morning || 'Cerah', afternoon: e.target.value })}
+                  placeholder="Cerah / Hujan"
+                  className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs bg-white text-slate-900 focus:outline-none focus:ring-2 focus:ring-pln-blue"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1">Jumlah Tenaga Kerja (Orang)</label>
+                <input
+                  type="number"
+                  min="0"
+                  value={formData.manpowerCount ?? ''}
+                  onChange={(e) => handleFieldChange('manpowerCount', parseInt(e.target.value) || 0)}
+                  placeholder="4"
+                  className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs bg-white text-slate-900 focus:outline-none focus:ring-2 focus:ring-pln-blue font-bold"
+                />
+              </div>
+            </div>
+
             {/* Executive Summary */}
             <div>
               <label className="block text-xs font-bold text-slate-700 mb-1">

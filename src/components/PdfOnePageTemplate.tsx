@@ -46,7 +46,7 @@ export const PdfOnePageTemplate: React.FC<PdfOnePageTemplateProps> = ({ report }
             {/* Center: Title & Subtitle */}
             <div className="text-center px-2 flex-1 max-w-[390px]">
               <div className="text-[9.5px] font-extrabold tracking-widest text-[#003366] uppercase">
-                LAPORAN PROGRES DUA HARIAN (SIKLUS #{report.cycleNumber})
+                LAPORAN PROGRES PEKERJAAN (SIKLUS #{report.cycleNumber})
               </div>
               <h1 className="text-[13.5px] font-black text-slate-900 uppercase tracking-tight leading-tight mt-0.5">
                 Pembangunan Smart Greenhouse
