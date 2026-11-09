@@ -92,10 +92,25 @@ export const PdfOnePageTemplate: React.FC<PdfOnePageTemplateProps> = ({ report }
                 </div>
               </div>
 
-              {/* Row 2: Location (Full text completely visible, no truncation) */}
-              <div className="flex items-center gap-1.5 text-[10px]">
-                <span className="text-slate-500 font-medium shrink-0">Lokasi Pekerjaan:</span>
-                <strong className="text-slate-900 font-bold">{report.location}</strong>
+              {/* Row 2: Location, Weather, and Manpower */}
+              <div className="flex items-center justify-between text-[9.5px]">
+                <div className="flex items-center gap-1.5 truncate max-w-[430px]">
+                  <span className="text-slate-500 font-medium shrink-0">Lokasi:</span>
+                  <strong className="text-slate-900 font-bold truncate">{report.location}</strong>
+                </div>
+
+                <div className="flex items-center gap-2 shrink-0 text-[8.5px]">
+                  {report.weather && (
+                    <div className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-50 border border-amber-200 text-amber-900 font-bold">
+                      <span>Cuaca: {report.weather.morning} / {report.weather.afternoon}</span>
+                    </div>
+                  )}
+                  {report.manpowerCount !== undefined && (
+                    <div className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-sky-50 border border-sky-200 text-[#003366] font-bold">
+                      <span>Tenaga Kerja: {report.manpowerCount} Orang</span>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
 
@@ -250,7 +265,12 @@ export const PdfOnePageTemplate: React.FC<PdfOnePageTemplateProps> = ({ report }
 
           {/* Manpower & Operational Deployment Indicator */}
           <div className="mt-1.5 flex items-center justify-between text-[8px] text-slate-400">
-            <span>Tenaga Kerja: <strong className="text-slate-600">10 Personel Lapangan Terdaftar (Achmad Widodo, dkk.)</strong></span>
+            <span>
+              Tenaga Kerja: <strong className="text-slate-600">10 Personel Lapangan (Achmad Widodo, dkk.)</strong>
+              {report.localPurchases && (
+                <span className="ml-2 text-slate-500">• Beli Lokal: <strong>{report.localPurchases.slice(0, 4).join(', ')}</strong></span>
+              )}
+            </span>
             <span>Kualifikasi K3: <strong className="text-emerald-700">Terverifikasi SMK3 • Siap Erection</strong></span>
           </div>
 

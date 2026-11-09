@@ -1,7 +1,7 @@
 import { BiDailyReport } from '../types/project';
 import { INITIAL_PROGRESS_REPORTS } from '../data/progressReports';
 
-const STORAGE_KEY = 'gh_pln_progress_reports_v3';
+const STORAGE_KEY = 'gh_pln_progress_reports_v4';
 
 export function loadReportsFromStorage(): BiDailyReport[] {
   try {
@@ -58,7 +58,7 @@ _Pemilik: PT PLN (Persero) UPDL Palembang_
 
 📅 *Periode Laporan:* ${report.displayDate} (Siklus #${report.cycleNumber})
 📍 *Lokasi Pekerjaan:* ${report.location}
-🚀 *Tahapan Proyek:* ${report.pipelineStageLabel}
+🚀 *Tahapan Proyek:* ${report.pipelineStageLabel}${report.weather ? `\n🌤️ *Kondisi Cuaca:* Pagi: ${report.weather.morning} | Siang/Sore: ${report.weather.afternoon}` : ''}${report.manpowerCount !== undefined ? `\n👷 *Tenaga Kerja Harian:* ${report.manpowerCount} Orang ${report.manpowerRole ? `(${report.manpowerRole})` : ''}` : ''}
 
 📊 *RINGKASAN CAPAIAN FISIK:*
 • Progres Kumulatif Total: *${report.cumulativeProgress.toFixed(1)}%* (${report.progressDelta >= 0 ? '+' : ''}${report.progressDelta.toFixed(1)}% dari siklus sebelumnya)
@@ -68,7 +68,7 @@ _Pemilik: PT PLN (Persero) UPDL Palembang_
 
 📝 *RINGKASAN TEKNIS:*
 ${report.executiveSummary}
-`;
+${report.logisticsNotes ? `\n🚚 *Koordinasi Kedatangan Site Indralaya:* ${report.logisticsNotes}\n` : ''}${report.approvalNotes ? `📑 *Izin & Approval Lapangan:* ${report.approvalNotes}\n` : ''}${report.localPurchases && report.localPurchases.length > 0 ? `🛒 *Material Approval (Beli Lokal Palembang):* ${report.localPurchases.join(', ')}\n` : ''}`;
 
   if (report.photos && report.photos.length > 0) {
     msg += `\n📸 *DOKUMENTASI PEKERJAAN (${report.photos.length} Foto Terlampir):*\n`;

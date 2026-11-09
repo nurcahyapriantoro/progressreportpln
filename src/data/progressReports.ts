@@ -1,6 +1,9 @@
 import { BiDailyReport } from '../types/project';
 
 export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
+  // =========================================================================
+  // 1. LAPORAN HARIAN 01 NOVEMBER 2026
+  // =========================================================================
   {
     id: 'report-2026-11-01',
     cycleNumber: 1,
@@ -9,7 +12,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     shortDate: '01 Nov',
     isCompleted: true,
     isLatestActive: false,
-    location: 'Workshop Depok & Site PLN UPDL Palembang',
+    location: 'Workshop Fabrikasi Depok & Site PLN UPDL Palembang',
     pipelineStage: 'workshop_depok',
     pipelineStageLabel: '1. Fabrikasi Modul Knock-Down (Depok)',
     cumulativeProgress: 3.0,
@@ -17,17 +20,87 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     civilProgress: 3.0,
     iotProgress: 3.0,
     status: 'COMPLETED',
-    executiveSummary: 'Kickoff pelaksanaan proyek, koordinasi awal SMK3, finalisasi Shop Drawing struktur Greenhouse Galvanis 8x25m, serta pengadaan material pipa hollow galvanis ke workshop perakitan Depok.',
-    photos: [],
+    weather: {
+      morning: 'Cerah',
+      afternoon: 'Cerah'
+    },
+    manpowerCount: 1,
+    manpowerRole: '1 Pekerja Lapangan (Penerimaan & Drop Material)',
+    executiveSummary: 'Kickoff pelaksanaan proyek: drop material profil pipa hollow galvanis ke workshop perakitan Depok (Paket Sipil 1.1), penerapan awal SMK3 keselamatan kerja, finalisasi Shop Drawing Greenhouse Galvanis 8x25m, serta penyiapan area fabrikasi modular knock-down.',
+    photos: [
+      {
+        id: 'photo-01-01',
+        url: '/progress/2026-11-01/Picture1.png',
+        caption: 'Drop Material Pipa Hollow Galvanis di Workshop Depok',
+        narrative: 'Penerimaan dan penataan bahan baku pipa hollow galvanis struktural di workshop perakitan Depok sebagai kesiapan awal pemotongan tiang dan busur atap.'
+      },
+      {
+        id: 'photo-01-02',
+        url: '/progress/2026-11-01/Picture2.png',
+        caption: 'Verifikasi Fisik & Spesifikasi Bahan Baku Baja',
+        narrative: 'Pengecekan dimensi penampang profil hollow galvanis dan ketebalan dinding baja untuk memastikan kesesuaian gambar shop drawing struktur greenhouse 8x25m.'
+      }
+    ],
     nextSteps: [
-      'Pemotongan bahan profil hollow galvanis sesuai daftar potong struktural.',
+      'Pemotongan bahan profil hollow galvanis tiang utama sesuai daftar potong struktural.',
       'Penyetelan mal lengkungan atap arch roof dan penyiapan area perakitan modular.',
       'Koordinasi persiapan tapak pembersihan lahan di area PLN UPDL Palembang.'
     ]
   },
+
+  // =========================================================================
+  // 2. LAPORAN HARIAN 02 NOVEMBER 2026
+  // =========================================================================
+  {
+    id: 'report-2026-11-02',
+    cycleNumber: 2,
+    dateStr: '2026-11-02',
+    displayDate: '02 November 2026',
+    shortDate: '02 Nov',
+    isCompleted: true,
+    isLatestActive: false,
+    location: 'Workshop Fabrikasi Depok',
+    pipelineStage: 'workshop_depok',
+    pipelineStageLabel: '1. Fabrikasi Modul Knock-Down (Depok)',
+    cumulativeProgress: 4.8,
+    progressDelta: 1.8,
+    civilProgress: 5.0,
+    iotProgress: 4.5,
+    status: 'COMPLETED',
+    weather: {
+      morning: 'Cerah',
+      afternoon: 'Cerah'
+    },
+    manpowerCount: 4,
+    manpowerRole: '4 Tenaga Kerja Fabrikasi & Pemotongan',
+    executiveSummary: 'Pekerjaan pemotongan bahan rangka tiang utama hollow galvanis 40x60 (Paket Sipil 5.1). Tim fabrikasi memotong profil tiang untuk 18 titik tiang utama dengan presisi tinggi dan sudut siku terstandar sesuai shop drawing struktur.',
+    photos: [
+      {
+        id: 'photo-02-01',
+        url: '/progress/2026-11-02/Picture1.png',
+        caption: 'Pemotongan Presisi Profil Tiang Hollow 40x60',
+        narrative: 'Pemotongan dingin menggunakan mesin cutting wheel untuk menghasilkan sudut potongan tegak lurus pada 18 batang tiang utama rangka greenhouse.'
+      },
+      {
+        id: 'photo-02-02',
+        url: '/progress/2026-11-02/Picture2.png',
+        caption: 'Penataan & Pengelompokan Batang Tiang Modular',
+        narrative: 'Hasil potongan profil tiang galvanis dikelompokkan dan ditandai (marking) untuk mempermudah proses assembling sistem knock-down.'
+      }
+    ],
+    nextSteps: [
+      'Pemotongan bahan kerangka atap lengkung bentang 8m.',
+      'Persiapan mal lengkungan atap di bidang kerja datar.',
+      'Penyiapan peralatan bending/rol pipa.'
+    ]
+  },
+
+  // =========================================================================
+  // 3. LAPORAN HARIAN 03 NOVEMBER 2026
+  // =========================================================================
   {
     id: 'report-2026-11-03',
-    cycleNumber: 2,
+    cycleNumber: 3,
     dateStr: '2026-11-03',
     displayDate: '03 November 2026',
     shortDate: '03 Nov',
@@ -37,11 +110,17 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     pipelineStage: 'workshop_depok',
     pipelineStageLabel: '1. Fabrikasi Modul Knock-Down (Depok)',
     cumulativeProgress: 6.5,
-    progressDelta: 3.5,
-    civilProgress: 6.5,
-    iotProgress: 6.5,
+    progressDelta: 1.7,
+    civilProgress: 6.8,
+    iotProgress: 6.2,
     status: 'COMPLETED',
-    executiveSummary: 'Proses pemotongan presisi profil hollow galvanis untuk modul kuda-kuda lengkung atap, penyetelan mal geometri bentang 8 meter, dan pengelasan titik (tack weld) sambungan siku rangka modular.',
+    weather: {
+      morning: 'Cerah',
+      afternoon: 'Hujan'
+    },
+    manpowerCount: 4,
+    manpowerRole: '4 Tenaga Kerja Fabrikasi & Perakitan',
+    executiveSummary: 'Proses pemotongan bahan kerangka lengkungan atap bentang 8 meter (Paket Sipil 5.2). Setting mal geometri bentang 8 meter dan pengelasan titik (tack weld) sambungan siku rangka modular sebelum proses rol bending.',
     photos: [
       {
         id: 'photo-03-01',
@@ -57,28 +136,91 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
       }
     ],
     nextSteps: [
-      'Penyelesaian pengelasan penuh (full welding) pada seluruh modul busur atap.',
-      'Pemotongan 18 tiang utama dan penyiapan angkur join behel pondasi.',
-      'Pabrikasi struktur dudukan meja tanam hidroponik NFT dan konsolidasi tandon.'
+      'Bending kerangka atap arch roof menggunakan mesin rol pipa.',
+      'Penyetelan radius lengkung kubah atap.',
+      'Pemeriksaan dimensi kelengkungan bentang 8m.'
     ]
   },
+
+  // =========================================================================
+  // 4. LAPORAN HARIAN 04 NOVEMBER 2026
+  // =========================================================================
+  {
+    id: 'report-2026-11-04',
+    cycleNumber: 4,
+    dateStr: '2026-11-04',
+    displayDate: '04 November 2026',
+    shortDate: '04 Nov',
+    isCompleted: true,
+    isLatestActive: false,
+    location: 'Workshop Fabrikasi Depok',
+    pipelineStage: 'workshop_depok',
+    pipelineStageLabel: '1. Fabrikasi Modul Knock-Down (Depok)',
+    cumulativeProgress: 8.2,
+    progressDelta: 1.7,
+    civilProgress: 8.5,
+    iotProgress: 8.0,
+    status: 'COMPLETED',
+    weather: {
+      morning: 'Cerah',
+      afternoon: 'Cerah'
+    },
+    manpowerCount: 4,
+    manpowerRole: '4 Tenaga Kerja Bending & Fabrikasi',
+    executiveSummary: 'Pekerjaan bending kerangka atap arch roof (Paket Sipil 5.2). Pipa hollow galvanis diproses roll bending bertahap untuk membentuk lengkungan busur kubah atap bentang 8 meter dengan radius seragam dan bebas deformasi penampang.',
+    photos: [
+      {
+        id: 'photo-04-01',
+        url: '/progress/2026-11-04/Picture3.png',
+        caption: 'Proses Roll Bending Busur Atap Galvanis',
+        narrative: 'Pengerjaan pembengkokan bertahap profil pipa galvanis menggunakan mesin rol presisi guna mencapai radius lengkung kubah atap sesuai gambar kerja.'
+      },
+      {
+        id: 'photo-04-02',
+        url: '/progress/2026-11-04/Picture4.png',
+        caption: 'Pengecekan Radius & Geometri Lengkung Busur',
+        narrative: 'Pengukuran jarak busur dan anak panah busur lengkung atap terhadap mal bentangan 8 meter untuk menjamin keseragaman seluruh modul atap.'
+      },
+      {
+        id: 'photo-04-03',
+        url: '/progress/2026-11-04/Picture5.png',
+        caption: 'Penataan Hasil Bending Modul Kuda-Kuda Atap',
+        narrative: 'Hasil rol busur kubah atap ditempatkan pada dudukan khusus agar kelurusan tetap terjaga sebelum perakitan pengaku diagonal.'
+      }
+    ],
+    nextSteps: [
+      'Penyelesaian bending seluruh modul busur atap.',
+      'Penyiapan 18 angkur behel tiang utama.',
+      'Konsolidasi tandon dan utilitas nutrisi.'
+    ]
+  },
+
+  // =========================================================================
+  // 5. LAPORAN HARIAN 05 NOVEMBER 2026
+  // =========================================================================
   {
     id: 'report-2026-11-05',
-    cycleNumber: 3,
+    cycleNumber: 5,
     dateStr: '2026-11-05',
     displayDate: '05 November 2026',
     shortDate: '05 Nov',
     isCompleted: true,
-    isLatestActive: true,
+    isLatestActive: false,
     location: 'Workshop Fabrikasi Depok (Pra-Pengiriman Palembang)',
     pipelineStage: 'workshop_depok',
     pipelineStageLabel: '1. Fabrikasi Modul Knock-Down (Depok)',
     cumulativeProgress: 10.0,
-    progressDelta: 3.5,
+    progressDelta: 1.8,
     civilProgress: 10.0,
     iotProgress: 10.0,
-    status: 'ON-SCHEDULE',
-    executiveSummary: 'Capaian signifikan pra-fabrikasi sistem knock-down di workshop Depok: modul lengkungan atap telah terangkai, penyiapan tiang utama beserta 18 angkur behel selesai, perakitan meja NFT beralas wiremesh telah berjalan, serta tandon air & profil pendukung telah terkonsolidasi siap QC.',
+    status: 'COMPLETED',
+    weather: {
+      morning: 'Cerah',
+      afternoon: 'Hujan'
+    },
+    manpowerCount: 4,
+    manpowerRole: '4 Tenaga Kerja Fabrikasi & Konsolidasi',
+    executiveSummary: 'Penyelesaian tahap bending kerangka atap (Paket Sipil 5.2), perakitan modul lengkungan atap arch roof sistem knock-down, penyiapan 18 angkur behel tiang utama (Paket Sipil 3.5), perakitan awal rangka meja NFT beralas wiremesh galvanis (Paket IoT 15.1), serta konsolidasi tandon air nutrisi (Paket IoT 12.4).',
     photos: [
       {
         id: 'photo-05-01',
@@ -106,124 +248,241 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
       }
     ],
     nextSteps: [
-      'Penyelesaian fabrikasi akhir & QC modul knock-down di workshop Depok.',
-      'Jadwal muat material (loading) di workshop Depok: 10 November 2026.',
-      'Koordinasi dropping tapak dengan tim PLN Indralaya (estimasi armada tiba di site Palembang: 12 – 15 November 2026).'
+      'Adjusting ukuran atap dan kalibrasi toleransi geometri bentang 8m.',
+      'Pemotongan bahan profil baja ringan untuk meja NFT.',
+      'Penyambungan kerangka meja modul tanam NFT.'
     ]
   },
+
+  // =========================================================================
+  // 6. LAPORAN HARIAN 06 NOVEMBER 2026
+  // =========================================================================
+  {
+    id: 'report-2026-11-06',
+    cycleNumber: 6,
+    dateStr: '2026-11-06',
+    displayDate: '06 November 2026',
+    shortDate: '06 Nov',
+    isCompleted: true,
+    isLatestActive: false,
+    location: 'Workshop Fabrikasi Depok',
+    pipelineStage: 'workshop_depok',
+    pipelineStageLabel: '1. Fabrikasi Modul Knock-Down (Depok)',
+    cumulativeProgress: 12.0,
+    progressDelta: 2.0,
+    civilProgress: 12.4,
+    iotProgress: 11.6,
+    status: 'COMPLETED',
+    weather: {
+      morning: 'Cerah',
+      afternoon: 'Cerah'
+    },
+    manpowerCount: 4,
+    manpowerRole: '4 Tenaga Kerja Perakitan & Kalibrasi Atap',
+    executiveSummary: 'Pekerjaan adjusting ukuran dan kalibrasi geometri kubah atap lengkung (Paket Sipil 5.2). Melakukan simulasi pemasangan antar-modul busur lengkung knock-down untuk memastikan toleransi sambungan baut/konektor pas dan simetris sebelum dipaketkan.',
+    photos: [
+      {
+        id: 'photo-06-01',
+        url: '/progress/2026-11-06/Picture6.png',
+        caption: 'Adjusting Ukuran & Geometri Busur Lengkung Atap',
+        narrative: 'Pengecekan kelengkungan dan penyesuaian dimensi antar-modul busur atap bentang 8 meter agar presisi saat ereksi di site PLN UPDL Indralaya.'
+      },
+      {
+        id: 'photo-06-02',
+        url: '/progress/2026-11-06/Picture7.png',
+        caption: 'Perakitan Modul Uji Coba Knock-Down Atap',
+        narrative: 'Uji rakit sambungan busur atap di area terbuka workshop Depok untuk memastikan kemudahan dan kecepatan perakitan di lokasi Palembang.'
+      }
+    ],
+    nextSteps: [
+      'Pemotongan bahan kerangka baja ringan meja NFT hidroponik.',
+      'Penyambungan struktur meja tanam NFT.',
+      'Persiapan pengepakan komponen rangka.'
+    ]
+  },
+
+  // =========================================================================
+  // 7. LAPORAN HARIAN 07 NOVEMBER 2026
+  // =========================================================================
   {
     id: 'report-2026-11-07',
-    cycleNumber: 4,
+    cycleNumber: 7,
     dateStr: '2026-11-07',
     displayDate: '07 November 2026',
     shortDate: '07 Nov',
+    isCompleted: true,
+    isLatestActive: false,
+    location: 'Workshop Fabrikasi Depok',
+    pipelineStage: 'workshop_depok',
+    pipelineStageLabel: '1. Fabrikasi Modul Knock-Down (Depok)',
+    cumulativeProgress: 14.0,
+    progressDelta: 2.0,
+    civilProgress: 14.2,
+    iotProgress: 13.8,
+    status: 'COMPLETED',
+    weather: {
+      morning: 'Cerah',
+      afternoon: 'Cerah'
+    },
+    manpowerCount: 4,
+    manpowerRole: '4 Tenaga Kerja Fabrikasi Baja Ringan NFT',
+    executiveSummary: 'Pekerjaan pemotongan kerangka baja ringan meja tanam NFT hidroponik (Paket IoT 15.1). Pemotongan presisi kanal C dan reng baja ringan galvanis sebagai rangka utama dudukan talang gully hidroponik seluas 100 m².',
+    photos: [
+      {
+        id: 'photo-07-01',
+        url: '/progress/2026-11-07/Picture8.jpg',
+        caption: 'Pemotongan Profil Kanal C Baja Ringan Meja NFT',
+        narrative: 'Pemotongan material baja ringan tahan karat sesuai ukuran modul meja hidroponik dengan kemiringan elevasi 1-2% untuk sirkulasi nutrisi NFT.'
+      },
+      {
+        id: 'photo-07-02',
+        url: '/progress/2026-11-07/Picture9.jpg',
+        caption: 'Pengelompokan Komponen Rangka Baja Ringan Meja Tanam',
+        narrative: 'Komponen kaki dan palang meja tanam disusun dan diikat berdasarkan modul unit agar mobilisasi dan perakitan di tapak berjalan efisien.'
+      }
+    ],
+    nextSteps: [
+      'Penyambungan & perakitan modul rangka meja NFT.',
+      'Konsolidasi tandon dan utilitas nutrisi.',
+      'Pengecekan checklist material pra-loading.'
+    ]
+  },
+
+  // =========================================================================
+  // 8. LAPORAN HARIAN 08 NOVEMBER 2026 (TERBARU & AKTIF)
+  // =========================================================================
+  {
+    id: 'report-2026-11-08',
+    cycleNumber: 8,
+    dateStr: '2026-11-08',
+    displayDate: '08 November 2026',
+    shortDate: '08 Nov',
+    isCompleted: true,
+    isLatestActive: true,
+    location: 'Workshop Fabrikasi Depok (Persiapan Loading Ekspedisi)',
+    pipelineStage: 'workshop_depok',
+    pipelineStageLabel: '1. Fabrikasi Modul Knock-Down (Depok)',
+    cumulativeProgress: 16.2,
+    progressDelta: 2.2,
+    civilProgress: 16.0,
+    iotProgress: 16.4,
+    status: 'ON-SCHEDULE',
+    weather: {
+      morning: 'Cerah',
+      afternoon: 'Cerah'
+    },
+    manpowerCount: 4,
+    manpowerRole: '4 Tenaga Kerja Assembling NFT & QC Modul',
+    executiveSummary: 'Penyambungan dan perakitan modul meja tanam hidroponik NFT (Paket IoT 15.1) telah berjalan optimal. Struktur knock-down greenhouse dan meja tanam siap memasuki tahap final QC dan packing. Dilengkapi persiapan operasional pengadaan material lokal di Palembang serta koordinasi jadwal kedatangan tim ke Indralaya.',
+    photos: [
+      {
+        id: 'photo-08-01',
+        url: '/progress/2026-11-08/Picture10.png',
+        caption: 'Penyambungan Struktur Rangka Meja Hidroponik NFT',
+        narrative: 'Perakitan sambungan modul meja tanam NFT menggunakan baut roofing dan bracing pengaku agar kokoh menopang talang gully dan debit air nutrisi.'
+      }
+    ],
+    nextSteps: [
+      'Jadwal muat (loading) material rangka & modul meja ke truk ekspedisi di Depok: 10 November 2026.',
+      'Tim BRAIN dan armada ekspedisi dijadwalkan tiba di site PLN UPDL Indralaya/Palembang pada Kamis atau Jumat (12 atau 13 November 2026).',
+      'Pembelian material approval lokal di Palembang: 1. Pasir, 2. Semen, 3. Hebel, 4. Kayu bowplank.',
+      'Menunggu persetujuan working permit (SMK3) dan persetujuan dropping material saat armada tiba di site Indralaya.'
+    ],
+    localPurchases: [
+      'Pasir Pasang & Cor',
+      'Semen PC Portland',
+      'Bata Ringan (Hebel t:10cm)',
+      'Kayu Bowplank & Kaso'
+    ],
+    logisticsNotes: 'Tim BRAIN dan armada ekspedisi dropping material dijadwalkan tiba di lokasi PLN UPDL Indralaya Palembang pada hari Kamis atau Jumat (12 atau 13 November 2026).',
+    approvalNotes: 'Menunggu approval working permit (Izin Kerja SMK3 PLN) dan approval dropping material saat armada tiba di tapak kerja Indralaya Palembang.'
+  },
+
+  // =========================================================================
+  // 9. FORWARD MILESTONE: 10 NOVEMBER 2026 (MUAT EKSPEDISI DEPOK)
+  // =========================================================================
+  {
+    id: 'report-2026-11-10',
+    cycleNumber: 9,
+    dateStr: '2026-11-10',
+    displayDate: '10 November 2026',
+    shortDate: '10 Nov',
     isCompleted: false,
     isLatestActive: false,
-    location: 'Workshop Depok (Persiapan Muat Ekspedisi)',
+    location: 'Workshop Depok (Muat Truk Ekspedisi)',
     pipelineStage: 'qc_packing',
-    pipelineStageLabel: '2. QC, Packing & Persiapan Muat',
-    cumulativeProgress: 29.5,
-    progressDelta: 11.0,
-    civilProgress: 34.7,
-    iotProgress: 24.3,
+    pipelineStageLabel: '2. QC, Packing & Muat Ekspedisi',
+    cumulativeProgress: 32.0,
+    progressDelta: 15.8,
+    civilProgress: 35.0,
+    iotProgress: 29.0,
     status: 'ON-SCHEDULE',
-    executiveSummary: 'Tahap final Quality Control (QC) modul knock-down, pelabelan kode sambungan (tagging), penerbitan surat jalan armada untuk jadwal muat 10 November 2026 di Depok, serta koordinasi titik dropping tapak bersama tim PLN Indralaya.',
+    executiveSummary: 'Pemuatan (loading) modul hollow galvanis struktur greenhouse, modul lengkungan atap arch roof, rangka meja NFT, tandon air, dan material utilitas ke armada truk ekspedisi di Depok untuk perjalanan menuju Palembang.',
     photos: [],
     nextSteps: [
-      'Pemuatan (loading) modul hollow galvanis & meja tanam ke truk di Depok pada 10 November 2026.',
-      'Perjalanan ekspedisi darat rute Depok–Merak–Bakauheni menuju Palembang.',
-      'Koordinasi penerimaan dan pembongkaran dropping material di site PLN UPDL Indralaya/Palembang (ETA 12–15 Nov).'
+      'Pemuatan armada truk ekspedisi dan pengikatan muatan dengan terpal pelindung.',
+      'Pemberangkatan armada rute Depok – Pelabuhan Merak – Bakauheni – Palembang.',
+      'Koordinasi penerimaan armada di PLN UPDL Indralaya (ETA 12–13 November 2026).'
     ]
   },
+
+  // =========================================================================
+  // 10. FORWARD MILESTONE: 12-13 NOVEMBER 2026 (DROP INDRALAYA & LOCAL PURCHASES)
+  // =========================================================================
   {
-    id: 'report-2026-11-09',
-    cycleNumber: 5,
-    dateStr: '2026-11-09',
-    displayDate: '09 November 2026',
-    shortDate: '09 Nov',
+    id: 'report-2026-11-12',
+    cycleNumber: 10,
+    dateStr: '2026-11-12',
+    displayDate: '12 November 2026',
+    shortDate: '12 Nov',
     isCompleted: false,
     isLatestActive: false,
-    location: 'Workshop Depok & Rute Ekspedisi Lintas Sumatera',
+    location: 'Site PLN UPDL Indralaya Palembang',
     pipelineStage: 'ekspedisi',
-    pipelineStageLabel: '3. Ekspedisi & Dropping Material',
-    cumulativeProgress: 38.5,
-    progressDelta: 9.0,
-    civilProgress: 42.0,
-    iotProgress: 35.0,
+    pipelineStageLabel: '3. Kedatangan & Dropping Material Indralaya',
+    cumulativeProgress: 46.5,
+    progressDelta: 14.5,
+    civilProgress: 47.0,
+    iotProgress: 46.0,
     status: 'ON-SCHEDULE',
-    executiveSummary: 'Pemuatan (loading) material di workshop Depok per 10 November 2026 dan perjalanan armada ekspedisi logistik menuju site PLN UPDL Indralaya/Palembang dengan estimasi kedatangan 12–15 November 2026.',
+    executiveSummary: 'Kedatangan Tim BRAIN dan armada ekspedisi di site PLN UPDL Indralaya Palembang (Kamis/Jumat 12–13 Nov). Pembongkaran (unloading) dropping material modular, pengurusan approval working permit SMK3 PLN, serta pembelian material lokal untuk persetujuan: pasir, semen, hebel, dan kayu bowplank.',
     photos: [],
     nextSteps: [
-      'Monitoring armada logistik selama penyeberangan feri dan perjalanan darat lintas Sumatera.',
-      'Penyiapan tapak lahan dan clearing di PLN UPDL Indralaya sebelum armada tiba.',
-      'Penyambutan armada, unloading dropping material, dan verifikasi checklist komponen di site.'
-    ]
+      'Penyambutan armada ekspedisi dan unloading material di area kerja PLN Indralaya.',
+      'Approval working permit dan verifikasi bersama pengawas K3 PLN.',
+      'Pengadaan material lokal di Palembang (Pasir, Semen, Hebel, Kayu Bowplank).',
+      'Pekerjaan pengukuran, bowplank, dan galian tapak tiang.'
+    ],
+    localPurchases: [
+      'Pasir Pasang & Cor',
+      'Semen PC Portland',
+      'Bata Ringan (Hebel)',
+      'Kayu Bowplank & Kaso'
+    ],
+    logisticsNotes: 'Tim BRAIN dan armada ekspedisi dropping material tiba di lokasi PLN UPDL Indralaya Palembang pada hari Kamis atau Jumat (12 atau 13 November 2026).',
+    approvalNotes: 'Menunggu approval working permit (Izin Kerja SMK3 PLN) dan approval dropping material saat armada tiba di tapak kerja Indralaya Palembang.'
   },
-  {
-    id: 'report-2026-11-11',
-    cycleNumber: 6,
-    dateStr: '2026-11-11',
-    displayDate: '11 November 2026',
-    shortDate: '11 Nov',
-    isCompleted: false,
-    isLatestActive: false,
-    location: 'Jalur Ekspedisi Menuju PLN UPDL Indralaya/Palembang',
-    pipelineStage: 'ekspedisi',
-    pipelineStageLabel: '3. Ekspedisi & Dropping Material',
-    cumulativeProgress: 45.0,
-    progressDelta: 6.5,
-    civilProgress: 46.0,
-    iotProgress: 44.0,
-    status: 'ON-SCHEDULE',
-    executiveSummary: 'Armada ekspedisi dalam perjalanan rute Sumatera menuju Palembang setelah pemuatan di Depok pada 10 November. Koordinasi tapak dropping intensif dilakukan bersama tim PLN Indralaya untuk penyambutan armada antara 12–15 November 2026.',
-    photos: [],
-    nextSteps: [
-      'Penyambutan armada ekspedisi di tapak PLN UPDL Indralaya (ETA: 12–15 November 2026).',
-      'Unloading material modular dan penataan komponen di area tapak kerja.',
-      'Persiapan mobilisasi tim erection untuk perakitan tiang utama struktur.'
-    ]
-  },
-  {
-    id: 'report-2026-11-13',
-    cycleNumber: 7,
-    dateStr: '2026-11-13',
-    displayDate: '13 November 2026',
-    shortDate: '13 Nov',
-    isCompleted: false,
-    isLatestActive: false,
-    location: 'PLN UPDL Palembang',
-    pipelineStage: 'erection_palembang',
-    pipelineStageLabel: '3. Erection & Sipil Palembang',
-    cumulativeProgress: 56.9,
-    progressDelta: 8.2,
-    civilProgress: 56.4,
-    iotProgress: 57.5,
-    status: 'ON-SCHEDULE',
-    executiveSummary: 'Struktur atap lengkung terpasang kokoh, pemasangan pintu (pintu utama, sterilisasi, pintu kolam), serta pengecatan dinding luar keliling.',
-    photos: [],
-    nextSteps: [
-      'Pemasangan plastik UV 200 micron atap dan dinding insect net mesh 50.',
-      'Pemasangan lantai rumput sintetis dan weedmat anti gulma.',
-      'Penempatan meja NFT dan jalur irigasi drip.'
-    ]
-  },
+
+  // =========================================================================
+  // 11. FORWARD MILESTONE: 15 NOVEMBER 2026 (ERECTION STRUKTUR PALEMBANG)
+  // =========================================================================
   {
     id: 'report-2026-11-15',
-    cycleNumber: 8,
+    cycleNumber: 11,
     dateStr: '2026-11-15',
     displayDate: '15 November 2026',
     shortDate: '15 Nov',
     isCompleted: false,
     isLatestActive: false,
-    location: 'PLN UPDL Palembang',
+    location: 'Site PLN UPDL Palembang',
     pipelineStage: 'erection_palembang',
-    pipelineStageLabel: '3. Erection & Sipil Palembang',
+    pipelineStageLabel: '4. Erection Struktur & Sipil Palembang',
     cumulativeProgress: 66.0,
-    progressDelta: 9.1,
+    progressDelta: 19.5,
     civilProgress: 63.8,
     iotProgress: 68.2,
     status: 'ON-SCHEDULE',
-    executiveSummary: 'Greenhouse tertutup rapi dengan plastik UV atap dan insect net, lantai rumput sintetis terbentang, dan dinding insect net ruang kontrol IoT selesai dipasang.',
+    executiveSummary: 'Ereksi 18 tiang utama dan busur kubah atap bentang 8x25m di site Palembang, penutupan atap dengan plastik UV 200 micron dan dinding insect net mesh 50, serta pemasangan dinding bata hebel keliling setinggi 60cm.',
     photos: [],
     nextSteps: [
       'Pemasangan talang gully NFT 100 m² dan tatakan drip hebel 100 m².',
@@ -231,17 +490,21 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
       'Pekerjaan pondasi dan kanopi kolam bulat D2.'
     ]
   },
+
+  // =========================================================================
+  // 12. FORWARD MILESTONE: 17 NOVEMBER 2026 (MEKANIKAL & ELEKTRIKAL)
+  // =========================================================================
   {
     id: 'report-2026-11-17',
-    cycleNumber: 9,
+    cycleNumber: 12,
     dateStr: '2026-11-17',
     displayDate: '17 November 2026',
     shortDate: '17 Nov',
     isCompleted: false,
     isLatestActive: false,
-    location: 'PLN UPDL Palembang',
+    location: 'Site PLN UPDL Palembang',
     pipelineStage: 'iot_bast',
-    pipelineStageLabel: '4. Integrasi Hidroponik & Smart IoT BRAIN',
+    pipelineStageLabel: '5. Integrasi Hidroponik & Smart IoT BRAIN',
     cumulativeProgress: 74.0,
     progressDelta: 8.0,
     civilProgress: 72.0,
@@ -255,17 +518,21 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
       'Penyelesaian kanopi kolam bulat pelindung UV.'
     ]
   },
+
+  // =========================================================================
+  // 13. FORWARD MILESTONE: 19 NOVEMBER 2026 (INTEGRASI PANEL IOT & SENSOR)
+  // =========================================================================
   {
     id: 'report-2026-11-19',
-    cycleNumber: 10,
+    cycleNumber: 13,
     dateStr: '2026-11-19',
     displayDate: '19 November 2026',
     shortDate: '19 Nov',
     isCompleted: false,
     isLatestActive: false,
-    location: 'PLN UPDL Palembang',
+    location: 'Site PLN UPDL Palembang',
     pipelineStage: 'iot_bast',
-    pipelineStageLabel: '4. Integrasi Hidroponik & Smart IoT BRAIN',
+    pipelineStageLabel: '5. Integrasi Hidroponik & Smart IoT BRAIN',
     cumulativeProgress: 82.4,
     progressDelta: 8.4,
     civilProgress: 80.5,
@@ -279,17 +546,21 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
       'Finishing estetika lanskap rumput sintetis dan marka utilitas.'
     ]
   },
+
+  // =========================================================================
+  // 14. FORWARD MILESTONE: 21 NOVEMBER 2026 (COMMISSIONING FERTIGASI)
+  // =========================================================================
   {
     id: 'report-2026-11-21',
-    cycleNumber: 11,
+    cycleNumber: 14,
     dateStr: '2026-11-21',
     displayDate: '21 November 2026',
     shortDate: '21 Nov',
     isCompleted: false,
     isLatestActive: false,
-    location: 'PLN UPDL Palembang',
+    location: 'Site PLN UPDL Palembang',
     pipelineStage: 'iot_bast',
-    pipelineStageLabel: '4. Integrasi Hidroponik & Smart IoT BRAIN',
+    pipelineStageLabel: '5. Integrasi Hidroponik & Smart IoT BRAIN',
     cumulativeProgress: 89.2,
     progressDelta: 6.8,
     civilProgress: 88.0,
@@ -298,103 +569,93 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     executiveSummary: 'Seluruh sistem mekanikal, elektrikal, perpipaan, dan kanopi kolam bulat tuntas terpasang. Sistem IoT telah membaca data suhu, intensitas lux, dan PPM secara real-time.',
     photos: [],
     nextSteps: [
-      'Penyemaian bibit uji coba (melon drip & sayur daun NFT).',
-      'Penyusunan Standard Operating Procedure (SOP) operasional untuk tim PLN UPDL.',
-      'Pembersihan menyeluruh (general cleaning) area greenhouse.'
+      'Uji coba otomasi dosing pupuk A&B otomatis berbasis target PPM.',
+      'Kalibrasi relay pompa dan aktuasi ventilasi drum fan.',
+      'Penyusunan draft laporan Berita Acara Serah Terima (BAST).'
     ]
   },
+
+  // =========================================================================
+  // 15. FORWARD MILESTONE: 23 NOVEMBER 2026 (TESTING END-TO-END)
+  // =========================================================================
   {
     id: 'report-2026-11-23',
-    cycleNumber: 12,
+    cycleNumber: 15,
     dateStr: '2026-11-23',
     displayDate: '23 November 2026',
     shortDate: '23 Nov',
     isCompleted: false,
     isLatestActive: false,
-    location: 'PLN UPDL Palembang',
+    location: 'Site PLN UPDL Palembang',
     pipelineStage: 'iot_bast',
-    pipelineStageLabel: '5. Commissioning & Serah Terima (BAST)',
+    pipelineStageLabel: '5. Integrasi Hidroponik & Smart IoT BRAIN',
     cumulativeProgress: 94.2,
     progressDelta: 5.0,
     civilProgress: 94.0,
     iotProgress: 94.5,
     status: 'ON-SCHEDULE',
-    executiveSummary: 'Tahap Commissioning Test 24 jam non-stop: uji ketahanan pompa, otomatisasi penyiraman drip, sirkulasi NFT, dan pengoperasian darurat manual panel listrik.',
+    executiveSummary: 'Uji performa 48 jam nonstop otomasi irigasi fertigasi, stabilitas koneksi cloud IoT dashboard, dan penyelesaian instalasi kolam bioflok bulat D2 beserta kanopi pelindung.',
     photos: [],
     nextSteps: [
-      'Pelatihan operasional (transfer of knowledge) kepada staf PLN UPDL Palembang.',
-      'Finalisasi dokumen As-Built Drawing dan manual panduan IoT.',
-      'Persiapan inspeksi bersama tim manajemen PLN UPDL Palembang.'
+      'Final touch-up pengecatan dan pembersihan area greenhouse.',
+      'Penyusunan as-built drawing final dan manual SOP pengoperasian IoT.',
+      'Persiapan serah terima parsial dan demonstrasi sistem kepada perwakilan PLN.'
     ]
   },
+
+  // =========================================================================
+  // 16. FORWARD MILESTONE: 25 NOVEMBER 2026 (TRAINING OPERATOR & SOP)
+  // =========================================================================
   {
     id: 'report-2026-11-25',
-    cycleNumber: 13,
+    cycleNumber: 16,
     dateStr: '2026-11-25',
     displayDate: '25 November 2026',
     shortDate: '25 Nov',
     isCompleted: false,
     isLatestActive: false,
-    location: 'PLN UPDL Palembang',
+    location: 'Site PLN UPDL Palembang',
     pipelineStage: 'iot_bast',
-    pipelineStageLabel: '5. Commissioning & Serah Terima (BAST)',
+    pipelineStageLabel: '5. Integrasi Hidroponik & Smart IoT BRAIN',
     cumulativeProgress: 97.5,
     progressDelta: 3.3,
-    civilProgress: 97.5,
-    iotProgress: 97.5,
+    civilProgress: 97.0,
+    iotProgress: 98.0,
     status: 'ON-SCHEDULE',
-    executiveSummary: 'Pra-inspeksi bersama manajemen PLN UPDL Palembang, seluruh catatan minor langsung ditindaklanjuti, greenhouse dalam kondisi siap panen bibit uji coba.',
+    executiveSummary: 'Pelatihan teknis pengoperasian sistem Smart Greenhouse kepada perwakilan PLN UPDL Palembang, serah terima buku panduan pemeliharaan, serta penanaman bibit perdana pada meja NFT.',
     photos: [],
     nextSteps: [
-      'Final touch up pengecatan dan pembersihan kaca/net.',
-      'Penandatanganan Berita Acara Uji Fungsi Mekanikal & IoT.',
-      'Persiapan serah terima akhir.'
+      'Inspeksi akhir bersama (joint inspection) tim teknis BRAIN IPB dan PLN.',
+      'Verifikasi kelengkapan administrasi BAST I (100%).',
+      'Penandatanganan Berita Acara Serah Terima pekerjaan.'
     ]
   },
-  {
-    id: 'report-2026-11-27',
-    cycleNumber: 14,
-    dateStr: '2026-11-27',
-    displayDate: '27 November 2026',
-    shortDate: '27 Nov',
-    isCompleted: false,
-    isLatestActive: false,
-    location: 'PLN UPDL Palembang',
-    pipelineStage: 'iot_bast',
-    pipelineStageLabel: '5. Commissioning & Serah Terima (BAST)',
-    cumulativeProgress: 99.1,
-    progressDelta: 1.6,
-    civilProgress: 99.2,
-    iotProgress: 99.0,
-    status: 'ON-SCHEDULE',
-    executiveSummary: 'Penyelesaian seluruh administrasi proyek, serah terima berkas As-Built Drawing, buku panduan operasional Smart IoT, serta persiapan peresmian serah terima (BAST).',
-    photos: [],
-    nextSteps: [
-      'Penandatanganan BAST (Berita Acara Serah Terima) 100%.',
-      'Demonstrasi sistem di hadapan General Manager PLN UPDL Palembang.'
-    ]
-  },
+
+  // =========================================================================
+  // 17. FORWARD MILESTONE: 28 NOVEMBER 2026 (BAST 100% SELESAI)
+  // =========================================================================
   {
     id: 'report-2026-11-28',
-    cycleNumber: 15,
+    cycleNumber: 17,
     dateStr: '2026-11-28',
     displayDate: '28 November 2026',
     shortDate: '28 Nov',
     isCompleted: false,
     isLatestActive: false,
-    location: 'PLN UPDL Palembang',
+    location: 'Site PLN UPDL Palembang',
     pipelineStage: 'iot_bast',
-    pipelineStageLabel: '5. Commissioning & Serah Terima (BAST)',
+    pipelineStageLabel: '5. Integrasi Hidroponik & Smart IoT BRAIN',
     cumulativeProgress: 100.0,
-    progressDelta: 0.9,
+    progressDelta: 2.5,
     civilProgress: 100.0,
     iotProgress: 100.0,
-    status: 'COMPLETED',
-    executiveSummary: 'TARGET SELESAI 100%: Serah Terima Hasil Pekerjaan (BAST) Pembangunan Smart Greenhouse PLN UPDL Palembang antara BRAIN IPB University dan PT PLN (Persero) UPDL Palembang berjalan sukses dan tepat waktu.',
+    status: 'ON-SCHEDULE',
+    executiveSummary: 'Seluruh 17 paket pekerjaan Pembangunan Smart Greenhouse PLN UPDL Palembang telah rampung 100%. Fasilitas siap dimanfaatkan secara optimal untuk program pembelajaran purnabakti dan budidaya tanaman presisi tinggi.',
     photos: [],
     nextSteps: [
-      'Masa pemeliharaan dan pendampingan budidaya smart farming berkelanjutan.',
-      'Monitoring berkala performa sensor IoT via cloud dashboard BRAIN IPB.'
+      'Penandatanganan resmi Berita Acara Serah Terima (BAST) 100%.',
+      'Memasuki masa pemeliharaan fasilitas selama 90 hari kalender.',
+      'Monitoring berkala performa sistem IoT dan fertigasi tanaman.'
     ]
   }
 ];

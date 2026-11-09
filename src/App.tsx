@@ -20,7 +20,11 @@ import { BiDailyReport } from './types/project';
 
 export function App() {
   const [reports, setReports] = useState<BiDailyReport[]>(() => loadReportsFromStorage());
-  const [selectedReportId, setSelectedReportId] = useState<string>('report-2026-11-05');
+  const [selectedReportId, setSelectedReportId] = useState<string>(() => {
+    const loaded = loadReportsFromStorage();
+    const latest = loaded.find((r) => r.isLatestActive);
+    return latest?.id || 'report-2026-11-08';
+  });
   const [isAdminOpen, setIsAdminOpen] = useState<boolean>(false);
   const [isDownloadingPdf, setIsDownloadingPdf] = useState<boolean>(false);
   const [toasts, setToasts] = useState<ToastMessage[]>([]);
@@ -34,7 +38,7 @@ export function App() {
   }, []);
 
   const selectedReport = useMemo(() => {
-    return reports.find((r) => r.id === selectedReportId) || reports[2];
+    return reports.find((r) => r.id === selectedReportId) || reports.find((r) => r.isLatestActive) || reports[0];
   }, [reports, selectedReportId]);
 
   // Handle URL route /admin or #/admin to open admin panel automatically

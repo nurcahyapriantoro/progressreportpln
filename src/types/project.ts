@@ -5,6 +5,11 @@ export interface ProgressPhoto {
   narrative: string;
 }
 
+export interface DailyWeather {
+  morning: string;   // e.g. "Cerah"
+  afternoon: string; // e.g. "Cerah" | "Hujan"
+}
+
 export type PipelineStage = 
   | 'workshop_depok'
   | 'qc_packing'
@@ -31,6 +36,12 @@ export interface BiDailyReport {
   executiveSummary: string;
   photos: ProgressPhoto[];
   nextSteps: string[];
+  weather?: DailyWeather;
+  manpowerCount?: number;      // e.g. 1 or 4 orang
+  manpowerRole?: string;       // e.g. "4 Tenaga Fabrikasi Workshop"
+  localPurchases?: string[];   // e.g. ["Pasir", "Semen", "Hebel", "Kayu Bowplank"]
+  logisticsNotes?: string;     // Info jadwal tiba Indralaya 12/13 Nov
+  approvalNotes?: string;      // Info working permit & drop material approval
 }
 
 export interface WorkPackageSubItem {

@@ -6,7 +6,12 @@ import {
   Maximize2, 
   X,
   Sparkles,
-  ChevronRight
+  ChevronRight,
+  Sun,
+  CloudRain,
+  Users,
+  Truck,
+  CheckCircle2
 } from 'lucide-react';
 import { BiDailyReport, ProgressPhoto } from '../types/project';
 
@@ -23,7 +28,8 @@ export const DateReportSelector: React.FC<DateReportSelectorProps> = ({
 }) => {
   const [activePhotoModal, setActivePhotoModal] = useState<ProgressPhoto | null>(null);
 
-  const selectedReport = reports.find((r) => r.id === selectedReportId) || reports[2]; // Default 05 Nov
+  const latestActiveReport = reports.find((r) => r.isLatestActive) || reports[reports.length - 1];
+  const selectedReport = reports.find((r) => r.id === selectedReportId) || latestActiveReport;
 
   return (
     <section id="laporan-harian" className="space-y-6">
@@ -35,15 +41,15 @@ export const DateReportSelector: React.FC<DateReportSelectorProps> = ({
           <div>
             <h2 className="text-base sm:text-lg font-extrabold text-slate-900 tracking-tight flex items-center gap-2">
               <Calendar className="w-5 h-5 text-pln-blue" />
-              <span>Pilih Siklus Laporan (Setiap 2 Hari)</span>
+              <span>Pilih Tanggal & Siklus Laporan Progres</span>
             </h2>
             <p className="text-xs text-slate-500 mt-0.5">
-              Geser horizontal untuk memilih tanggal laporan (01 Nov s.d. 28 Nov 2026)
+              Pilih tanggal laporan harian dan siklus pekerjaan (01 Nov s.d. 28 Nov 2026)
             </p>
           </div>
           <div className="text-xs text-slate-500 flex items-center gap-1.5 self-start sm:self-auto">
-            <span className="w-2 h-2 rounded-full bg-emerald-500" />
-            <span>Siklus Terkini: <strong>05 Nov 2026</strong></span>
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+            <span>Laporan Aktif Terbaru: <strong>{latestActiveReport?.displayDate}</strong></span>
           </div>
         </div>
 
@@ -111,18 +117,99 @@ export const DateReportSelector: React.FC<DateReportSelectorProps> = ({
               Periode {selectedReport.displayDate}
             </h3>
 
-            <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-500">
-              <div className="flex items-center gap-1.5">
+            <div className="mt-2.5 flex flex-wrap items-center gap-2 text-xs">
+              <div className="flex items-center gap-1.5 text-slate-500 mr-2">
                 <MapPin className="w-3.5 h-3.5 text-pln-blue" />
                 <span>Lokasi: <strong className="text-slate-700">{selectedReport.location}</strong></span>
               </div>
-              <div className="flex items-center gap-1.5">
+              <div className="flex items-center gap-1.5 text-slate-500 mr-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-slate-400" />
                 <span>Tahapan: <strong className="text-slate-700">{selectedReport.pipelineStageLabel}</strong></span>
               </div>
+
+              {/* Daily Weather Badge */}
+              {selectedReport.weather && (
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-amber-50 text-amber-900 border border-amber-200/80 font-bold text-[11px] shadow-2xs">
+                  {selectedReport.weather.afternoon.toLowerCase().includes('hujan') ? (
+                    <CloudRain className="w-3.5 h-3.5 text-blue-500" />
+                  ) : (
+                    <Sun className="w-3.5 h-3.5 text-amber-500" />
+                  )}
+                  <span>Cuaca: Pagi ({selectedReport.weather.morning}) • Siang/Sore ({selectedReport.weather.afternoon})</span>
+                </div>
+              )}
+
+              {/* Daily Manpower Badge */}
+              {selectedReport.manpowerCount !== undefined && (
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-sky-50 text-[#003366] border border-sky-200/80 font-bold text-[11px] shadow-2xs">
+                  <Users className="w-3.5 h-3.5 text-[#00A2E9]" />
+                  <span>Tenaga Kerja: {selectedReport.manpowerCount} Orang</span>
+                  {selectedReport.manpowerRole && (
+                    <span className="text-slate-500 font-normal hidden sm:inline">• {selectedReport.manpowerRole}</span>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         </div>
+
+        {/* Operational Logistics & Approval Notes Banner */}
+        {(selectedReport.logisticsNotes || selectedReport.localPurchases || selectedReport.approvalNotes) && (
+          <div className="bg-gradient-to-br from-amber-50/90 via-sky-50/60 to-emerald-50/80 rounded-2xl p-5 border border-amber-200/80 shadow-2xs space-y-3">
+            <div className="flex items-center justify-between flex-wrap gap-2 pb-2 border-b border-amber-200/60">
+              <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-amber-950">
+                <Truck className="w-4 h-4 text-amber-700" />
+                <span>Koordinasi Logistik, Kedatangan Indralaya & Material Approval</span>
+              </div>
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-200/60 text-amber-900">
+                Update Operasional
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+              {selectedReport.logisticsNotes && (
+                <div className="bg-white/90 p-3.5 rounded-xl border border-amber-200/70 shadow-2xs">
+                  <div className="text-[10px] font-bold text-slate-500 uppercase flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
+                    <span>Jadwal Armada & Tim BRAIN</span>
+                  </div>
+                  <p className="text-slate-800 font-medium mt-1.5 leading-snug">
+                    {selectedReport.logisticsNotes}
+                  </p>
+                </div>
+              )}
+
+              {selectedReport.approvalNotes && (
+                <div className="bg-white/90 p-3.5 rounded-xl border border-sky-200/70 shadow-2xs">
+                  <div className="text-[10px] font-bold text-slate-500 uppercase flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#00A2E9]" />
+                    <span>Perizinan & Working Permit</span>
+                  </div>
+                  <p className="text-slate-800 font-medium mt-1.5 leading-snug">
+                    {selectedReport.approvalNotes}
+                  </p>
+                </div>
+              )}
+
+              {selectedReport.localPurchases && selectedReport.localPurchases.length > 0 && (
+                <div className="bg-white/90 p-3.5 rounded-xl border border-emerald-200/70 shadow-2xs">
+                  <div className="text-[10px] font-bold text-slate-500 uppercase flex items-center gap-1">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                    <span>Material Approval Lokal Palembang</span>
+                  </div>
+                  <ul className="mt-1.5 space-y-1 text-slate-800 font-medium">
+                    {selectedReport.localPurchases.map((mat, i) => (
+                      <li key={i} className="flex items-center gap-1.5 text-xs">
+                        <span className="w-1 h-1 rounded-full bg-emerald-600" />
+                        <span>{mat}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
 
         {/* Executive Narrative */}
         <div className="bg-slate-50/80 rounded-2xl p-5 border border-slate-200/60">

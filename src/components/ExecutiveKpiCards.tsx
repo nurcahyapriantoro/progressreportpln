@@ -39,7 +39,7 @@ const PIPELINE_STAGES: {
   {
     id: 'ekspedisi',
     label: '3. Ekspedisi & Dropping',
-    sublabel: 'Tiba: 12–15 Nov (Indralaya)',
+    sublabel: 'Tiba: 12–13 Nov (Indralaya)',
     icon: Truck,
   },
   {
@@ -319,7 +319,7 @@ export const ExecutiveKpiCards: React.FC<ExecutiveKpiCardsProps> = ({
                   </span>
                 </div>
                 <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                  Pemuatan material modular di <strong>Workshop Depok: 10 November 2026</strong>. Estimasi armada ekspedisi tiba di site <strong>PLN UPDL Indralaya/Palembang: 12 – 15 November 2026</strong> untuk dropping material dan persiapan tapak konstruksi.
+                  Pemuatan material modular di <strong>Workshop Depok: 10 November 2026</strong>. Tim BRAIN & armada ekspedisi tiba di site <strong>PLN UPDL Indralaya/Palembang: 12 – 13 November 2026 (Kamis/Jumat)</strong> untuk dropping material, approval working permit, dan pengadaan material lokal (pasir, semen, hebel, bowplank).
                 </p>
               </div>
             </div>
@@ -329,7 +329,7 @@ export const ExecutiveKpiCards: React.FC<ExecutiveKpiCardsProps> = ({
                 Muat di Depok: <strong className="text-pln-blue">10 Nov 2026</strong>
               </div>
               <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-emerald-200 shadow-2xs whitespace-nowrap">
-                ETA Palembang: <strong className="text-emerald-700">12 – 15 Nov 2026</strong>
+                Tiba Indralaya: <strong className="text-emerald-700">12 – 13 Nov 2026</strong>
               </div>
             </div>
           </div>
