@@ -113,6 +113,14 @@ export const PdfOnePageTemplate: React.FC<PdfOnePageTemplateProps> = ({ report }
                       </span>
                     </>
                   )}
+                  {report.briefingSchedule && (
+                    <>
+                      <span className="text-slate-300">•</span>
+                      <span className="font-semibold text-slate-600">
+                        Briefing: <strong className="text-amber-800 font-bold">09.00 WIB (Mulai 13 Nov)</strong>
+                      </span>
+                    </>
+                  )}
                 </div>
               </div>
             </div>
@@ -315,7 +323,7 @@ export const PdfOnePageTemplate: React.FC<PdfOnePageTemplateProps> = ({ report }
 
           {/* Manpower & Operational Deployment Indicator */}
           <div className="mt-1.5 flex items-center justify-between text-[8px] text-slate-400">
-            <span>Tenaga Kerja: <strong className="text-slate-600">10 Personel Lapangan Terdaftar (Achmad Widodo, dkk.)</strong></span>
+            <span>Tenaga Kerja: <strong className="text-slate-600">10 Personel Lapangan (Briefing Pagi 09.00 WIB Mulai 13 Nov)</strong></span>
             <span>Kualifikasi K3: <strong className="text-emerald-700">Terverifikasi SMK3 • Siap Erection</strong></span>
           </div>
 

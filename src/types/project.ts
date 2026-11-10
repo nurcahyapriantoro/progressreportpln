@@ -42,6 +42,7 @@ export interface BiDailyReport {
   localPurchases?: string[];   // e.g. ["Pasir", "Semen", "Hebel", "Kayu Bowplank"]
   logisticsNotes?: string;     // Info jadwal tiba Indralaya 12/13 Nov
   approvalNotes?: string;      // Info working permit & drop material approval
+  briefingSchedule?: string;   // Info briefing pekerja jam 09.00 mulai 13 Nov
 }
 
 export interface WorkPackageSubItem {

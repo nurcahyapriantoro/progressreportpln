@@ -33,13 +33,13 @@ const PIPELINE_STAGES: {
   {
     id: 'qc_packing',
     label: '2. QC & Muat Depok',
-    sublabel: 'Muat: 10 Nov 2026',
+    sublabel: 'Selesai Muat: 10 Nov',
     icon: CheckCircle2,
   },
   {
     id: 'ekspedisi',
     label: '3. Ekspedisi & Dropping',
-    sublabel: 'Tiba: 12–13 Nov (Indralaya)',
+    sublabel: 'ETA: Kamis, 12 Nov',
     icon: Truck,
   },
   {
@@ -319,17 +319,20 @@ export const ExecutiveKpiCards: React.FC<ExecutiveKpiCardsProps> = ({
                   </span>
                 </div>
                 <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                  Pemuatan material modular di <strong>Workshop Depok: 10 November 2026</strong>. Tim BRAIN & armada ekspedisi tiba di site <strong>PLN UPDL Indralaya/Palembang: 12 – 13 November 2026 (Kamis/Jumat)</strong> untuk dropping material, approval working permit, dan pengadaan material lokal (pasir, semen, hebel, bowplank).
+                  Pemuatan material greenhouse di <strong>Workshop Depok telah selesai pada Selasa, 10 November 2026</strong>. Armada ekspedisi dalam perjalanan dengan <strong>estimasi sampai pada hari Kamis, 12 November 2026</strong> di site PLN ULP Indralaya / UPDL Palembang. <strong>Briefing pekerja dilaksanakan setiap pagi pukul 09.00 WIB mulai hari Jumat, 13 November 2026</strong> di lokasi pengerjaan.
                 </p>
               </div>
             </div>
 
             <div className="flex items-center sm:flex-col sm:items-end gap-2 shrink-0 border-t md:border-t-0 pt-2 md:pt-0 border-blue-200/60">
               <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-blue-100 shadow-2xs whitespace-nowrap">
-                Muat di Depok: <strong className="text-pln-blue">10 Nov 2026</strong>
+                Muat di Depok: <strong className="text-pln-blue">Selesai (10 Nov)</strong>
               </div>
               <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-emerald-200 shadow-2xs whitespace-nowrap">
-                Tiba Indralaya: <strong className="text-emerald-700">12 – 13 Nov 2026</strong>
+                Estimasi Tiba: <strong className="text-emerald-700">Kamis, 12 Nov</strong>
+              </div>
+              <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-amber-200 shadow-2xs whitespace-nowrap">
+                Briefing Pagi: <strong className="text-amber-800">09.00 WIB (Mulai 13 Nov)</strong>
               </div>
             </div>
           </div>

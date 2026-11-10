@@ -154,19 +154,19 @@ export const DateReportSelector: React.FC<DateReportSelectorProps> = ({
         </div>
 
         {/* Operational Logistics & Approval Notes Banner */}
-        {(selectedReport.logisticsNotes || selectedReport.localPurchases || selectedReport.approvalNotes) && (
+        {(selectedReport.logisticsNotes || selectedReport.localPurchases || selectedReport.approvalNotes || selectedReport.briefingSchedule) && (
           <div className="bg-gradient-to-br from-amber-50/90 via-sky-50/60 to-emerald-50/80 rounded-2xl p-5 border border-amber-200/80 shadow-2xs space-y-3">
             <div className="flex items-center justify-between flex-wrap gap-2 pb-2 border-b border-amber-200/60">
               <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-amber-950">
                 <Truck className="w-4 h-4 text-amber-700" />
-                <span>Koordinasi Logistik, Kedatangan Indralaya & Material Approval</span>
+                <span>Koordinasi Logistik, Kedatangan Indralaya, Briefing & Material Approval</span>
               </div>
               <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-200/60 text-amber-900">
                 Update Operasional
               </span>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
               {selectedReport.logisticsNotes && (
                 <div className="bg-white/90 p-3.5 rounded-xl border border-amber-200/70 shadow-2xs">
                   <div className="text-[10px] font-bold text-slate-500 uppercase flex items-center gap-1">
@@ -175,6 +175,18 @@ export const DateReportSelector: React.FC<DateReportSelectorProps> = ({
                   </div>
                   <p className="text-slate-800 font-medium mt-1.5 leading-snug">
                     {selectedReport.logisticsNotes}
+                  </p>
+                </div>
+              )}
+
+              {selectedReport.briefingSchedule && (
+                <div className="bg-white/90 p-3.5 rounded-xl border border-blue-200/80 shadow-2xs">
+                  <div className="text-[10px] font-bold text-slate-500 uppercase flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-pln-blue" />
+                    <span>Briefing Pekerja Pagi</span>
+                  </div>
+                  <p className="text-slate-800 font-medium mt-1.5 leading-snug">
+                    {selectedReport.briefingSchedule}
                   </p>
                 </div>
               )}

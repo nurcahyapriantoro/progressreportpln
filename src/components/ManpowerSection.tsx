@@ -24,7 +24,10 @@ export const ManpowerSection: React.FC = () => {
         </div>
 
         {/* Status Badge */}
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-blue-50 text-pln-blue text-xs font-bold border border-blue-200 shadow-2xs">
+            <span>Briefing Pagi: <strong>09.00 WIB (Mulai 13 Nov)</strong></span>
+          </span>
           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200 shadow-2xs">
             <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
             <span>10 Personel Terdaftar</span>
@@ -69,7 +72,7 @@ export const ManpowerSection: React.FC = () => {
           <Users className="w-4 h-4" />
         </div>
         <p className="text-[11.5px] leading-relaxed">
-          Seluruh <strong>10 tenaga kerja</strong> di atas merupakan personel resmi pelaksana pekerjaan fabrikasi workshop dan erection tapak di PLN UPDL Palembang / Indralaya.
+          Seluruh <strong>10 tenaga kerja</strong> di atas merupakan personel resmi pelaksana pekerjaan fabrikasi workshop dan erection tapak di PLN UPDL Palembang / Indralaya. <strong>Briefing pekerja rutin dilaksanakan setiap pagi pukul 09.00 WIB mulai hari Jumat, 13 November 2026</strong> sebelum memulai aktivitas lapangan.
         </p>
       </div>
     </section>

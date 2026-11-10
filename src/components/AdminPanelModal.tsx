@@ -436,6 +436,20 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               </div>
             </div>
 
+            {/* Briefing Schedule */}
+            <div>
+              <label className="block text-xs font-bold text-slate-700 mb-1">
+                Jadwal Briefing Pekerja Pagi
+              </label>
+              <input
+                type="text"
+                value={formData.briefingSchedule || ''}
+                onChange={(e) => handleFieldChange('briefingSchedule', e.target.value)}
+                placeholder="Contoh: Briefing pekerja rutin dilaksanakan setiap pagi pukul 09.00 WIB mulai hari Jumat, 13 November 2026."
+                className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-pln-blue"
+              />
+            </div>
+
             {/* Executive Summary */}
             <div>
               <label className="block text-xs font-bold text-slate-700 mb-1">

@@ -1,7 +1,7 @@
 import { BiDailyReport } from '../types/project';
 import { INITIAL_PROGRESS_REPORTS } from '../data/progressReports';
 
-const STORAGE_KEY = 'gh_pln_progress_reports_v5';
+const STORAGE_KEY = 'gh_pln_progress_reports_v6';
 
 export function loadReportsFromStorage(): BiDailyReport[] {
   try {
@@ -68,7 +68,7 @@ _Pemilik: PT PLN (Persero) UPDL Palembang_
 
 📝 *RINGKASAN TEKNIS:*
 ${report.executiveSummary}
-${report.logisticsNotes ? `\n🚚 *Koordinasi Kedatangan Site Indralaya:* ${report.logisticsNotes}\n` : ''}${report.approvalNotes ? `📑 *Izin & Approval Lapangan:* ${report.approvalNotes}\n` : ''}${report.localPurchases && report.localPurchases.length > 0 ? `🛒 *Material Approval (Beli Lokal Palembang):* ${report.localPurchases.join(', ')}\n` : ''}`;
+${report.logisticsNotes ? `\n🚚 *Koordinasi Kedatangan Site Indralaya:* ${report.logisticsNotes}\n` : ''}${report.briefingSchedule ? `\n⏰ *Jadwal Briefing Pagi:* ${report.briefingSchedule}\n` : ''}${report.approvalNotes ? `📑 *Izin & Approval Lapangan:* ${report.approvalNotes}\n` : ''}${report.localPurchases && report.localPurchases.length > 0 ? `🛒 *Material Approval (Beli Lokal Palembang):* ${report.localPurchases.join(', ')}\n` : ''}`;
 
   if (report.photos && report.photos.length > 0) {
     msg += `\n📸 *DOKUMENTASI PEKERJAAN (${report.photos.length} Foto Terlampir):*\n`;

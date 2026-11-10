@@ -17,64 +17,64 @@ const DESIGN_ITEMS: DesignItem[] = [
     id: 'd-01',
     pageNum: 1,
     category: 'render_3d',
-    title: 'Isometri Tertutup Greenhouse',
-    subtitle: 'Perspektif eksterior lengkap dengan penutup plastik UV 200 micron & insect net mesh 50',
+    title: 'Isometri Greenhouse',
+    subtitle: 'Perspektif eksterior lengkap dengan penutup plastik UV 200 micron, dinding insect net seri 50, talang air, dan pipa pembuangan 3 inch',
     imageSrc: '/3d-design/page-01.jpg',
-    specs: ['Ukuran 8x25 Meter', 'Plastik UV 200 Micron', 'Insect Net Mesh 50', 'Ruang Kontrol Sterilisasi']
+    specs: ['Ukuran 8x25 Meter', 'Plastik UV 200 Micron', 'Dinding Insectnet Seri 50', 'Pipa Pembuangan 3"']
   },
   {
     id: 'd-02',
     pageNum: 2,
     category: 'render_3d',
-    title: 'Isometri Bagian Belakang & Kolam Bulat D2',
-    subtitle: 'Tampak area kolam bundar penampungan dan kanopi pelindung UV bagian belakang',
+    title: 'Isometri Belakang Greenhouse & 3 Kolam D2',
+    subtitle: 'Tampak area 3 unit kolam bundar D2 penampungan dan kanopi pelindung UV bagian belakang',
     imageSrc: '/3d-design/page-02.jpg',
-    specs: ['Kolam Bulat Diameter 2m', 'Rangka Kanopi 32 m²', 'Akses Pintu Belakang']
+    specs: ['3 Unit Kolam D2', 'Rangka Kanopi 4.00x8.00m', 'Atap Kanopi UV']
   },
   {
     id: 'd-03',
     pageNum: 3,
     category: 'render_3d',
     title: 'Isometri Terbuka Struktur Rangka Galvanis',
-    subtitle: 'Konstruksi tiang hollow 40x60 tebal 2mm dan rangka lengkung 40x40 tebal 1.5mm',
+    subtitle: 'Konstruksi tiang hollow 40x60 1.8mm (±2mm), rangka hollow 40x40 1mm (±2mm), dan lantai rumput sintetis',
     imageSrc: '/3d-design/page-03.jpg',
-    specs: ['Tiang 40x60x2.0mm', 'Rangka 40x40x1.5mm', 'Lantai Rumput Sintetis 125 m²', 'Lantai Weedmat 125 m²']
+    specs: ['Tiang Hollow 40x60 1.8mm (±2mm)', 'Rangka Hollow 40x40 1mm (±2mm)', 'Lantai Rumput Sintetis']
   },
   {
     id: 'd-04',
     pageNum: 4,
     category: 'render_3d',
-    title: 'Ruang Kontrol Smart IoT BRAIN & Display 24"',
-    subtitle: 'Pusat kendali fertigasi cerdas, display touchscreen 24", panel manual-IoT, dan bak nutrisi A/B',
+    title: 'Ruang Kontrol Smart IoT & Fertigasi',
+    subtitle: 'Pusat kendali display monitor touchscreen, panel listrik dual-mode, toren air drip & NFT, pompa pendorong, filter air, dan bak nutrisi A & B 100L',
     imageSrc: '/3d-design/page-04.jpg',
-    specs: ['Display 24" Touchscreen', 'Prosesor Intel Core i3', 'Pompa Drip & NFT', 'Filter & Toren Air']
+    specs: ['Display Monitor Touchscreen', 'Panel Listrik', 'Toren & Pompa Drip/NFT', 'Bak Nutrisi A&B 100L', 'Filter Air']
   },
   {
     id: 'd-05',
     pageNum: 5,
     category: 'render_3d',
-    title: 'Zona Sistem Irigasi Drip (Tetes)',
-    subtitle: 'Jalur pipa 1" & 16mm, stick drip presisi, stopkran distribusi, dan tatakan hebel polybag',
+    title: 'Sistem Irigasi Drip (Tetes)',
+    subtitle: 'Jalur pipa 1" & 1/2", pipa 16mm, stopkran 16mm, stick drip presisi, polybag 40x40 cm, dan tatakan hebel',
     imageSrc: '/3d-design/page-05.jpg',
-    specs: ['Luas 100 m²', 'Stick Drip Terkalibrasi', 'Polybag 40x40 cm', 'Tatakan Hebel 15m']
+    specs: ['Pipa 1" & 1/2"', 'Pipa & Stopkran 16mm', 'Stick Drip Terkalibrasi', 'Polybag 40x40 cm', 'Tatakan Hebel']
   },
   {
     id: 'd-06',
     pageNum: 6,
     category: 'render_3d',
-    title: 'Zona Sistem Hidroponik NFT',
-    subtitle: 'Modul talang gully tanam, rangka baja ringan kokoh, dan stopkran sirkulasi nutrisi',
+    title: 'Sistem Hidroponik NFT',
+    subtitle: 'Modul talang gully tanam, rangka baja ringan kokoh, stopkran 1/2 inch sirkulasi nutrisi, dan rumput sintetis',
     imageSrc: '/3d-design/page-06.jpg',
-    specs: ['Luas 100 m²', 'Talang Gully Tanam', 'Rangka Baja Ringan', 'Sirkulasi Oksigen Terlarut']
+    specs: ['Talang Gully NFT', 'Rangka Baja Ringan', 'Stopkran 1/2 Inch', 'Alas Rumput Sintetis']
   },
   {
     id: 'd-07',
     pageNum: 7,
     category: 'render_3d',
-    title: 'Zona Vertical Farming Hidroponik',
-    subtitle: 'Tiga menara tower hidroponik vertikal untuk efisiensi ruang dan estetika showcase',
+    title: 'Sistem Vertikal Hidroponik & Kolam',
+    subtitle: 'Tiga menara vertikal farming 24 lubang, pemipaan sirkulasi nutrisi, dan integrasi kolam bioflok bulat',
     imageSrc: '/3d-design/page-07.jpg',
-    specs: ['3 Menara Tower', 'Pompa Vertikal Dedicated', 'Fitting & Nozzle Khusus']
+    specs: ['3 Menara Vertikal Farming 24 Lubang', 'Pemipaan Sirkulasi Nutrisi', 'Kolam Bulat D2']
   },
 
   // 5 Technical Architectural Drawings with Dimensions
@@ -83,45 +83,45 @@ const DESIGN_ITEMS: DesignItem[] = [
     pageNum: 8,
     category: 'technical_drawing',
     title: 'Gambar Kerja: Tampak Depan Dimensi',
-    subtitle: 'Bentang lebar 8.00m, tinggi dinding 4.00m, puncak atap 6.20m, dan pintu steril 1.00x2.00m',
+    subtitle: 'Bentang lebar 8.00m, tinggi dinding 4.00m, tinggi puncak 6.20m, dinding bata t:0.60m, dan pintu steril 1.00x2.00m',
     imageSrc: '/3d-design/page-08.jpg',
-    specs: ['Lebar 8.00 m', 'Tinggi Dinding 4.00 m', 'Tinggi Puncak 6.20 m', 'Dinding Bata t:0.60 m']
+    specs: ['Lebar 8.00 m', 'Tinggi Dinding 4.00 m', 'Tinggi Puncak 6.20 m', 'Dinding Bata 0.60 m', 'Pintu 1.00x2.00 m']
   },
   {
     id: 'd-09',
     pageNum: 9,
     category: 'technical_drawing',
     title: 'Gambar Kerja: Tampak Atas Dimensi',
-    subtitle: 'Panjang total 25.00m + kanopi kolam 4.00m, ruang kontrol 3.00m, dan pembagian zona tanam',
+    subtitle: 'Panjang total 25.00m + kanopi kolam 4.00m, lebar 8.00m, ruang kontrol 3.00m, dan pembagian zona tanam',
     imageSrc: '/3d-design/page-09.jpg',
-    specs: ['Panjang 25.00 m', 'Ruang Kontrol 3.00 m', 'Kanopi Kolam Belakang 4.00 m']
+    specs: ['Panjang 25.00 m', 'Kanopi Kolam Belakang 4.00 m', 'Lebar 8.00 m']
   },
   {
     id: 'd-10',
     pageNum: 10,
     category: 'technical_drawing',
     title: 'Gambar Kerja: Tampak Samping Dimensi',
-    subtitle: 'Jarak antar tiang utama 3.00m (8 modul bentang) serta elevasi talang dan kanopi kolam 3.77m',
+    subtitle: 'Jarak antar tiang utama 3.00m (8 modul bentang 25m) serta elevasi kanopi kolam 3.77m / 3.00m',
     imageSrc: '/3d-design/page-10.jpg',
-    specs: ['8 Modul Antar-Tiang @3.00m', 'Elevasi Kanopi Kolam 3.77 m', 'Jalur Pipa Talang Drainase']
+    specs: ['8 Modul Antar-Tiang @3.00m', 'Kanopi Kolam 4.00 m', 'Elevasi Kanopi 3.77 m / 3.00 m']
   },
   {
     id: 'd-11',
     pageNum: 11,
     category: 'technical_drawing',
     title: 'Gambar Kerja: Layout Denah Dalam (Jauh)',
-    subtitle: 'Jarak lorong sirkulasi 0.70m, meja NFT 1.40m & 4.00m, serta tata letak 3 kolam belakang',
+    subtitle: 'Jarak lorong sirkulasi 0.70m, meja NFT 1.40m & 4.00m, meja drip 1.20m, serta tata letak 3 kolam belakang',
     imageSrc: '/3d-design/page-11.jpg',
-    specs: ['Lebar Jalur Meja 1.20 - 1.40 m', 'Lorong Servis 0.70 m', 'Akses Kolam Belakang 2.00 m']
+    specs: ['Meja Drip 1.20 m', 'Meja NFT 1.40 m', 'Lorong Servis 0.70 m', '3 Kolam D2']
   },
   {
     id: 'd-12',
     pageNum: 12,
     category: 'technical_drawing',
     title: 'Gambar Kerja: Layout Denah Dalam (Dekat)',
-    subtitle: 'Detail posisi toren drip, toren NFT dalam galian rabat, pompa pendorong, dan perpipaan',
+    subtitle: 'Detail posisi toren drip & NFT, pompa pendorong, bak rabat tandon, jarak lubang drip 0.40m, dan jarak lubang NFT 0.20m',
     imageSrc: '/3d-design/page-12.jpg',
-    specs: ['Jarak Lubang Drip 0.40 m', 'Jarak Lubang NFT 0.20 m', 'Bak Rabat Tandon NFT']
+    specs: ['Jarak Titik Drip 0.40 m', 'Jarak Lubang NFT 0.20 m', 'Toren Drip & Toren NFT', 'Bak Rabat Tandon']
   }
 ];
 
@@ -141,16 +141,16 @@ export const Design3DShowcase: React.FC = () => {
         <div>
           <div className="flex items-center gap-2">
             <span className="px-2.5 py-0.5 rounded-full bg-blue-50 text-pln-blue text-[11px] font-extrabold uppercase">
-              Rancangan Desain Awal
+              Shop Drawing Resmi
             </span>
-            <span className="text-xs text-slate-400">• Shop Drawing Acuan</span>
+            <span className="text-xs text-slate-400">• PLN ULP Indralaya</span>
           </div>
           <h2 className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight mt-1 flex items-center gap-2">
             <Compass className="w-5 h-5 text-pln-blue" />
             <span>Gambar Kerja & Model 3D Greenhouse Galvanis 8x25m</span>
           </h2>
           <p className="text-xs text-slate-500 mt-0.5">
-            12 Halaman visualisasi arsitektur teknis, layout fertigasi, dan ruang kontrol IoT
+            12 Halaman visualisasi arsitektur teknis, layout fertigasi, dan ruang kontrol IoT (PLN ULP Indralaya)
           </p>
         </div>
 

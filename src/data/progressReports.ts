@@ -349,7 +349,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 8. LAPORAN HARIAN 08 NOVEMBER 2026 (TERBARU & AKTIF)
+  // 8. LAPORAN HARIAN 08 NOVEMBER 2026
   // =========================================================================
   {
     id: 'report-2026-11-08',
@@ -358,7 +358,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     displayDate: '08 November 2026',
     shortDate: '08 Nov',
     isCompleted: true,
-    isLatestActive: true,
+    isLatestActive: false,
     location: 'Workshop Fabrikasi Depok (Persiapan Loading Ekspedisi)',
     pipelineStage: 'workshop_depok',
     pipelineStageLabel: '1. Fabrikasi Modul Knock-Down (Depok)',
@@ -366,7 +366,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     progressDelta: 2.2,
     civilProgress: 16.0,
     iotProgress: 16.4,
-    status: 'ON-SCHEDULE',
+    status: 'COMPLETED',
     weather: {
       morning: 'Cerah',
       afternoon: 'Cerah'
@@ -384,7 +384,8 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     ],
     nextSteps: [
       'Jadwal muat (loading) material rangka & modul meja ke truk ekspedisi di Depok: 10 November 2026.',
-      'Tim BRAIN dan armada ekspedisi dijadwalkan tiba di site PLN UPDL Indralaya/Palembang pada Kamis atau Jumat (12 atau 13 November 2026).',
+      'Armada ekspedisi bergerak menuju lokasi PLN ULP Indralaya (estimasi sampai: Kamis, 12 November 2026).',
+      'Briefing pekerja tiap pagi jam 09.00 WIB dimulai hari Jumat, 13 November 2026.',
       'Pembelian material approval lokal di Palembang: 1. Pasir, 2. Semen, 3. Hebel, 4. Kayu bowplank.',
       'Menunggu persetujuan working permit (SMK3) dan persetujuan dropping material saat armada tiba di site Indralaya.'
     ],
@@ -394,12 +395,12 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
       'Bata Ringan (Hebel t:10cm)',
       'Kayu Bowplank & Kaso'
     ],
-    logisticsNotes: 'Tim BRAIN dan armada ekspedisi dropping material dijadwalkan tiba di lokasi PLN UPDL Indralaya Palembang pada hari Kamis atau Jumat (12 atau 13 November 2026).',
+    logisticsNotes: 'Material greenhouse dijadwalkan muat 10 Nov dan diperkirakan tiba di lokasi PLN ULP Indralaya Palembang pada hari Kamis, 12 November 2026.',
     approvalNotes: 'Menunggu approval working permit (Izin Kerja SMK3 PLN) dan approval dropping material saat armada tiba di tapak kerja Indralaya Palembang.'
   },
 
   // =========================================================================
-  // 9. FORWARD MILESTONE: 10 NOVEMBER 2026 (MUAT EKSPEDISI DEPOK)
+  // 9. LAPORAN HARIAN 10 NOVEMBER 2026 (TERBARU & AKTIF)
   // =========================================================================
   {
     id: 'report-2026-11-10',
@@ -407,9 +408,9 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     dateStr: '2026-11-10',
     displayDate: '10 November 2026',
     shortDate: '10 Nov',
-    isCompleted: false,
-    isLatestActive: false,
-    location: 'Workshop Depok (Muat Truk Ekspedisi)',
+    isCompleted: true,
+    isLatestActive: true,
+    location: 'Workshop Depok (Muat Ekspedisi) & On-Transit ke Palembang',
     pipelineStage: 'qc_packing',
     pipelineStageLabel: '2. QC, Packing & Muat Ekspedisi',
     cumulativeProgress: 32.0,
@@ -417,13 +418,37 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     civilProgress: 35.0,
     iotProgress: 29.0,
     status: 'ON-SCHEDULE',
-    executiveSummary: 'Pemuatan (loading) modul hollow galvanis struktur greenhouse, modul lengkungan atap arch roof, rangka meja NFT, tandon air, dan material utilitas ke armada truk ekspedisi di Depok untuk perjalanan menuju Palembang.',
-    photos: [],
+    weather: {
+      morning: 'Cerah Berawan',
+      afternoon: 'Cerah'
+    },
+    manpowerCount: 4,
+    manpowerRole: '4 Tenaga Kerja Loading & QC Ekspedisi',
+    executiveSummary: 'Alhamdulillah hari ini (Selasa, 10 November 2026) seluruh material greenhouse, modul lengkungan atap, rangka meja hidroponik, perpipaan, dan peralatan kerja telah selesai dimuat (loading) ke armada ekspedisi di Depok. Material dalam perjalanan menuju lokasi PLN ULP Indralaya / UPDL Palembang dengan estimasi sampai pada hari Kamis, 12 November 2026. Briefing pekerja tiap pagi jam 09.00 WIB akan dimulai pada hari Jumat, 13 November 2026.',
+    photos: [
+      {
+        id: 'photo-10-01',
+        url: '/progress/2026-11-10/1.jpeg',
+        caption: 'Pemuatan (Loading) Material Greenhouse ke Armada Truk Ekspedisi',
+        narrative: 'Material struktur modul hollow galvanis, rangka atap lengkung, rangka meja NFT, tandon air, serta perpipaan telah selesai dimuat dan ditata rapi ke dalam armada truk ekspedisi di Depok untuk perjalanan menuju Palembang/Indralaya.'
+      }
+    ],
     nextSteps: [
-      'Pemuatan armada truk ekspedisi dan pengikatan muatan dengan terpal pelindung.',
-      'Pemberangkatan armada rute Depok – Pelabuhan Merak – Bakauheni – Palembang.',
-      'Koordinasi penerimaan armada di PLN UPDL Indralaya (ETA 12–13 November 2026).'
-    ]
+      'Armada ekspedisi melakukan perjalanan rute Depok – Pelabuhan Merak – Bakauheni – Palembang/Indralaya (Estimasi tiba: Kamis, 12 November 2026).',
+      'Persiapan kedatangan tim dan pembongkaran (unloading) dropping material di site PLN ULP Indralaya.',
+      'Pelaksanaan briefing pekerja setiap pagi jam 09.00 WIB mulai hari Jumat, 13 November 2026.',
+      'Menunggu approval working permit (Izin Kerja SMK3 PLN) dan approval dropping material saat tiba di lokasi.',
+      'Pengadaan material lokal di Palembang: 1. Pasir, 2. Semen, 3. Hebel, 4. Kayu bowplank.'
+    ],
+    localPurchases: [
+      'Pasir Pasang & Cor',
+      'Semen PC Portland',
+      'Bata Ringan (Hebel t:10cm)',
+      'Kayu Bowplank & Kaso'
+    ],
+    logisticsNotes: 'Material greenhouse telah selesai dimuat hari ini di Depok dan sedang dalam perjalanan ekspedisi dengan estimasi sampai di lokasi PLN ULP Indralaya pada hari Kamis, 12 November 2026.',
+    approvalNotes: 'Menunggu approval working permit (Izin Kerja SMK3 PLN) dan persetujuan dropping material saat armada tiba di tapak kerja Indralaya.',
+    briefingSchedule: 'Briefing pekerja rutin dilaksanakan setiap pagi pukul 09.00 WIB mulai hari Jumat, 13 November 2026 di lokasi kerja.'
   },
 
   // =========================================================================
@@ -437,7 +462,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     shortDate: '12 Nov',
     isCompleted: false,
     isLatestActive: false,
-    location: 'Site PLN UPDL Indralaya Palembang',
+    location: 'Site PLN ULP Indralaya / UPDL Palembang',
     pipelineStage: 'ekspedisi',
     pipelineStageLabel: '3. Kedatangan & Dropping Material Indralaya',
     cumulativeProgress: 46.5,
@@ -445,10 +470,11 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     civilProgress: 47.0,
     iotProgress: 46.0,
     status: 'ON-SCHEDULE',
-    executiveSummary: 'Kedatangan Tim BRAIN dan armada ekspedisi di site PLN UPDL Indralaya Palembang (Kamis/Jumat 12–13 Nov). Pembongkaran (unloading) dropping material modular, pengurusan approval working permit SMK3 PLN, serta pembelian material lokal untuk persetujuan: pasir, semen, hebel, dan kayu bowplank.',
+    executiveSummary: 'Kedatangan armada ekspedisi dan Tim BRAIN di site PLN ULP Indralaya / UPDL Palembang (Estimasi tiba: Kamis, 12 Nov). Pembongkaran (unloading) dropping material modular, verifikasi bersama pengawas K3 PLN untuk approval working permit SMK3, pengadaan material lokal (pasir, semen, hebel, kayu bowplank), serta persiapan pelaksanaan briefing pekerja setiap pagi pukul 09.00 WIB mulai Jumat, 13 November 2026.',
     photos: [],
     nextSteps: [
-      'Penyambutan armada ekspedisi dan unloading material di area kerja PLN Indralaya.',
+      'Penyambutan armada ekspedisi dan unloading material di area kerja PLN Indralaya (Kamis, 12 Nov).',
+      'Briefing pekerja setiap pagi jam 09.00 WIB mulai hari Jumat, 13 November 2026.',
       'Approval working permit dan verifikasi bersama pengawas K3 PLN.',
       'Pengadaan material lokal di Palembang (Pasir, Semen, Hebel, Kayu Bowplank).',
       'Pekerjaan pengukuran, bowplank, dan galian tapak tiang.'
@@ -459,8 +485,9 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
       'Bata Ringan (Hebel)',
       'Kayu Bowplank & Kaso'
     ],
-    logisticsNotes: 'Tim BRAIN dan armada ekspedisi dropping material tiba di lokasi PLN UPDL Indralaya Palembang pada hari Kamis atau Jumat (12 atau 13 November 2026).',
-    approvalNotes: 'Menunggu approval working permit (Izin Kerja SMK3 PLN) dan approval dropping material saat armada tiba di tapak kerja Indralaya Palembang.'
+    logisticsNotes: 'Armada ekspedisi dropping material tiba di lokasi PLN ULP Indralaya Palembang dengan estimasi hari Kamis, 12 November 2026.',
+    approvalNotes: 'Menunggu approval working permit (Izin Kerja SMK3 PLN) dan approval dropping material saat armada tiba di tapak kerja Indralaya Palembang.',
+    briefingSchedule: 'Briefing pekerja rutin dilaksanakan setiap pagi pukul 09.00 WIB mulai hari Jumat, 13 November 2026 di lokasi kerja.'
   },
 
   // =========================================================================
