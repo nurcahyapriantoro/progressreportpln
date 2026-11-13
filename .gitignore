@@ -22,17 +22,13 @@ dist-ssr
 *.sln
 *.sw?
 
-# Raw reference files (kept safe locally, not needed in lightweight static Vercel build)
+# Heavy project reference files (kept safe locally, excluded from repository & Vercel builds)
 *.xlsx
-GH Galvanis 8x25 (Drip dan NFT).pdf
-SHOP DRAWING PLN ULP INDRALAYA-4.pdf
+docs/shop-drawings/
+docs/spreadsheets/
+docs/raw-archives/
 Dok03Nov/
 Dokumentasi05Nov/
 DokumentasiNovember2026/
-updatedata.md
-updatedata2.md
-logopln.png
-brain-ipb.webp
-spesifikasi_dan_master_prompt_*.md
 
 .vercel

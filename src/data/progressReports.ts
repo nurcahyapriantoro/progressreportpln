@@ -524,37 +524,37 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     photos: [
       {
         id: 'photo-13-01',
-        url: '/progress/2026-11-13/truk sampai di indralaya.jpeg',
+        url: '/progress/2026-11-13/1-truk-sampai-indralaya.jpeg',
         caption: 'Armada Truk Ekspedisi Tiba di Kompleks PLN Udiklat Indralaya',
         narrative: 'Armada truk boks biru MODENZ yang mengangkut seluruh modul pabrikasi knock-down rangka greenhouse dan perlengkapan hidroponik telah tiba dengan selamat dan terparkir di area PLN UPDL Palembang / Indralaya.'
       },
       {
         id: 'photo-13-02',
-        url: '/progress/2026-11-13/penempatan truk dilokasi.jpeg',
+        url: '/progress/2026-11-13/2-staging-material-dilokasi.jpeg',
         caption: 'Area Staging Material & Logistik Lapangan Pasca-Bongkar Muat',
         narrative: 'Penataan material di area terbuka tapak kerja: tumpukan semen zak terlindung terpal biru, modul rangka portal baja galvanis berdiri, tumpukan pipa hollow, talang gully NFT, palet, dan kayu kaso/bowplank dengan pengawasan personel ber-APD K3 lengkap.'
       },
       {
         id: 'photo-13-03',
-        url: '/progress/2026-11-13/discharge dari truk.jpeg',
+        url: '/progress/2026-11-13/3-barisan-modul-meja-nft.jpeg',
         caption: 'Barisan Modul Rangka Meja Tanam NFT Hasil Sub-Assembly di Site',
         narrative: 'Modul-modul rangka meja hidroponik NFT yang telah selesai dirakit awal ditata berjajar rapi di atas lahan tapak kerja berlatar gedung PLN, membuktikan akselerasi fabrikasi lapangan berjalan cepat.'
       },
       {
         id: 'photo-13-04',
-        url: '/progress/2026-11-13/perakitan ditempat loading dari truk.jpeg',
+        url: '/progress/2026-11-13/4-perakitan-meja-hidroponik.jpeg',
         caption: 'Perakitan & Fastening Modul Meja Hidroponik di Tapak Kerja',
         narrative: 'Dua orang personel teknis ber-APD lengkap (helm kuning, rompi reflektif, sarung tangan, safety boots) aktif melakukan perakitan, penyetelan, dan pengencangan baut rangka meja NFT di area staging Indralaya.'
       },
       {
         id: 'photo-13-05',
-        url: '/progress/2026-11-13/kontraktor bertemeu dengan manager pln bu sri dilokasi untuk menentukan titik pembangunan greenhouse yang fix dan pas.jpeg',
+        url: '/progress/2026-11-13/5-koordinasi-mup-pln-bu-sri.jpeg',
         caption: 'Penentuan Titik Koordinat Greenhouse Bersama MUP PLN (Ibu Sri Wigati)',
         narrative: 'Koordinasi langsung di lapangan antara Manager PLN UPDL Palembang (Ibu Sri Wigati) dengan perwakilan kontraktor dan 4 pekerja ber-APD lengkap untuk mengunci titik tapak fixed dan batas elevasi greenhouse 8x25m.'
       },
       {
         id: 'photo-13-06',
-        url: '/progress/2026-11-13/pengukuran greenhouse dilokasi sesuai rancangan awal.jpeg',
+        url: '/progress/2026-11-13/6-pengukuran-tapak-greenhouse.jpeg',
         caption: 'Pengukuran Tapak & Setting Out Bangunan Sesuai Desain Awal',
         narrative: 'Pekerja lapangan melakukan pengukuran presisi, penarikan garis benang ukur, dan setting out luasan tapak greenhouse 8x25m sesuai rancangan shop drawing awal di bawah kondisi cuaca sore yang sejuk berawan.'
       }
