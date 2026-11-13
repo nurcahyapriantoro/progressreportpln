@@ -400,7 +400,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 9. LAPORAN HARIAN 10 NOVEMBER 2026 (TERBARU & AKTIF)
+  // 9. LAPORAN HARIAN 10 NOVEMBER 2026
   // =========================================================================
   {
     id: 'report-2026-11-10',
@@ -409,7 +409,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     displayDate: '10 November 2026',
     shortDate: '10 Nov',
     isCompleted: true,
-    isLatestActive: true,
+    isLatestActive: false,
     location: 'Workshop Depok (Muat Ekspedisi) & On-Transit ke Palembang',
     pipelineStage: 'qc_packing',
     pipelineStageLabel: '2. QC, Packing & Muat Ekspedisi',
@@ -452,7 +452,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 10. FORWARD MILESTONE: 12-13 NOVEMBER 2026 (DROP INDRALAYA & LOCAL PURCHASES)
+  // 10. LAPORAN DUA HARIAN 12 NOVEMBER 2026 (WORKING PERMIT & ARMADA TIBA)
   // =========================================================================
   {
     id: 'report-2026-11-12',
@@ -460,24 +460,29 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     dateStr: '2026-11-12',
     displayDate: '12 November 2026',
     shortDate: '12 Nov',
-    isCompleted: false,
+    isCompleted: true,
     isLatestActive: false,
     location: 'Site PLN ULP Indralaya / UPDL Palembang',
     pipelineStage: 'ekspedisi',
     pipelineStageLabel: '3. Kedatangan & Dropping Material Indralaya',
-    cumulativeProgress: 46.5,
-    progressDelta: 14.5,
-    civilProgress: 47.0,
-    iotProgress: 46.0,
+    cumulativeProgress: 36.0,
+    progressDelta: 4.0,
+    civilProgress: 38.0,
+    iotProgress: 34.0,
     status: 'ON-SCHEDULE',
-    executiveSummary: 'Kedatangan armada ekspedisi dan Tim BRAIN di site PLN ULP Indralaya / UPDL Palembang (Estimasi tiba: Kamis, 12 Nov). Pembongkaran (unloading) dropping material modular, verifikasi bersama pengawas K3 PLN untuk approval working permit SMK3, pengadaan material lokal (pasir, semen, hebel, kayu bowplank), serta persiapan pelaksanaan briefing pekerja setiap pagi pukul 09.00 WIB mulai Jumat, 13 November 2026.',
+    weather: {
+      morning: 'Cerah Berawan',
+      afternoon: 'Cerah'
+    },
+    manpowerCount: 4,
+    manpowerRole: '4 Personel (Tim Mobilisasi & Pengurusan Administrasi K3)',
+    executiveSummary: 'Approval Working Permit SMK3 PLN No. 0018/70201000/XI/2026 resmi disetujui secara digital oleh MUP UPDL Palembang (Ibu Sri Wigati) pada pukul 09.03 WIB dengan izin operasional kerja lembur 08.00–22.00 WIB (12–25 Nov 2026) untuk mengejar target capaian pertama pada 20 November 2026. Armada truk ekspedisi MODENZ pembawa modul greenhouse dan hidroponik telah tiba di kompleks PLN UPDL Palembang / Udiklat Indralaya dengan aman dan siap untuk pembongkaran (unloading).',
     photos: [],
     nextSteps: [
-      'Penyambutan armada ekspedisi dan unloading material di area kerja PLN Indralaya (Kamis, 12 Nov).',
-      'Briefing pekerja setiap pagi jam 09.00 WIB mulai hari Jumat, 13 November 2026.',
-      'Approval working permit dan verifikasi bersama pengawas K3 PLN.',
-      'Pengadaan material lokal di Palembang (Pasir, Semen, Hebel, Kayu Bowplank).',
-      'Pekerjaan pengukuran, bowplank, dan galian tapak tiang.'
+      'Briefing K3 harian pukul 09.00 WIB mulai Jumat, 13 November 2026 di lokasi pengerjaan.',
+      'Pembongkaran (unloading/discharge) modul struktur dan instalasi hidroponik dari armada truk MODENZ.',
+      'Koordinasi penentuan titik tapak fixed bersama Manager UPDL Palembang (Ibu Sri Wigati).',
+      'Pengukuran tapak 8x25m dan perakitan awal modul meja NFT di area staging.'
     ],
     localPurchases: [
       'Pasir Pasang & Cor',
@@ -485,17 +490,98 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
       'Bata Ringan (Hebel)',
       'Kayu Bowplank & Kaso'
     ],
-    logisticsNotes: 'Armada ekspedisi dropping material tiba di lokasi PLN ULP Indralaya Palembang dengan estimasi hari Kamis, 12 November 2026.',
-    approvalNotes: 'Menunggu approval working permit (Izin Kerja SMK3 PLN) dan approval dropping material saat armada tiba di tapak kerja Indralaya Palembang.',
-    briefingSchedule: 'Briefing pekerja rutin dilaksanakan setiap pagi pukul 09.00 WIB mulai hari Jumat, 13 November 2026 di lokasi kerja.'
+    logisticsNotes: 'Armada ekspedisi boks MODENZ telah tiba dengan selamat di kompleks PLN UPDL Palembang / Indralaya. Seluruh material dalam kondisi aman dan siap unloading.',
+    approvalNotes: 'Working Permit No. 0018/70201000/XI/2026 SPK No. 0021.PJ/HKM.02.01/F29120000/2026 RESMI APPROVED (12 Nov 2026 09.03 WIB oleh MUP Ibu Sri Wigati). Disetujui jam kerja lembur 08.00–22.00 WIB menuju target 20 Nov 2026.',
+    briefingSchedule: 'Briefing pekerja rutin dilaksanakan setiap pagi pukul 09.00 WIB mulai hari Jumat, 13 November 2026 di lokasi kerja Indralaya.'
   },
 
   // =========================================================================
-  // 11. FORWARD MILESTONE: 15 NOVEMBER 2026 (ERECTION STRUKTUR PALEMBANG)
+  // 11. LAPORAN DUA HARIAN 13 NOVEMBER 2026 (TERBARU & AKTIF)
+  // =========================================================================
+  {
+    id: 'report-2026-11-13',
+    cycleNumber: 11,
+    dateStr: '2026-11-13',
+    displayDate: '13 November 2026',
+    shortDate: '13 Nov',
+    isCompleted: true,
+    isLatestActive: true,
+    location: 'Site PLN UPDL Palembang / Udiklat Indralaya',
+    pipelineStage: 'erection_palembang',
+    pipelineStageLabel: '4. Erection Struktur & Pekerjaan Lapangan',
+    cumulativeProgress: 44.0,
+    progressDelta: 8.0,
+    civilProgress: 45.0,
+    iotProgress: 43.0,
+    status: 'ON-SCHEDULE',
+    weather: {
+      morning: 'Cerah Berawan',
+      afternoon: 'Mendung'
+    },
+    manpowerCount: 6,
+    manpowerRole: '6 Personel Lapangan (Tim Erection, Pengukuran & Perakitan Hidroponik)',
+    executiveSummary: 'Pelaksanaan briefing K3 perdana pada pukul 09.00 WIB di lokasi PLN Udiklat Indralaya, dilanjutkan pembongkaran (discharge/unloading) material dari armada truk MODENZ ke area staging. Dilakukan koordinasi dan penentuan titik fixed pembangunan greenhouse bersama Manager UPDL Palembang (Ibu Sri Wigati), pengukuran tapak 8x25m sesuai gambar kerja awal, penataan material lokal (semen zak dan kayu bowplank berterpal), serta percepatan perakitan modul rangka meja tanam hidroponik NFT berjajar di tapak kerja memanfaatkan izin kerja lembur 08.00–22.00 WIB.',
+    photos: [
+      {
+        id: 'photo-13-01',
+        url: '/progress/2026-11-13/truk sampai di indralaya.jpeg',
+        caption: 'Armada Truk Ekspedisi Tiba di Kompleks PLN Udiklat Indralaya',
+        narrative: 'Armada truk boks biru MODENZ yang mengangkut seluruh modul pabrikasi knock-down rangka greenhouse dan perlengkapan hidroponik telah tiba dengan selamat dan terparkir di area PLN UPDL Palembang / Indralaya.'
+      },
+      {
+        id: 'photo-13-02',
+        url: '/progress/2026-11-13/penempatan truk dilokasi.jpeg',
+        caption: 'Area Staging Material & Logistik Lapangan Pasca-Bongkar Muat',
+        narrative: 'Penataan material di area terbuka tapak kerja: tumpukan semen zak terlindung terpal biru, modul rangka portal baja galvanis berdiri, tumpukan pipa hollow, talang gully NFT, palet, dan kayu kaso/bowplank dengan pengawasan personel ber-APD K3 lengkap.'
+      },
+      {
+        id: 'photo-13-03',
+        url: '/progress/2026-11-13/discharge dari truk.jpeg',
+        caption: 'Barisan Modul Rangka Meja Tanam NFT Hasil Sub-Assembly di Site',
+        narrative: 'Modul-modul rangka meja hidroponik NFT yang telah selesai dirakit awal ditata berjajar rapi di atas lahan tapak kerja berlatar gedung PLN, membuktikan akselerasi fabrikasi lapangan berjalan cepat.'
+      },
+      {
+        id: 'photo-13-04',
+        url: '/progress/2026-11-13/perakitan ditempat loading dari truk.jpeg',
+        caption: 'Perakitan & Fastening Modul Meja Hidroponik di Tapak Kerja',
+        narrative: 'Dua orang personel teknis ber-APD lengkap (helm kuning, rompi reflektif, sarung tangan, safety boots) aktif melakukan perakitan, penyetelan, dan pengencangan baut rangka meja NFT di area staging Indralaya.'
+      },
+      {
+        id: 'photo-13-05',
+        url: '/progress/2026-11-13/kontraktor bertemeu dengan manager pln bu sri dilokasi untuk menentukan titik pembangunan greenhouse yang fix dan pas.jpeg',
+        caption: 'Penentuan Titik Koordinat Greenhouse Bersama MUP PLN (Ibu Sri Wigati)',
+        narrative: 'Koordinasi langsung di lapangan antara Manager PLN UPDL Palembang (Ibu Sri Wigati) dengan perwakilan kontraktor dan 4 pekerja ber-APD lengkap untuk mengunci titik tapak fixed dan batas elevasi greenhouse 8x25m.'
+      },
+      {
+        id: 'photo-13-06',
+        url: '/progress/2026-11-13/pengukuran greenhouse dilokasi sesuai rancangan awal.jpeg',
+        caption: 'Pengukuran Tapak & Setting Out Bangunan Sesuai Desain Awal',
+        narrative: 'Pekerja lapangan melakukan pengukuran presisi, penarikan garis benang ukur, dan setting out luasan tapak greenhouse 8x25m sesuai rancangan shop drawing awal di bawah kondisi cuaca sore yang sejuk berawan.'
+      }
+    ],
+    nextSteps: [
+      'Pekerjaan galian tanah pondasi setempat dan pemasangan bowplank batas tapak tiang (Paket Sipil 1.2 & 1.3).',
+      'Perakitan lanjutan dan pengelasan modul rangka atap arch roof di tapak Palembang.',
+      'Pengecoran angkur kolom 18 titik tiang penyangga utama.',
+      'Pelaksanaan kerja lembur terarah pukul 17.00–22.00 WIB untuk akselerasi struktur target 20 Nov 2026.'
+    ],
+    localPurchases: [
+      'Pasir Pasang & Cor',
+      'Semen PC Portland (Tersedia di Site)',
+      'Bata Ringan Hebel',
+      'Kayu Bowplank & Kaso (Tersedia di Site)'
+    ],
+    logisticsNotes: 'Material telah seluruhnya diturunkan (unloaded) di site Indralaya. Material lokal semen dan kayu kaso bowplank telah siap di area staging.',
+    approvalNotes: 'Working Permit Inspekta No. 0018/70201000/XI/2026 AKTIF. Penentuan titik koordinat greenhouse telah disetujui bersama Ibu Sri Wigati (Manager UPDL Palembang). Jadwal lembur 08.00–22.00 WIB berjalan kondusif.',
+    briefingSchedule: 'Briefing K3 harian pukul 09.00 WIB berjalan rutin setiap pagi. Pelaksanaan jam kerja intensif hingga pukul 22.00 WIB dimonitor oleh pengawas lapangan.'
+  },
+
+  // =========================================================================
+  // 12. FORWARD MILESTONE: 15 NOVEMBER 2026 (ERECTION STRUKTUR PALEMBANG)
   // =========================================================================
   {
     id: 'report-2026-11-15',
-    cycleNumber: 11,
+    cycleNumber: 12,
     dateStr: '2026-11-15',
     displayDate: '15 November 2026',
     shortDate: '15 Nov',
@@ -505,7 +591,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     pipelineStage: 'erection_palembang',
     pipelineStageLabel: '4. Erection Struktur & Sipil Palembang',
     cumulativeProgress: 66.0,
-    progressDelta: 19.5,
+    progressDelta: 22.0,
     civilProgress: 63.8,
     iotProgress: 68.2,
     status: 'ON-SCHEDULE',
@@ -519,11 +605,11 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 12. FORWARD MILESTONE: 17 NOVEMBER 2026 (MEKANIKAL & ELEKTRIKAL)
+  // 13. FORWARD MILESTONE: 17 NOVEMBER 2026 (MEKANIKAL & ELEKTRIKAL)
   // =========================================================================
   {
     id: 'report-2026-11-17',
-    cycleNumber: 12,
+    cycleNumber: 13,
     dateStr: '2026-11-17',
     displayDate: '17 November 2026',
     shortDate: '17 Nov',
@@ -547,11 +633,11 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 13. FORWARD MILESTONE: 19 NOVEMBER 2026 (INTEGRASI PANEL IOT & SENSOR)
+  // 14. FORWARD MILESTONE: 19 NOVEMBER 2026 (INTEGRASI PANEL IOT & SENSOR)
   // =========================================================================
   {
     id: 'report-2026-11-19',
-    cycleNumber: 13,
+    cycleNumber: 14,
     dateStr: '2026-11-19',
     displayDate: '19 November 2026',
     shortDate: '19 Nov',
@@ -575,11 +661,11 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 14. FORWARD MILESTONE: 21 NOVEMBER 2026 (COMMISSIONING FERTIGASI)
+  // 15. FORWARD MILESTONE: 21 NOVEMBER 2026 (COMMISSIONING FERTIGASI)
   // =========================================================================
   {
     id: 'report-2026-11-21',
-    cycleNumber: 14,
+    cycleNumber: 15,
     dateStr: '2026-11-21',
     displayDate: '21 November 2026',
     shortDate: '21 Nov',
@@ -603,11 +689,11 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 15. FORWARD MILESTONE: 23 NOVEMBER 2026 (TESTING END-TO-END)
+  // 16. FORWARD MILESTONE: 23 NOVEMBER 2026 (TESTING END-TO-END)
   // =========================================================================
   {
     id: 'report-2026-11-23',
-    cycleNumber: 15,
+    cycleNumber: 16,
     dateStr: '2026-11-23',
     displayDate: '23 November 2026',
     shortDate: '23 Nov',
@@ -631,11 +717,11 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 16. FORWARD MILESTONE: 25 NOVEMBER 2026 (TRAINING OPERATOR & SOP)
+  // 17. FORWARD MILESTONE: 25 NOVEMBER 2026 (TRAINING OPERATOR & SOP)
   // =========================================================================
   {
     id: 'report-2026-11-25',
-    cycleNumber: 16,
+    cycleNumber: 17,
     dateStr: '2026-11-25',
     displayDate: '25 November 2026',
     shortDate: '25 Nov',
@@ -659,11 +745,11 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 17. FORWARD MILESTONE: 28 NOVEMBER 2026 (BAST 100% SELESAI)
+  // 18. FORWARD MILESTONE: 28 NOVEMBER 2026 (BAST 100% SELESAI)
   // =========================================================================
   {
     id: 'report-2026-11-28',
-    cycleNumber: 17,
+    cycleNumber: 18,
     dateStr: '2026-11-28',
     displayDate: '28 November 2026',
     shortDate: '28 Nov',

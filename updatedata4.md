@@ -1,0 +1,4 @@
+working permit sudah selesai E:\Projects\ProgressReportPLN\Working Permit Green House.pdf pada tanggal 12 November, working permit available untuk lembur dari jam 8 pagi hingga 10 malam untuk mengejar target pertama di 20 november
+analisis semua gambarnya dan masukkan keprogress data update, saya juga sudah emnambahkan beberapa informasi terkait  gambarnya di nama fotonya, tapi anda juga analisis fotonya E:\Projects\ProgressReportPLN\public\progress\2026-11-13 
+
+okeey analisis gambar-gambar tersebut dan masukkan ke dalam progress data update. Pastikan untuk mencatat setiap detail penting yang terlihat pada gambar, termasuk kondisi pekerjaan, alat yang digunakan, dan kemajuan yang telah dicapai. Setelah itu, buat ringkasan dari hasil analisis tersebut dan simpan dalam format yang sesuai untuk laporan progres.

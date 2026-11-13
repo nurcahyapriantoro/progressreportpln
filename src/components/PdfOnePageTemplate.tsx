@@ -170,10 +170,36 @@ export const PdfOnePageTemplate: React.FC<PdfOnePageTemplateProps> = ({ report }
               <span className="text-[8.5px] font-normal text-slate-400">Workshop Pra-Fabrikasi & Tapak Pengerjaan</span>
             </div>
 
-            {/* 4+ Photos: 2x2 Grid */}
-            {photoCount >= 4 && (
+            {/* 5+ Photos: 3x2 Grid */}
+            {photoCount >= 5 && (
+              <div className="grid grid-cols-3 gap-2">
+                {report.photos.slice(0, 6).map((p, idx) => (
+                  <div key={p.id} className="bg-slate-50 rounded-xl p-1.5 border border-slate-200 flex flex-col justify-between">
+                    <div className="h-[118px] w-full rounded-lg overflow-hidden bg-slate-100 border border-slate-200/60 shrink-0 flex items-center justify-center">
+                      <img
+                        src={p.url}
+                        alt={p.caption}
+                        className="w-full h-auto min-h-full object-cover object-center"
+                        style={{ width: '100%', height: 'auto', minHeight: '100%', display: 'block' }}
+                      />
+                    </div>
+                    <div className="mt-1 px-0.5">
+                      <div className="text-[9px] font-bold text-slate-900 leading-tight">
+                        {idx + 1}. {p.caption}
+                      </div>
+                      <div className="text-[7.5px] text-slate-600 leading-snug mt-0.5">
+                        {p.narrative}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Exactly 4 Photos: 2x2 Grid */}
+            {photoCount === 4 && (
               <div className="grid grid-cols-2 gap-2.5">
-                {report.photos.slice(0, 4).map((p, idx) => (
+                {report.photos.map((p, idx) => (
                   <div key={p.id} className="bg-slate-50 rounded-xl p-2 border border-slate-200 flex flex-col justify-between">
                     <div className="h-[180px] w-full rounded-lg overflow-hidden bg-slate-100 border border-slate-200/60 shrink-0 flex items-center justify-center">
                       <img
@@ -323,8 +349,8 @@ export const PdfOnePageTemplate: React.FC<PdfOnePageTemplateProps> = ({ report }
 
           {/* Manpower & Operational Deployment Indicator */}
           <div className="mt-1.5 flex items-center justify-between text-[8px] text-slate-400">
-            <span>Tenaga Kerja: <strong className="text-slate-600">10 Personel Lapangan (Briefing Pagi 09.00 WIB Mulai 13 Nov)</strong></span>
-            <span>Kualifikasi K3: <strong className="text-emerald-700">Terverifikasi SMK3 • Siap Erection</strong></span>
+            <span>Tenaga Kerja: <strong className="text-slate-600">{report.manpowerCount ? `${report.manpowerCount} Personel Aktif Lapangan` : '10 Personel Lapangan'} {report.briefingSchedule ? '(Briefing Pagi 09.00 WIB)' : ''}</strong></span>
+            <span>Kualifikasi K3: <strong className="text-emerald-700">Working Permit #0018 Approved • Lembur 08.00–22.00 WIB</strong></span>
           </div>
 
           {/* =====================================================================

@@ -23,7 +23,7 @@ export function App() {
   const [selectedReportId, setSelectedReportId] = useState<string>(() => {
     const loaded = loadReportsFromStorage();
     const latest = loaded.find((r) => r.isLatestActive);
-    return latest?.id || 'report-2026-11-10';
+    return latest?.id || 'report-2026-11-13';
   });
   const [isAdminOpen, setIsAdminOpen] = useState<boolean>(false);
   const [isDownloadingPdf, setIsDownloadingPdf] = useState<boolean>(false);
