@@ -496,7 +496,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 11. LAPORAN DUA HARIAN 13 NOVEMBER 2026 (TERBARU & AKTIF)
+  // 11. LAPORAN DUA HARIAN 13 NOVEMBER 2026
   // =========================================================================
   {
     id: 'report-2026-11-13',
@@ -505,7 +505,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     displayDate: '13 November 2026',
     shortDate: '13 Nov',
     isCompleted: true,
-    isLatestActive: true,
+    isLatestActive: false,
     location: 'Site PLN UPDL Palembang / Udiklat Indralaya',
     pipelineStage: 'erection_palembang',
     pipelineStageLabel: '4. Erection Struktur & Pekerjaan Lapangan',
@@ -577,39 +577,237 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 12. FORWARD MILESTONE: 15 NOVEMBER 2026 (ERECTION STRUKTUR PALEMBANG)
+  // 12. LAPORAN HARIAN 14 NOVEMBER 2026 (GALIAN PONDASI & PENGELASAN RANGKA)
   // =========================================================================
   {
-    id: 'report-2026-11-15',
+    id: 'report-2026-11-14',
     cycleNumber: 12,
-    dateStr: '2026-11-15',
-    displayDate: '15 November 2026',
-    shortDate: '15 Nov',
-    isCompleted: false,
+    dateStr: '2026-11-14',
+    displayDate: '14 November 2026',
+    shortDate: '14 Nov',
+    isCompleted: true,
     isLatestActive: false,
-    location: 'Site PLN UPDL Palembang',
+    location: 'Site PLN UPDL Palembang / Udiklat Indralaya',
     pipelineStage: 'erection_palembang',
     pipelineStageLabel: '4. Erection Struktur & Sipil Palembang',
-    cumulativeProgress: 66.0,
-    progressDelta: 22.0,
-    civilProgress: 63.8,
-    iotProgress: 68.2,
+    cumulativeProgress: 47.3,
+    progressDelta: 3.3,
+    civilProgress: 49.5,
+    iotProgress: 45.0,
     status: 'ON-SCHEDULE',
-    executiveSummary: 'Ereksi 18 tiang utama dan busur kubah atap bentang 8x25m di site Palembang, penutupan atap dengan plastik UV 200 micron dan dinding insect net mesh 50, serta pemasangan dinding bata hebel keliling setinggi 60cm.',
-    photos: [],
+    weather: {
+      morning: 'Hujan (08.00–12.00)',
+      afternoon: 'Cerah (13.30–17.00)'
+    },
+    manpowerCount: 4,
+    manpowerRole: '4 Pekerja Lapangan (Pengelasan Rangka & Penggalian Pondasi)',
+    executiveSummary: 'Kendati cuaca pagi (08.00–12.00 WIB) turun hujan, pekerjaan lapangan tetap dioptimalkan begitu cuaca cerah pada siang hingga sore hari (13.30–17.00 WIB). Tim melaksanakan dua pekerjaan utama secara paralel: penggalian lubang pondasi setempat tepat pada jalur benang ukur bouwplank (Paket Sipil 3.1) serta pengelasan modul rangka memanjang/kremona dan busur kuda-kuda atap arch roof bentang 8 meter (Paket Sipil 5.1 & 5.2).',
+    photos: [
+      {
+        id: 'photo-14-01',
+        url: '/progress/2026-11-14/1-galian-pondasi-jalur-bouwplank.jpeg',
+        caption: 'Penggalian Lubang Pondasi pada Jalur Benang Ukur Bouwplank',
+        narrative: 'Lubang galian pondasi titik kolom utama telah digali mengikuti tarikan benang ukur dan patok kayu kaso (Paket Sipil 3.1) di samping tenda kerja berterpal biru.'
+      },
+      {
+        id: 'photo-14-02',
+        url: '/progress/2026-11-14/2-detail-lubang-pondasi-sudut-tapak.jpeg',
+        caption: 'Detail Galian Titik Sudut Tapak & Penjajaran Rangka Meja NFT',
+        narrative: 'Titik galian pondasi berada presisi di persilangan siku benang ukur tapak 8x25m; tampak barisan modul rangka meja hidroponik NFT (Paket 15.1) di latar kanan.'
+      },
+      {
+        id: 'photo-14-03',
+        url: '/progress/2026-11-14/3-pengelasan-rangka-kremona-galvanis.jpeg',
+        caption: 'Hasil Pengelasan Modul Rangka Kremona Pipa Hollow Galvanis',
+        narrative: 'Perakitan dan pengelasan rangka pengaku memanjang/kremona (Paket Sipil 5.1 & 5.2) dari pipa hollow galvanis untuk menopang kekakuan bentang struktur greenhouse.'
+      },
+      {
+        id: 'photo-14-04',
+        url: '/progress/2026-11-14/4-pengelasan-busur-atap-arch-roof.jpeg',
+        caption: 'Pengelasan Kuda-Kuda Lengkung Atap (Arch Roof) di Atas Mal Kerja',
+        narrative: 'Pengelasan modul lengkungan atap arch roof bentang 8m menggunakan mesin las inverter portabel di atas mal tripleks guna menjamin keseragaman radius kubah.'
+      }
+    ],
     nextSteps: [
-      'Pemasangan talang gully NFT 100 m² dan tatakan drip hebel 100 m².',
-      'Instalasi kelistrikan penerangan dan kipas drum fan sirkulasi.',
-      'Pekerjaan pondasi dan kanopi kolam bulat D2.'
-    ]
+      'Lanjutan pengelasan modul kuda-kuda atap arch roof dan kremona (Paket Sipil 5.2).',
+      'Pemasangan angkur besi kolom dan pengecoran pondasi tiang utama (Paket Sipil 3.3–3.5).',
+      'Briefing rutin K3 pukul 09.00 WIB dan pemanfaatan waktu lembur sesuai Working Permit #0018.'
+    ],
+    approvalNotes: 'Working Permit No. 0018/70201000/XI/2026 AKTIF. Penyesuaian jadwal kerja akibat hujan pagi terkompensasi optimal pada sesi siang–sore hari.',
+    briefingSchedule: 'Briefing K3 dilaksanakan sebelum pekerjaan lapang dan monitoring kondisi hujan sebelum pengelasan.'
   },
 
   // =========================================================================
-  // 13. FORWARD MILESTONE: 17 NOVEMBER 2026 (MEKANIKAL & ELEKTRIKAL)
+  // 13. LAPORAN HARIAN 15 NOVEMBER 2026 (PENGECORAN PONDASI & PENGELASAN RANGKA)
+  // =========================================================================
+  {
+    id: 'report-2026-11-15',
+    cycleNumber: 13,
+    dateStr: '2026-11-15',
+    displayDate: '15 November 2026',
+    shortDate: '15 Nov',
+    isCompleted: true,
+    isLatestActive: false,
+    location: 'Site PLN UPDL Palembang / Udiklat Indralaya',
+    pipelineStage: 'erection_palembang',
+    pipelineStageLabel: '4. Erection Struktur & Sipil Palembang',
+    cumulativeProgress: 51.5,
+    progressDelta: 4.2,
+    civilProgress: 55.0,
+    iotProgress: 48.0,
+    status: 'ON-SCHEDULE',
+    weather: {
+      morning: 'Cerah (08.00–12.00)',
+      afternoon: 'Hujan (13.30–17.00)'
+    },
+    manpowerCount: 4,
+    manpowerRole: '4 Pekerja Lapangan (Pengelasan Rangka & Pengecoran Pondasi)',
+    executiveSummary: 'Memanfaatkan cuaca pagi yang cerah (08.00–12.00 WIB), 4 pekerja melakukan pengecoran pondasi sekaligus penanaman stek kolom hollow galvanis lurus benang ukur (Paket Sipil 3.3, 3.4, 3.5) serta memperbanyak stok las kuda-kuda atap arch roof hingga 8–10 unit siap pasang (Paket Sipil 5.2). Saat hujan turun pada sore hari (13.30–17.00 WIB), seluruh titik cor beton baru langsung diproteksi dengan terpal/karton agar mutu beton tetap terjaga.',
+    photos: [
+      {
+        id: 'photo-15-01',
+        url: '/progress/2026-11-15/1-pengecoran-pondasi-dan-stek-tiang.jpeg',
+        caption: 'Pengecoran Pondasi & Penanaman Stek Tiang Kolom Galvanis',
+        narrative: 'Titik pondasi kolom yang telah dicor beton dan ditanami stek hollow galvanis presisi di jalur benang ukur (Paket Sipil 3.4 & 3.5), ditutup lembaran pelindung dari rintik hujan sore.'
+      },
+      {
+        id: 'photo-15-02',
+        url: '/progress/2026-11-15/2-proteksi-cor-pondasi-saat-hujan.jpeg',
+        caption: 'Proteksi Titik Cor Pondasi Baru Terhadap Hujan Sore',
+        narrative: 'Deretan pondasi cor di depan gedung PLN UPDL Palembang dilindungi plastik/terpal hitam agar ikatan semen beton tetap kuat meskipun hujan turun pada pukul 13.30–17.00 WIB.'
+      },
+      {
+        id: 'photo-15-03',
+        url: '/progress/2026-11-15/3-kelurusan-jalur-angkur-pondasi.jpeg',
+        caption: 'Verifikasi Kelurusan Barisan Stek Tiang pada Benang As Bangunan',
+        narrative: 'Pemeriksaan kelurusan (alignment) deretan stek tiang yang sudah tertanam cor pada garis benang as bangunan untuk memastikan kesikuan struktur sebelum erection.'
+      },
+      {
+        id: 'photo-15-04',
+        url: '/progress/2026-11-15/4-tumpukan-kuda-kuda-atap-selesai-las.jpeg',
+        caption: 'Tumpukan Modul Kuda-Kuda Lengkung Atap Selesai Pengelasan',
+        narrative: 'Progress signifikan fabrikasi baja di site (Paket Sipil 5.2): tumpukan busur rangka atap arch roof terus bertambah dan tersusun rapi siap tahap pemasangan.'
+      }
+    ],
+    nextSteps: [
+      'Pengecoran pondasi lanjutan titik tiang tersisa lengkap dengan angkur silang (Paket Sipil 3.5).',
+      'Pengelasan rangka lanjutan hingga seluruh modul struktur atap siap dinaikkan.',
+      'Persiapan material talang gully NFT dan galian bak penampungan tandon nutrisi.'
+    ],
+    approvalNotes: 'Working Permit No. 0018/70201000/XI/2026 AKTIF. Proteksi mutu pengecoran selama hujan sore dilaksanakan sesuai standar pengawasan lapangan.',
+    briefingSchedule: 'Briefing K3 rutin setiap pagi pukul 09.00 WIB dilaksanakan di area kerja Indralaya.'
+  },
+
+  // =========================================================================
+  // 14. LAPORAN HARIAN 16 NOVEMBER 2026 (TERBARU & AKTIF)
+  // =========================================================================
+  {
+    id: 'report-2026-11-16',
+    cycleNumber: 14,
+    dateStr: '2026-11-16',
+    displayDate: '16 November 2026',
+    shortDate: '16 Nov',
+    isCompleted: true,
+    isLatestActive: true,
+    location: 'Site PLN UPDL Palembang / Udiklat Indralaya',
+    pipelineStage: 'erection_palembang',
+    pipelineStageLabel: '4. Erection Struktur & Sipil Palembang',
+    cumulativeProgress: 58.0,
+    progressDelta: 6.5,
+    civilProgress: 61.5,
+    iotProgress: 54.5,
+    status: 'ON-SCHEDULE',
+    weather: {
+      morning: 'Cerah (08.00–12.00)',
+      afternoon: 'Hujan (13.30–17.00)'
+    },
+    manpowerCount: 4,
+    manpowerRole: '4 Pekerja Lapangan (Pengelasan Rangka, Pengecoran Pondasi, Pabrikasi Talang & Galian NFT)',
+    executiveSummary: 'Hari ini (Senin, 16 November 2026) diawali apel & briefing K3 pagi pukul 08.18 WIB dengan APD lengkap. Selama cuaca pagi cerah, 4 pekerja mengeksekusi paralel pengelasan kuda-kuda atap arch roof hingga menumpuk siap erection (Paket Sipil 5.2) serta pemasangan angkur besi silang dan pengecoran pondasi kolom ber-waterpass presisi (Paket Sipil 3.4, 3.5 & 5.3). Menjelang sore, tim juga mengakselerasi Lingkup Hidroponik (Paket 15.1–15.3) melalui pabrikasi pelubangan talang gully NFT dengan hole-saw serta penggalian bak penampungan tandon NFT lengkap dengan susunan bata ringan Hebel.',
+    photos: [
+      {
+        id: 'photo-16-01',
+        url: '/progress/2026-11-16/1-briefing-pagi-k3-tim-lapangan.jpeg',
+        caption: 'Apel & Briefing K3 Pagi Tim Lapangan (08.18 WIB)',
+        narrative: 'Pengawas lapangan berhelm putih memimpin briefing keselamatan kerja (SMK3 - Paket 1.3) bersama pekerja lapangan ber-APD lengkap (helm kuning, rompi reflektif, sepatu boots) sebelum pekerjaan dimulai.'
+      },
+      {
+        id: 'photo-16-02',
+        url: '/progress/2026-11-16/2-detail-angkur-besi-silang-pondasi.jpeg',
+        caption: 'Detail Angkur Besi Silang Kolom di Dalam Lubang Pondasi',
+        narrative: 'Pemasangan tulangan angkur silang besi behel yang dilas pada pangkal kaki kolom hollow tepat di persilangan benang as bangunan (Paket Sipil 3.5 & 5.3) untuk daya cengkeram beton maksimal.'
+      },
+      {
+        id: 'photo-16-03',
+        url: '/progress/2026-11-16/3-leveling-waterpass-dan-cor-pondasi.jpeg',
+        caption: 'Leveling Waterpass & Pengecoran Pondasi Kolom Utama',
+        narrative: 'Dua pekerja menyetel ketegakan vertikal stek kolom menggunakan alat ukur waterpass sementara personel lain mengangkut adukan beton cor pada pagi hari yang cerah (Paket Sipil 3.4).'
+      },
+      {
+        id: 'photo-16-04',
+        url: '/progress/2026-11-16/4-pengelasan-rangka-dan-setting-kolom.jpeg',
+        caption: 'Kerja Paralel Pengelasan Kuda-Kuda Atap & Pengecoran Kolom',
+        narrative: 'Sinergi tim di tapak kerja: satu pekerja mengelas penyempurnaan tumpukan rangka kuda-kuda lengkung atap di kiri (Paket 5.2), sementara dua pekerja menuntaskan cor kolom di kanan.'
+      },
+      {
+        id: 'photo-16-05',
+        url: '/progress/2026-11-16/5-pabrikasi-pelubangan-talang-nft.jpeg',
+        caption: 'Pabrikasi Pelubangan Titik Tanam Talang Gully NFT (Hole-Saw)',
+        narrative: 'Pekerja melubangi penutup talang gully PVC putih hidroponik NFT satu per satu menggunakan bor hole-saw di atas rangka meja tanam di site (Paket IoT & Hidroponik 15.1).'
+      },
+      {
+        id: 'photo-16-06',
+        url: '/progress/2026-11-16/6-galian-bak-tandon-nft-dan-hebel.jpeg',
+        caption: 'Galian Bak Penampungan Tandon NFT & Penataan Bata Hebel',
+        narrative: 'Penggalian lubang bak tandon nutrisi hidroponik NFT disertai pemasangan awal bata ringan Hebel di tepian galian serta stok palet Hebel di lokasi (Paket IoT & Hidroponik 15.2 & 15.3).'
+      },
+      {
+        id: 'photo-16-07',
+        url: '/progress/2026-11-16/7-hasil-akhir-cor-pedestal-pondasi.jpeg',
+        caption: 'Hasil Akhir Cor Pedestal Pondasi Kolom yang Sudah Dirapikan',
+        narrative: 'Dua titik pondasi kolom utama telah selesai dicor dengan permukaan pedestal halus dan stek tiang berdiri tegak lurus mengikuti garis benang as bangunan (Paket Sipil 3.4 & 5.1).'
+      },
+      {
+        id: 'photo-16-08',
+        url: '/progress/2026-11-16/8-tumpukan-busur-atap-siap-erection.jpeg',
+        caption: 'Tumpukan Penuh Kuda-Kuda Lengkung Atap Siap Dinaikkan',
+        narrative: 'Tumpukan modul kuda-kuda atap arch roof telah terkumpul lengkap hasil pengelasan di lapangan dan siap memasuki tahap penaikan rangka (Paket Sipil 5.2).'
+      },
+      {
+        id: 'photo-16-09',
+        url: '/progress/2026-11-16/9-penataan-mal-rangka-dan-jalur-kolom.jpeg',
+        caption: 'Area Kerja Mal Perakitan Rangka & Barisan Pondasi Kolom',
+        narrative: 'Penataan papan mal kerja di samping deretan pondasi kolom yang sudah dicor rapi serta stok rangka atap yang telah selesai difabrikasi di sisi kiri.'
+      },
+      {
+        id: 'photo-16-10',
+        url: '/progress/2026-11-16/10-koordinasi-pagi-pengawas-dan-pekerja.jpeg',
+        caption: 'Koordinasi Target Harian Pengawas K3 & Tim Pelaksana',
+        narrative: 'Pengarahan target pengelasan rangka, pengecoran pondasi, dan langkah keselamatan kerja di depan tenda logistik sebelum aktivitas pagi dimulai.'
+      }
+    ],
+    nextSteps: [
+      'Pengelasan rangka lanjutan dan naikkan rangka (erection 18 tiang utama & kuda-kuda arch roof).',
+      'Pabrikasi talang lanjutan (pelubangan gully NFT & persiapan talang air drainase atap).',
+      'Penyelesaian galian NFT serta pemasangan dinding bata ringan dudukan bak tandon nutrisi.'
+    ],
+    localPurchases: [
+      'Pasir Pasang & Cor (Tersedia di Site)',
+      'Semen PC Portland (Tersedia di Site)',
+      'Bata Ringan Hebel (Tersedia di Site)',
+      'Kayu Bowplank & Kaso (Tersedia di Site)'
+    ],
+    logisticsNotes: 'Stok material lokal (semen, pasir, bata ringan Hebel, kayu bowplank) dan seluruh modul rangka kuda-kuda atap serta pipa gully telah berada lengkap di area staging site Indralaya.',
+    approvalNotes: 'Working Permit Inspekta No. 0018/70201000/XI/2026 AKTIF s/d 25 Nov 2026 dengan izin lembur 08.00–22.00 WIB menuju target capaian pertama 20 Nov 2026.',
+    briefingSchedule: 'Apel & Briefing K3 pagi hari rutin dilaksanakan pengawas dan seluruh pekerja ber-APD lengkap sebelum pekerjaan dimulai.'
+  },
+
+  // =========================================================================
+  // 15. FORWARD MILESTONE: 17 NOVEMBER 2026 (NAIK RANGKA & MEKANIKAL)
   // =========================================================================
   {
     id: 'report-2026-11-17',
-    cycleNumber: 13,
+    cycleNumber: 15,
     dateStr: '2026-11-17',
     displayDate: '17 November 2026',
     shortDate: '17 Nov',
@@ -619,25 +817,25 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     pipelineStage: 'iot_bast',
     pipelineStageLabel: '5. Integrasi Hidroponik & Smart IoT BRAIN',
     cumulativeProgress: 74.0,
-    progressDelta: 8.0,
+    progressDelta: 16.0,
     civilProgress: 72.0,
     iotProgress: 76.1,
     status: 'ON-SCHEDULE',
-    executiveSummary: 'Instalasi pemipaan manifold drip & NFT terpasang, instalasi 4 unit drum fan sirkulasi udara, serta penempatan menara vertical farming hidroponik.',
+    executiveSummary: 'Penaikan rangka struktur utama dan busur kubah atap 8x25m, lanjutan pabrikasi talang gully NFT & penyelesaian bak tandon, instalasi pemipaan manifold drip & NFT, serta pemasangan unit drum fan sirkulasi udara.',
     photos: [],
     nextSteps: [
-      'Pemasangan display touchscreen 24", prosesor Core i3, dan sensor suhu/RH/lux.',
-      'Pemasangan sensor EC/PPM nutrisi dan panel manual-IoT.',
+      'Pemasangan plastik UV atap 200 micron, dinding insect net, dan dinding bata hebel keliling.',
+      'Pemasangan display touchscreen 24", prosesor Core i3, sensor suhu/RH/lux & EC/PPM nutrisi.',
       'Penyelesaian kanopi kolam bulat pelindung UV.'
     ]
   },
 
   // =========================================================================
-  // 14. FORWARD MILESTONE: 19 NOVEMBER 2026 (INTEGRASI PANEL IOT & SENSOR)
+  // 16. FORWARD MILESTONE: 19 NOVEMBER 2026 (INTEGRASI PANEL IOT & SENSOR)
   // =========================================================================
   {
     id: 'report-2026-11-19',
-    cycleNumber: 14,
+    cycleNumber: 16,
     dateStr: '2026-11-19',
     displayDate: '19 November 2026',
     shortDate: '19 Nov',
@@ -661,11 +859,11 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 15. FORWARD MILESTONE: 21 NOVEMBER 2026 (COMMISSIONING FERTIGASI)
+  // 17. FORWARD MILESTONE: 21 NOVEMBER 2026 (COMMISSIONING FERTIGASI)
   // =========================================================================
   {
     id: 'report-2026-11-21',
-    cycleNumber: 15,
+    cycleNumber: 17,
     dateStr: '2026-11-21',
     displayDate: '21 November 2026',
     shortDate: '21 Nov',
@@ -689,11 +887,11 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 16. FORWARD MILESTONE: 23 NOVEMBER 2026 (TESTING END-TO-END)
+  // 18. FORWARD MILESTONE: 23 NOVEMBER 2026 (TESTING END-TO-END)
   // =========================================================================
   {
     id: 'report-2026-11-23',
-    cycleNumber: 16,
+    cycleNumber: 18,
     dateStr: '2026-11-23',
     displayDate: '23 November 2026',
     shortDate: '23 Nov',
@@ -717,11 +915,11 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 17. FORWARD MILESTONE: 25 NOVEMBER 2026 (TRAINING OPERATOR & SOP)
+  // 19. FORWARD MILESTONE: 25 NOVEMBER 2026 (TRAINING OPERATOR & SOP)
   // =========================================================================
   {
     id: 'report-2026-11-25',
-    cycleNumber: 17,
+    cycleNumber: 19,
     dateStr: '2026-11-25',
     displayDate: '25 November 2026',
     shortDate: '25 Nov',
@@ -745,11 +943,11 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 18. FORWARD MILESTONE: 28 NOVEMBER 2026 (BAST 100% SELESAI)
+  // 20. FORWARD MILESTONE: 28 NOVEMBER 2026 (BAST 100% SELESAI)
   // =========================================================================
   {
     id: 'report-2026-11-28',
-    cycleNumber: 18,
+    cycleNumber: 20,
     dateStr: '2026-11-28',
     displayDate: '28 November 2026',
     shortDate: '28 Nov',

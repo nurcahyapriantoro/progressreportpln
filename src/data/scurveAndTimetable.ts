@@ -332,11 +332,22 @@ export const SCURVE_DATA: SCurveDataPoint[] = [
     label: '15 Nov',
     dayIndex: 15,
     planCivilCumulative: 63.80,
-    actualCivilCumulative: null,
+    actualCivilCumulative: 55.00,
     planIotCumulative: 68.20,
-    actualIotCumulative: null,
+    actualIotCumulative: 48.00,
     planCombinedCumulative: 65.99,
-    actualCombinedCumulative: null
+    actualCombinedCumulative: 51.50
+  },
+  {
+    date: '2026-11-16',
+    label: '16 Nov',
+    dayIndex: 16,
+    planCivilCumulative: 67.90,
+    actualCivilCumulative: 61.50,
+    planIotCumulative: 72.15,
+    actualIotCumulative: 54.50,
+    planCombinedCumulative: 70.02,
+    actualCombinedCumulative: 58.00
   },
   {
     date: '2026-11-17',

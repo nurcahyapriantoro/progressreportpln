@@ -166,7 +166,7 @@ export const PdfOnePageTemplate: React.FC<PdfOnePageTemplateProps> = ({ report }
           ===================================================================== */}
           <div className="mt-2.5">
             <div className="text-[9.5px] font-extrabold uppercase tracking-wider text-slate-900 mb-1.5 flex items-center justify-between">
-              <span>Dokumentasi Visual Pekerjaan Lapangan ({photoCount} Foto)</span>
+              <span>Dokumentasi Visual Pekerjaan Lapangan ({photoCount > 6 ? `6 Foto Pilihan dari ${photoCount} Foto` : `${photoCount} Foto`})</span>
               <span className="text-[8.5px] font-normal text-slate-400">Workshop Pra-Fabrikasi & Tapak Pengerjaan</span>
             </div>
 

@@ -212,10 +212,21 @@ export const SCurveAndTimetable: React.FC = () => {
 
         {/* Legend / Status Note */}
         <div className="flex flex-wrap items-center justify-between gap-3 p-3.5 bg-slate-50 rounded-xl text-xs text-slate-600">
-          <div className="flex items-center gap-2">
-            <span className="w-3 h-1 bg-[#00A2E9] rounded-full" />
-            <span>Realisasi Aktual Siklus 05 Nov: <strong className="text-slate-900 font-bold">10.00%</strong> (On Schedule)</span>
-          </div>
+          {(() => {
+            const latestActual = [...chartData].reverse().find((d) => d.actual !== null);
+            return (
+              <div className="flex items-center gap-2">
+                <span className="w-3 h-1 bg-[#00A2E9] rounded-full" />
+                <span>
+                  Realisasi Aktual Terkini ({latestActual?.label ?? '16 Nov'}):{' '}
+                  <strong className="text-slate-900 font-bold">
+                    {(latestActual?.actual ?? 58.0).toFixed(2)}%
+                  </strong>{' '}
+                  (Target Rencana: {(latestActual?.plan ?? 70.02).toFixed(2)}%)
+                </span>
+              </div>
+            );
+          })()}
           <div className="flex items-center gap-2">
             <span className="w-3 h-1 bg-slate-400 border-dashed rounded-full" />
             <span>Target Akhir: <strong className="text-slate-900 font-bold">100.00% pada 28 Nov 2026</strong></span>
