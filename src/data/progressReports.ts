@@ -699,7 +699,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 14. LAPORAN HARIAN 16 NOVEMBER 2026 (TERBARU & AKTIF)
+  // 14. LAPORAN HARIAN 16 NOVEMBER 2026
   // =========================================================================
   {
     id: 'report-2026-11-16',
@@ -708,7 +708,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     displayDate: '16 November 2026',
     shortDate: '16 Nov',
     isCompleted: true,
-    isLatestActive: true,
+    isLatestActive: false,
     location: 'Site PLN UPDL Palembang / Udiklat Indralaya',
     pipelineStage: 'erection_palembang',
     pipelineStageLabel: '4. Erection Struktur & Sipil Palembang',
@@ -803,7 +803,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 15. FORWARD MILESTONE: 17 NOVEMBER 2026 (NAIK RANGKA & MEKANIKAL)
+  // 15. LAPORAN HARIAN 17 NOVEMBER 2026 (TERBARU & AKTIF)
   // =========================================================================
   {
     id: 'report-2026-11-17',
@@ -811,23 +811,129 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     dateStr: '2026-11-17',
     displayDate: '17 November 2026',
     shortDate: '17 Nov',
-    isCompleted: false,
-    isLatestActive: false,
-    location: 'Site PLN UPDL Palembang',
-    pipelineStage: 'iot_bast',
-    pipelineStageLabel: '5. Integrasi Hidroponik & Smart IoT BRAIN',
-    cumulativeProgress: 74.0,
-    progressDelta: 16.0,
+    isCompleted: true,
+    isLatestActive: true,
+    location: 'Site PLN UPDL Palembang / Udiklat Indralaya',
+    pipelineStage: 'erection_palembang',
+    pipelineStageLabel: '4. Erection Struktur & Sipil Palembang',
+    cumulativeProgress: 68.0,
+    progressDelta: 10.0,
     civilProgress: 72.0,
-    iotProgress: 76.1,
+    iotProgress: 64.0,
     status: 'ON-SCHEDULE',
-    executiveSummary: 'Penaikan rangka struktur utama dan busur kubah atap 8x25m, lanjutan pabrikasi talang gully NFT & penyelesaian bak tandon, instalasi pemipaan manifold drip & NFT, serta pemasangan unit drum fan sirkulasi udara.',
-    photos: [],
+    weather: {
+      morning: 'Cerah (08.00–12.00)',
+      afternoon: 'Cerah (13.30–17.00)'
+    },
+    manpowerCount: 4,
+    manpowerRole: '4 Pekerja Lapangan (Pengelasan Rangka & Menaikkan Rangka Utama 8x25m)',
+    executiveSummary: 'Hari ini (Selasa, 17 November 2026) dalam kondisi cuaca cerah sepanjang hari (pagi hingga sore), 4 pekerja lapangan mengeksekusi milestone struktural utama: pengelasan penguatan sambungan rangka (Paket Sipil 5.2 & 5.3) dilanjutkan penaikan penuh (erection) seluruh 9 portal—terdiri atas 18 tiang utama dan busur kuda-kuda lengkung atap arch roof bentang 8×25m—di atas pondasi angkur hingga berdiri utuh pada pukul 17.43 WIB (Lingkup Sipil mencapai target Kurva-S 72,0%). Bersamaan dengan itu, dikerjakan pula pemotongan plat/talang galvanis, penyelesaian pelubangan stok talang gully NFT (Paket 15.1), serta pendalaman galian dan dinding bata ringan bak tandon NFT (Paket 15.2 & 15.3).',
+    photos: [
+      {
+        id: 'photo-17-01',
+        url: '/progress/2026-11-17/1-apel-pagi-k3-persiapan-naik-rangka.jpeg',
+        caption: 'Apel Pagi K3 & Persiapan Penaikan Rangka Utama (09.15 WIB)',
+        narrative: 'Pengawas lapangan berhelm putih memimpin briefing K3 pagi (Paket Sipil 1.3) bersama 4 pekerja ber-APD lengkap di samping barisan stek pondasi kolom sebelum pengelasan dan pengangkatan portal.'
+      },
+      {
+        id: 'photo-17-02',
+        url: '/progress/2026-11-17/2-pengelasan-sambungan-kuda-kuda-atap.jpeg',
+        caption: 'Pengelasan Penguatan Sambungan Modul Kuda-Kuda Atap',
+        narrative: 'Pekerja ber-APD lengkap (helm, rompi reflektif, sarung tangan las, sepatu safety boot) melakukan pengelasan penguatan titik sambung sudut modul kuda-kuda lengkung sebelum diangkat.'
+      },
+      {
+        id: 'photo-17-03',
+        url: '/progress/2026-11-17/3-pemotongan-plat-dan-talang-galvanis.jpeg',
+        caption: 'Pemotongan Lembaran Plat & Talang Seng Galvanis',
+        narrative: 'Pemotongan lembaran plat/talang galvanis menggunakan gerinda tangan di tapak kerja sebagai persiapan sambungan dan kelengkapan komponen talang struktur atap (Paket Sipil 5.3 & 5.4).'
+      },
+      {
+        id: 'photo-17-04',
+        url: '/progress/2026-11-17/4-fabrikasi-plat-dan-kesiapan-stek-kolom.jpeg',
+        caption: 'Fabrikasi Plat Galvanis & Kesiapan Barisan Stek Pondasi Kolom',
+        narrative: 'Aktivitas kerja paralel di tapak Indralaya: pemotongan plat galvanis di area depan, barisan stek kolom pondasi yang telah mengeras di tengah, dan modul meja tanam NFT di latar belakang.'
+      },
+      {
+        id: 'photo-17-05',
+        url: '/progress/2026-11-17/5-pendalaman-galian-bak-tandon-nft.jpeg',
+        caption: 'Pendalaman Galian Lubang Bak Penampungan Tandon NFT',
+        narrative: 'Pekerja berada di dalam lubang galian untuk memperdalam ruang bak penampungan nutrisi sirkulasi hidroponik NFT sesuai elevasi kedalaman desain (Paket IoT & Hidroponik 15.2).'
+      },
+      {
+        id: 'photo-17-06',
+        url: '/progress/2026-11-17/6-perapihan-dinding-galian-tandon-dan-hebel.jpeg',
+        caption: 'Perapihan Dinding Galian Tandon & Pasangan Bata Hebel',
+        narrative: 'Perapihan kesikuan dinding galian bak tandon NFT mengikuti garis benang ukur dan pembatas pasangan bata ringan Hebel pada sisi luar galian (Paket 15.2 & 15.3).'
+      },
+      {
+        id: 'photo-17-07',
+        url: '/progress/2026-11-17/7-penataan-gully-nft-dan-pipa-distribusi.jpeg',
+        caption: 'Penataan Talang Gully NFT & Pipa Distribusi Nutrisi di Atas Meja',
+        narrative: 'Tumpukan talang gully NFT dan pipa PVC jalur distribusi nutrisi (Paket 12.4 & 15.1) ditata di atas rangka meja tanam galvanis siap tahap perakitan hidroponik.'
+      },
+      {
+        id: 'photo-17-08',
+        url: '/progress/2026-11-17/8-persiapan-penaikan-portal-kuda-kuda-pertama.jpeg',
+        caption: 'Persiapan Pengangkatan Portal Kuda-Kuda Pertama (10.37 WIB)',
+        narrative: 'Keempat pekerja memposisikan modul portal tiang utama dan lengkungan atap pertama sejajar dengan titik stek pondasi kolom sebelum didirikan bersama-sama.'
+      },
+      {
+        id: 'photo-17-09',
+        url: '/progress/2026-11-17/9-berdirinya-portal-kuda-kuda-pertama.jpeg',
+        caption: 'Portal Pertama Tiang Utama & Kuda-Kuda Arch Roof Berdiri Tegak',
+        narrative: 'Portal pertama struktur tiang dan kuda-kuda atap lengkung berventilasi atas (Paket Sipil 5.1 & 5.2) berhasil berdiri kokoh di atas pondasi pada pukul 10.40 WIB.'
+      },
+      {
+        id: 'photo-17-10',
+        url: '/progress/2026-11-17/10-pengangkatan-portal-kuda-kuda-kedua.jpeg',
+        caption: 'Penaikan Portal Kuda-Kuda Kedua Secara Terkoordinasi (10.54 WIB)',
+        narrative: 'Tim lapangan beranggotakan 4 pekerja mengangkat dan menyetel portal kedua di belakang portal pertama di tengah kondisi cuaca siang hari yang cerah terik.'
+      },
+      {
+        id: 'photo-17-11',
+        url: '/progress/2026-11-17/11-dua-portal-kuda-kuda-berdiri-terhubung.jpeg',
+        caption: 'Dua Portal Pertama Terpasang & Terkunci Balok Penghubung (11.02 WIB)',
+        narrative: 'Portal kuda-kuda ke-1 dan ke-2 telah berdiri tegak dan mulai diikat dengan batang penghubung memanjang (gording/kremona atas) agar kaku sebelum melanjutkan portal berikutnya.'
+      },
+      {
+        id: 'photo-17-12',
+        url: '/progress/2026-11-17/12-seluruh-portal-rangka-greenhouse-berdiri-penuh.jpeg',
+        caption: 'Seluruh 9 Portal Rangka Greenhouse 8x25m Berdiri Penuh (17.43 WIB)',
+        narrative: 'Pencapaian utama hari ini: seluruh 9 bentang portal (18 tiang utama & kuda-kuda atap arch roof bentang 8×25m) telah selesai dinaikkan dan berdiri utuh membentuk siluet penuh bangunan greenhouse.'
+      },
+      {
+        id: 'photo-17-13',
+        url: '/progress/2026-11-17/13-struktur-kolom-kremona-dan-ikatan-angin.jpeg',
+        caption: 'Detail Barisan Kolom, Balok Kremona Atas & Ikatan Angin',
+        narrative: 'Tampak memanjang struktur kolom hollow galvanis 40×60 beserta rangka pengaku kremona atas dan ikatan angin diagonal yang mengunci stabilitas kerangka bangunan (Paket Sipil 5.1 & 5.2).'
+      },
+      {
+        id: 'photo-17-14',
+        url: '/progress/2026-11-17/14-stok-talang-gully-nft-selesai-dilubangi.jpeg',
+        caption: 'Stok Talang Gully NFT Selesai Dilubangi Presisi Siap Pasang',
+        narrative: 'Jajaran talang gully NFT PVC putih telah selesai dilubangi secara seragam menggunakan hole-saw dan tersusun rapi di atas meja tanam menanti pemasangan jalur irigasi nutrisi (Paket 15.1).'
+      },
+      {
+        id: 'photo-17-15',
+        url: '/progress/2026-11-17/15-progres-akhir-galian-bak-tandon-nft-sore.jpeg',
+        caption: 'Progres Akhir Galian Bak Tandon NFT & Dinding Hebel Sore Hari',
+        narrative: 'Pekerja merampungkan penggalian dan perapihan dasar bak tandon nutrisi NFT yang telah dibatasi keliling bata ringan Hebel di bawah tenda kerja (Paket 15.2 & 15.3).'
+      }
+    ],
     nextSteps: [
-      'Pemasangan plastik UV atap 200 micron, dinding insect net, dan dinding bata hebel keliling.',
-      'Pemasangan display touchscreen 24", prosesor Core i3, sensor suhu/RH/lux & EC/PPM nutrisi.',
-      'Penyelesaian kanopi kolam bulat pelindung UV.'
-    ]
+      'Pengelasan sambungan atas rangka atap arch roof, gording memanjang, dan penguatan titik kuda-kuda (Paket Sipil 5.1 & 5.2).',
+      'Instalasi sistem hidroponik meja NFT, penataan talang gully & pemipaan manifold distribusi nutrisi (Paket 12.4 & 15.1).',
+      'Penyelesaian galian NFT serta pemasangan dinding bata ringan dan rabatan dasar bak penampungan tandon nutrisi (Paket 15.2–15.4).'
+    ],
+    localPurchases: [
+      'Pasir Pasang & Cor (Tersedia di Site)',
+      'Semen PC Portland (Tersedia di Site)',
+      'Bata Ringan Hebel (Tersedia di Site)',
+      'Kayu Bowplank & Kaso (Tersedia di Site)'
+    ],
+    logisticsNotes: 'Seluruh 9 portal rangka utama sudah berdiri di tapak kerja; stok talang gully NFT, pipa PVC, dan bata ringan Hebel siap untuk tahap instalasi lanjutan besok.',
+    approvalNotes: 'Working Permit Inspekta No. 0018/70201000/XI/2026 AKTIF. Erection kerangka bangunan 8×25m terlaksana aman (zero accident) sesuai rencana target Kurva-S Sipil 72,0%.',
+    briefingSchedule: 'Apel & Briefing K3 pagi hari rutin dilaksanakan dengan APD lengkap sebelum pekerjaan penaikan rangka dan pengelasan dimulai.'
   },
 
   // =========================================================================
@@ -845,7 +951,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     pipelineStage: 'iot_bast',
     pipelineStageLabel: '5. Integrasi Hidroponik & Smart IoT BRAIN',
     cumulativeProgress: 82.4,
-    progressDelta: 8.4,
+    progressDelta: 14.4,
     civilProgress: 80.5,
     iotProgress: 84.3,
     status: 'ON-SCHEDULE',

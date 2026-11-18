@@ -23,7 +23,7 @@ export function App() {
   const [selectedReportId, setSelectedReportId] = useState<string>(() => {
     const loaded = loadReportsFromStorage();
     const latest = loaded.find((r) => r.isLatestActive);
-    return latest?.id || 'report-2026-11-16';
+    return latest?.id || 'report-2026-11-17';
   });
   const [isAdminOpen, setIsAdminOpen] = useState<boolean>(false);
   const [isDownloadingPdf, setIsDownloadingPdf] = useState<boolean>(false);
@@ -89,7 +89,12 @@ export function App() {
   const handleDownloadPdf = async () => {
     if (isDownloadingPdf) return;
     setIsDownloadingPdf(true);
-    addToast('info', 'Menyiapkan layout PDF eksekutif 1 lembar A4...');
+    addToast(
+      'info',
+      selectedReport.photos.length > 6
+        ? 'Menyiapkan layout PDF eksekutif multi-halaman A4 (seluruh foto lengkap)...'
+        : 'Menyiapkan layout PDF eksekutif 1 lembar A4...'
+    );
 
     const filename = `Laporan_Progres_GH_PLN_Palembang_${selectedReport.dateStr}.pdf`;
     const success = await downloadOnePagePdf('pdf-one-page-container', filename);
@@ -130,7 +135,7 @@ export function App() {
     if (window.confirm('Apakah Anda yakin ingin mereset seluruh data laporan ke pengaturan awal?')) {
       const initial = resetReportsStorage();
       setReports(initial);
-      setSelectedReportId('report-2026-11-05');
+      setSelectedReportId('report-2026-11-17');
       addToast('info', 'Data laporan telah dikembalikan ke kondisi default.');
     }
   };
@@ -164,16 +169,16 @@ export function App() {
         {/* Operational Field Personnel & Manpower (10 Workers) */}
         <ManpowerSection />
 
-        {/* Offscreen Locked Container for Clean A4 PDF Generation (Exclusive for Admin) */}
+        {/* Offscreen Locked Container for Clean A4 PDF Generation (Single or Multi-Page) */}
         <div
           style={{
             position: 'fixed',
             left: '-9999px',
             top: '0',
             width: '794px',
-            height: '1123px',
+            height: 'auto',
             zIndex: -100,
-            overflow: 'hidden',
+            overflow: 'visible',
           }}
           aria-hidden="true"
         >
