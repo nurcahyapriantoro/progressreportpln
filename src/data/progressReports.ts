@@ -803,7 +803,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 15. LAPORAN HARIAN 17 NOVEMBER 2026 (TERBARU & AKTIF)
+  // 15. LAPORAN HARIAN 17 NOVEMBER 2026
   // =========================================================================
   {
     id: 'report-2026-11-17',
@@ -812,7 +812,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     displayDate: '17 November 2026',
     shortDate: '17 Nov',
     isCompleted: true,
-    isLatestActive: true,
+    isLatestActive: false,
     location: 'Site PLN UPDL Palembang / Udiklat Indralaya',
     pipelineStage: 'erection_palembang',
     pipelineStageLabel: '4. Erection Struktur & Sipil Palembang',
@@ -937,11 +937,121 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 16. FORWARD MILESTONE: 19 NOVEMBER 2026 (INTEGRASI PANEL IOT & SENSOR)
+  // 16. LAPORAN HARIAN 18 NOVEMBER 2026 (TERBARU & AKTIF)
+  // =========================================================================
+  {
+    id: 'report-2026-11-18',
+    cycleNumber: 16,
+    dateStr: '2026-11-18',
+    displayDate: '18 November 2026',
+    shortDate: '18 Nov',
+    isCompleted: true,
+    isLatestActive: true,
+    location: 'Site PLN UPDL Palembang / Udiklat Indralaya & Sistem Web IoT',
+    pipelineStage: 'erection_palembang',
+    pipelineStageLabel: '4. Pengelasan Atas, Galian NFT & Kesiapan Web IoT',
+    cumulativeProgress: 75.0,
+    progressDelta: 7.0,
+    civilProgress: 75.5,
+    iotProgress: 74.5,
+    status: 'ON-SCHEDULE',
+    weather: {
+      morning: 'Cerah (08.00–12.00)',
+      afternoon: 'Hujan (13.30–17.00)'
+    },
+    manpowerCount: 4,
+    manpowerRole: '4 Pekerja Lapangan (Pengelasan Rangka Atas, Galian NFT & Integrasi Web IoT)',
+    executiveSummary: 'Hari ini (Rabu, 18 November 2026) tim mengawali aktivitas dengan apel K3 pukul 08.30 WIB di bawah rangka 9 portal yang telah berdiri. Selama cuaca pagi cerah, pekerja melanjutkan pengelasan sambungan puncak tiang, kuda-kuda atap & gording menggunakan scaffolding (Paket Sipil 5.1, 5.2 & 1.5), fabrikasi talang air seng/galvanis (Paket 5.4), serta pendalaman penuh lubang galian bak tandon NFT + pembatas bata Hebel dan finishing lubang talang gully NFT (Paket 15.1–15.3). Dari sisi IoT, platform monitoring & kontrol berbasis web resmi https://smartfarmpln.com/login (unit greenhouse palembang) telah aktif Online membaca sensor pH Air, Temperatur Air, PPM, Cahaya, serta Kelembapan dan kini berstatus siap pasang di lokasi (Paket 13.1–13.5).',
+    photos: [
+      {
+        id: 'photo-18-01',
+        url: '/progress/2026-11-18/1-apel-pagi-k3-di-bawah-rangka-portal.jpeg',
+        caption: 'Apel & Briefing K3 Pagi di Bawah Rangka Portal Greenhouse (08.30 WIB)',
+        narrative: 'Pengawas lapangan berhelm putih memimpin pengarahan K3 pagi (Paket Sipil 1.3) bersama pekerja ber-APD lengkap di bawah struktur 9 portal rangka utama greenhouse.'
+      },
+      {
+        id: 'photo-18-02',
+        url: '/progress/2026-11-18/2-pengelasan-sambungan-atas-kuda-kuda-scaffolding.jpeg',
+        caption: 'Pengelasan Sambungan Atas Kuda-Kuda & Gording di Atas Scaffolding',
+        narrative: 'Pekerja berdiri di atas scaffolding kerja (Paket 1.5) untuk mengelas penuh sambungan puncak kolom, rangka atap arch roof, dan balok gording memanjang saat cuaca pagi cerah (Paket 5.1 & 5.2).'
+      },
+      {
+        id: 'photo-18-03',
+        url: '/progress/2026-11-18/3-fabrikasi-dan-penyetelan-talang-air-galvanis.jpeg',
+        caption: 'Fabrikasi & Penyetelan Lembaran Talang Air Seng Galvanis',
+        narrative: 'Perakitan serta pengeboran lembaran talang air seng/plat galvanis bersama rangka hollow penopang di lapangan menggunakan mesin bor tangan (Paket Sipil 5.4).'
+      },
+      {
+        id: 'photo-18-04',
+        url: '/progress/2026-11-18/4-pendalaman-dan-perapihan-galian-tandon-nft.jpeg',
+        caption: 'Pendalaman & Perapihan Lubang Galian Bak Tandon NFT',
+        narrative: 'Pekerja merapikan dinding lubang galian bak penampungan nutrisi NFT sedalam ~1 meter yang telah dikelilingi pasangan pembatas bata ringan Hebel (Paket IoT & Hidroponik 15.2 & 15.3).'
+      },
+      {
+        id: 'photo-18-05',
+        url: '/progress/2026-11-18/5-finishing-lubang-tanam-talang-gully-nft.jpeg',
+        caption: 'Finishing & Penghalusan Lubang Tanam Talang Gully NFT',
+        narrative: 'Penghalusan tepian lubang tanam (deburring) pada deretan talang gully PVC putih NFT di atas meja tanam galvanis berlatar gedung PLN UPDL Palembang agar siap instalasi netpot (Paket 15.1).'
+      },
+      {
+        id: 'photo-18-06',
+        url: '/progress/2026-11-18/6-dashboard-live-monitoring-web-iot-smartfarmpln.jpeg',
+        caption: 'Dashboard Live Web IoT smartfarmpln.com (Unit Greenhouse Palembang)',
+        narrative: 'Sistem Smart IoT BRAIN berbasis web (Paket 13.1–13.5) telah Online pada unit greenhouse palembang: membaca parameter pH Air, Temperatur Air (25.00°C), PPM, Cahaya, Kelembapan (69.07%), tren grafik, dan kendali aktuator—siap pasang di site.'
+      },
+      {
+        id: 'photo-18-07',
+        url: '/progress/2026-11-18/7-portal-login-web-iot-smartfarmpln-pln-brain-ipb.jpeg',
+        caption: 'Antarmuka Login Platform Web IoT https://smartfarmpln.com/login',
+        narrative: 'Halaman portal resmi PLN SmartFarming (In partnership with PLN & BRAIN IPB University) yang menyediakan Real-time Sensor Monitoring & Automated Control Systems siap diakses oleh pengelola.'
+      },
+      {
+        id: 'photo-18-08',
+        url: '/progress/2026-11-18/8-struktur-atas-kuda-kuda-dan-gording-petang.jpeg',
+        caption: 'Tampak Struktur Atas Kuda-Kuda & Gording Menjelang Petang (18.03 WIB)',
+        narrative: 'Detail rangka atap lengkung arch roof, ventilasi puncak jack roof, dan batang penghubung memanjang yang telah terikat kuat pada sore/petang hari pasca-hujan.'
+      },
+      {
+        id: 'photo-18-09',
+        url: '/progress/2026-11-18/9-kondisi-lubang-galian-tandon-nft-dan-hebel-sore.jpeg',
+        caption: 'Kondisi Lubang Galian Bak Tandon NFT & Bingkai Hebel Sore Hari',
+        narrative: 'Tampak atas galian bak tandon NFT yang telah mencapai kedalaman optimal dengan bingkai bata ringan Hebel tersusun rapi di sekeliling bibir galian (Paket 15.2 & 15.3).'
+      },
+      {
+        id: 'photo-18-10',
+        url: '/progress/2026-11-18/10-jalur-benang-ukur-dan-material-hebel-terproteksi.jpeg',
+        caption: 'Penataan Jalur Benang Ukur & Material Hebel Terproteksi Terpal',
+        narrative: 'Pengamanan stok material bata ringan dan penarikan benang ukur kelurusan batas pasangan dinding keliling di tepi tapak bangunan (Paket Sipil 3.6).'
+      },
+      {
+        id: 'photo-18-11',
+        url: '/progress/2026-11-18/11-pemeriksaan-jalur-galian-samping-lembur-petang.jpeg',
+        caption: 'Pemeriksaan Jalur Benang As Bangunan Sesi Petang (18.04 WIB)',
+        narrative: 'Pengecekan garis benang as pondasi dan kelurusan sisi samping greenhouse pada sesi petang guna memastikan kesiapan lanjutan pekerjaan sipil esok hari.'
+      }
+    ],
+    nextSteps: [
+      'Pengelasan sambungan atas lanjutan pada rangka kuda-kuda arch roof, gording, dan kremona (Paket Sipil 5.1 & 5.2).',
+      'Instalasi sistem hidroponik meja NFT, perpipaan distribusi nutrisi, dan persiapan pemasangan modul perangkat Web IoT smartfarmpln.com (Paket 12, 13 & 15).',
+      'Pabrikasi dan pemasangan rangka pintu masuk utama, pintu ruang sterilisasi, dan pintu akses belakang kolam (Paket Sipil 7.1–7.3).'
+    ],
+    localPurchases: [
+      'Pasir Pasang & Cor (Tersedia di Site)',
+      'Semen PC Portland (Tersedia di Site)',
+      'Bata Ringan Hebel (Tersedia di Site)',
+      'Kayu Bowplank & Kaso (Tersedia di Site)'
+    ],
+    logisticsNotes: 'Seluruh material struktur atas, talang galvanis, talang gully NFT, serta perangkat panel/sensor Web IoT (smartfarmpln.com) telah siap untuk tahap instalasi dan integrasi di site.',
+    approvalNotes: 'Working Permit Inspekta No. 0018/70201000/XI/2026 AKTIF. Aplikasi Web IoT https://smartfarmpln.com/login sudah aktif Online (tinggal pasang fisik sensor & panel di lokasi).',
+    briefingSchedule: 'Apel & Briefing K3 pagi dilaksanakan rutin pukul 08.30 WIB sebelum pekerjaan pengelasan ketinggian di atas scaffolding dimulai.'
+  },
+
+  // =========================================================================
+  // 17. FORWARD MILESTONE: 19 NOVEMBER 2026 (INTEGRASI PANEL IOT & SENSOR)
   // =========================================================================
   {
     id: 'report-2026-11-19',
-    cycleNumber: 16,
+    cycleNumber: 17,
     dateStr: '2026-11-19',
     displayDate: '19 November 2026',
     shortDate: '19 Nov',
@@ -951,7 +1061,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     pipelineStage: 'iot_bast',
     pipelineStageLabel: '5. Integrasi Hidroponik & Smart IoT BRAIN',
     cumulativeProgress: 82.4,
-    progressDelta: 14.4,
+    progressDelta: 7.4,
     civilProgress: 80.5,
     iotProgress: 84.3,
     status: 'ON-SCHEDULE',
@@ -965,11 +1075,11 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 17. FORWARD MILESTONE: 21 NOVEMBER 2026 (COMMISSIONING FERTIGASI)
+  // 18. FORWARD MILESTONE: 21 NOVEMBER 2026 (COMMISSIONING FERTIGASI)
   // =========================================================================
   {
     id: 'report-2026-11-21',
-    cycleNumber: 17,
+    cycleNumber: 18,
     dateStr: '2026-11-21',
     displayDate: '21 November 2026',
     shortDate: '21 Nov',
@@ -993,11 +1103,11 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 18. FORWARD MILESTONE: 23 NOVEMBER 2026 (TESTING END-TO-END)
+  // 19. FORWARD MILESTONE: 23 NOVEMBER 2026 (TESTING END-TO-END)
   // =========================================================================
   {
     id: 'report-2026-11-23',
-    cycleNumber: 18,
+    cycleNumber: 19,
     dateStr: '2026-11-23',
     displayDate: '23 November 2026',
     shortDate: '23 Nov',
@@ -1021,11 +1131,11 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 19. FORWARD MILESTONE: 25 NOVEMBER 2026 (TRAINING OPERATOR & SOP)
+  // 20. FORWARD MILESTONE: 25 NOVEMBER 2026 (TRAINING OPERATOR & SOP)
   // =========================================================================
   {
     id: 'report-2026-11-25',
-    cycleNumber: 19,
+    cycleNumber: 20,
     dateStr: '2026-11-25',
     displayDate: '25 November 2026',
     shortDate: '25 Nov',
@@ -1049,11 +1159,11 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 20. FORWARD MILESTONE: 28 NOVEMBER 2026 (BAST 100% SELESAI)
+  // 21. FORWARD MILESTONE: 28 NOVEMBER 2026 (BAST 100% SELESAI)
   // =========================================================================
   {
     id: 'report-2026-11-28',
-    cycleNumber: 20,
+    cycleNumber: 21,
     dateStr: '2026-11-28',
     displayDate: '28 November 2026',
     shortDate: '28 Nov',

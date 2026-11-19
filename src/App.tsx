@@ -23,7 +23,7 @@ export function App() {
   const [selectedReportId, setSelectedReportId] = useState<string>(() => {
     const loaded = loadReportsFromStorage();
     const latest = loaded.find((r) => r.isLatestActive);
-    return latest?.id || 'report-2026-11-17';
+    return latest?.id || 'report-2026-11-18';
   });
   const [isAdminOpen, setIsAdminOpen] = useState<boolean>(false);
   const [isDownloadingPdf, setIsDownloadingPdf] = useState<boolean>(false);
@@ -135,7 +135,7 @@ export function App() {
     if (window.confirm('Apakah Anda yakin ingin mereset seluruh data laporan ke pengaturan awal?')) {
       const initial = resetReportsStorage();
       setReports(initial);
-      setSelectedReportId('report-2026-11-17');
+      setSelectedReportId('report-2026-11-18');
       addToast('info', 'Data laporan telah dikembalikan ke kondisi default.');
     }
   };

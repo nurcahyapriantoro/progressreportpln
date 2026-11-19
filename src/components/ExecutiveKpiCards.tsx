@@ -302,7 +302,57 @@ export const ExecutiveKpiCards: React.FC<ExecutiveKpiCardsProps> = ({
         </div>
 
         {/* Logistics Dropping & Coordination Alert with PLN Indralaya */}
-        {report.dateStr >= '2026-11-17' ? (
+        {report.dateStr >= '2026-11-18' ? (
+          <div className="mt-4 p-3.5 sm:p-4 rounded-xl bg-gradient-to-r from-blue-50/90 via-sky-50/70 to-emerald-50/80 border border-blue-200/80 shadow-2xs">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
+              <div className="flex items-start gap-3">
+                <div className="w-9 h-9 rounded-xl bg-pln-blue text-white flex items-center justify-center shrink-0 shadow-xs">
+                  <Truck className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="text-xs font-black text-slate-900 uppercase tracking-wide">
+                      Pengelasan Rangka Atas, Galian NFT & Kesiapan Web IoT smartfarmpln.com
+                    </span>
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-extrabold border border-emerald-300">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
+                      Web IoT Online & Siap Pasang
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                    Pekerjaan <strong>pengelasan sambungan atas di atas scaffolding & fabrikasi talang galvanis</strong> (Sipil <strong>75,5%</strong>) berjalan seiring penyelesaian <strong>galian tandon NFT & talang gully</strong>. Sementara itu, platform Web IoT{' '}
+                    <a
+                      href="https://smartfarmpln.com/login"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-pln-blue font-bold underline hover:text-blue-800"
+                    >
+                      https://smartfarmpln.com/login
+                    </a>{' '}
+                    telah aktif Online (tinggal pasang fisik perangkat di lokasi), membawa progres IoT mencapai <strong>74,5%</strong> dan total kumulatif <strong>75,0%</strong>.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center sm:flex-col sm:items-end gap-2 shrink-0 border-t md:border-t-0 pt-2 md:pt-0 border-blue-200/60">
+                <a
+                  href="https://smartfarmpln.com/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[11px] font-bold text-emerald-700 bg-white px-2.5 py-1 rounded-lg border border-emerald-200 shadow-2xs whitespace-nowrap hover:bg-emerald-50 transition"
+                >
+                  Web IoT: <strong className="underline">smartfarmpln.com (Online)</strong>
+                </a>
+                <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-blue-100 shadow-2xs whitespace-nowrap">
+                  Kumulatif Kurva-S: <strong className="text-pln-blue">75,0% (Sipil 75,5% | IoT 74,5%)</strong>
+                </div>
+                <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-amber-200 shadow-2xs whitespace-nowrap">
+                  Agenda Besok: <strong className="text-amber-800">Las Atas, Hidroponik & Pintu</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : report.dateStr >= '2026-11-17' ? (
           <div className="mt-4 p-3.5 sm:p-4 rounded-xl bg-gradient-to-r from-blue-50/90 via-sky-50/70 to-emerald-50/80 border border-blue-200/80 shadow-2xs">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
               <div className="flex items-start gap-3">
