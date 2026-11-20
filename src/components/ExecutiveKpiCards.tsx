@@ -302,7 +302,56 @@ export const ExecutiveKpiCards: React.FC<ExecutiveKpiCardsProps> = ({
         </div>
 
         {/* Logistics Dropping & Coordination Alert with PLN Indralaya */}
-        {report.dateStr >= '2026-11-18' ? (
+        {report.dateStr >= '2026-11-20' ? (
+          <div className="mt-4 p-3.5 sm:p-4 rounded-xl bg-gradient-to-r from-blue-50/90 via-sky-50/70 to-emerald-50/80 border border-blue-200/80 shadow-2xs">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
+              <div className="flex items-start gap-3">
+                <div className="w-9 h-9 rounded-xl bg-pln-blue text-white flex items-center justify-center shrink-0 shadow-xs">
+                  <Truck className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="text-xs font-black text-slate-900 uppercase tracking-wide">
+                      Besi Dudukan Plastik UV, Dinding Hebel Ruang Kontrol & Semaian Pakcoy
+                    </span>
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-extrabold border border-emerald-300">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
+                      5 Pekerja Aktif • Full Body Harness K3
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                    Pemasangan <strong>besi dudukan plastik UV di struktur atas atap (dengan Full Body Harness)</strong> dan <strong>dinding bata ringan Hebel ruang kontrol & sisi samping 3 lapis (60 cm)</strong> menaikkan capaian Sipil ke <strong>83,5%</strong> (total kumulatif <strong>81,0%</strong>). Sebelumnya pada 19 Nov, perataan tanah, pondasi pintu, dan <strong>penyemaian bibit Pakcoy Nauli F1</strong> telah berjalan seiring kesiapan Web IoT{' '}
+                    <a
+                      href="https://smartfarmpln.com/login"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-pln-blue font-bold underline hover:text-blue-800"
+                    >
+                      smartfarmpln.com
+                    </a>.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center sm:flex-col sm:items-end gap-2 shrink-0 border-t md:border-t-0 pt-2 md:pt-0 border-blue-200/60">
+                <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-emerald-200 shadow-2xs whitespace-nowrap">
+                  Ruang Kontrol: <strong className="text-emerald-700">Hebel 3 Lapis (60 cm)</strong>
+                </div>
+                <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-blue-100 shadow-2xs whitespace-nowrap">
+                  Atap & Budidaya: <strong className="text-pln-blue">Dudukan UV & Semai Pakcoy</strong>
+                </div>
+                <a
+                  href="https://smartfarmpln.com/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[11px] font-bold text-amber-800 bg-white px-2.5 py-1 rounded-lg border border-amber-200 shadow-2xs whitespace-nowrap hover:bg-amber-50 transition"
+                >
+                  Kumulatif: <strong>81,0%</strong> • <span className="underline text-pln-blue">smartfarmpln.com</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        ) : report.dateStr >= '2026-11-18' ? (
           <div className="mt-4 p-3.5 sm:p-4 rounded-xl bg-gradient-to-r from-blue-50/90 via-sky-50/70 to-emerald-50/80 border border-blue-200/80 shadow-2xs">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
               <div className="flex items-start gap-3">
