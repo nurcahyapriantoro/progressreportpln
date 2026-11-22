@@ -23,7 +23,7 @@ export function App() {
   const [selectedReportId, setSelectedReportId] = useState<string>(() => {
     const loaded = loadReportsFromStorage();
     const latest = loaded.find((r) => r.isLatestActive);
-    return latest?.id || 'report-2026-11-20';
+    return latest?.id || 'report-2026-11-22';
   });
   const [isAdminOpen, setIsAdminOpen] = useState<boolean>(false);
   const [isDownloadingPdf, setIsDownloadingPdf] = useState<boolean>(false);
@@ -89,14 +89,19 @@ export function App() {
   const handleDownloadPdf = async () => {
     if (isDownloadingPdf) return;
     setIsDownloadingPdf(true);
+    const isWeekly22Nov = selectedReport.id === 'report-2026-11-22';
     addToast(
       'info',
-      selectedReport.photos.length > 6
-        ? 'Menyiapkan layout PDF eksekutif multi-halaman A4 (seluruh foto lengkap)...'
-        : 'Menyiapkan layout PDF eksekutif 1 lembar A4...'
+      isWeekly22Nov
+        ? 'Menyiapkan PDF Laporan Progres Mingguan Gabungan (19–22 Nov 2026, 23 foto lengkap)...'
+        : selectedReport.photos.length > 6
+          ? 'Menyiapkan layout PDF eksekutif multi-halaman A4 (seluruh foto lengkap)...'
+          : 'Menyiapkan layout PDF eksekutif 1 lembar A4...'
     );
 
-    const filename = `Laporan_Progres_GH_PLN_Palembang_${selectedReport.dateStr}.pdf`;
+    const filename = isWeekly22Nov
+      ? 'Laporan_Progres_Mingguan_19-22_Nov_2026_GH_PLN_Palembang.pdf'
+      : `Laporan_Progres_GH_PLN_Palembang_${selectedReport.dateStr}.pdf`;
     const success = await downloadOnePagePdf('pdf-one-page-container', filename);
 
     setIsDownloadingPdf(false);
@@ -135,7 +140,7 @@ export function App() {
     if (window.confirm('Apakah Anda yakin ingin mereset seluruh data laporan ke pengaturan awal?')) {
       const initial = resetReportsStorage();
       setReports(initial);
-      setSelectedReportId('report-2026-11-20');
+      setSelectedReportId('report-2026-11-22');
       addToast('info', 'Data laporan telah dikembalikan ke kondisi default.');
     }
   };
@@ -182,7 +187,7 @@ export function App() {
           }}
           aria-hidden="true"
         >
-          <PdfOnePageTemplate report={selectedReport} />
+          <PdfOnePageTemplate report={selectedReport} allReports={reports} />
         </div>
       </main>
 

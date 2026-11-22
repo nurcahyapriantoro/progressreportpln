@@ -1127,7 +1127,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 18. LAPORAN HARIAN 20 NOVEMBER 2026 (TERBARU & AKTIF)
+  // 18. LAPORAN HARIAN 20 NOVEMBER 2026
   // =========================================================================
   {
     id: 'report-2026-11-20',
@@ -1136,7 +1136,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     displayDate: '20 November 2026',
     shortDate: '20 Nov',
     isCompleted: true,
-    isLatestActive: true,
+    isLatestActive: false,
     location: 'Site PLN UPDL Palembang / Udiklat Indralaya',
     pipelineStage: 'erection_palembang',
     pipelineStageLabel: '4. Pasang Besi Dudukan Plastik UV & Dinding Hebel Ruang Kontrol',
@@ -1225,7 +1225,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 19. FORWARD MILESTONE: 21 NOVEMBER 2026 (PLASTIK UV, INSECT NET & FERTIGASI)
+  // 19. LAPORAN HARIAN 21 NOVEMBER 2026 (PLESTER HEBEL, INSECT NET & TANDON NFT)
   // =========================================================================
   {
     id: 'report-2026-11-21',
@@ -1233,31 +1233,139 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     dateStr: '2026-11-21',
     displayDate: '21 November 2026',
     shortDate: '21 Nov',
-    isCompleted: false,
+    isCompleted: true,
     isLatestActive: false,
-    location: 'Site PLN UPDL Palembang',
-    pipelineStage: 'iot_bast',
-    pipelineStageLabel: '5. Penutupan Atap UV, Insect Net & Integrasi IoT',
-    cumulativeProgress: 89.2,
-    progressDelta: 8.2,
-    civilProgress: 88.0,
-    iotProgress: 90.4,
+    location: 'Site PLN UPDL Palembang / Udiklat Indralaya',
+    pipelineStage: 'erection_palembang',
+    pipelineStageLabel: '4. Plester Hebel, Pasang Insect Net & Tandon NFT',
+    cumulativeProgress: 85.0,
+    progressDelta: 4.0,
+    civilProgress: 87.5,
+    iotProgress: 82.5,
     status: 'ON-SCHEDULE',
-    executiveSummary: 'Penutupan atap plastik UV 200 micron & insect net, plester/acian dinding hebel ruang kontrol, instalasi pemipaan hidroponik NFT/Drip, serta pemasangan panel Web IoT smartfarmpln.com dan sensor mikroklimat-PPM.',
-    photos: [],
+    weather: {
+      morning: 'Cerah Berawan',
+      afternoon: 'Cerah'
+    },
+    manpowerCount: 5,
+    manpowerRole: '5 Pekerja Lapangan (Plester Dinding Hebel, Pasangan Hebel & Instalasi Insect Net)',
+    executiveSummary: 'Kegiatan Sabtu, 21 November 2026 diawali apel K3 pagi bersama 5 pekerja lapangan (Paket 1.3). Tim mengeksekusi tiga pekerjaan utama: plesteran halus dinding bata ringan Hebel tampak depan & ruang kontrol (Paket Sipil 3.7), lanjutan pemasangan bata Hebel keliling (Paket 3.6), serta pemasangan profil kanal penjepit dan persiapan kawat pegas (spring clip) untuk pemasangan kain insect net Mesh 50 (Paket 6.2). Secara paralel pada Lingkup Hidroponik, tandon air nutrisi utama NFT telah terpasang masuk ke lubang bak galian (Paket 15.5) disertai penempatan tandon kedua dan pemilahan selang PE irigasi drip (Paket 14.1 & 14.3).',
+    photos: [
+      {
+        id: 'photo-21-01',
+        url: '/progress/2026-11-21/1-apel-pagi-k3-5-pekerja-21nov.jpeg',
+        caption: 'Apel & Briefing K3 Pagi 5 Pekerja Lapangan (09.19 WIB)',
+        narrative: 'Pengawas lapangan memimpin briefing keselamatan kerja (SMK3 - Paket 1.3) bersama 5 pekerja ber-APD lengkap di area rangka greenhouse berlatar gedung PLN UPDL Palembang.'
+      },
+      {
+        id: 'photo-21-02',
+        url: '/progress/2026-11-21/2-plester-dinding-hebel-depan-dan-samping.jpeg',
+        caption: 'Plesteran Halus Dinding Hebel Depan & Lanjutan Pasangan Hebel (08.33 WIB)',
+        narrative: 'Dinding bata ringan Hebel tampak depan area ruang kontrol telah mulai diplester semen halus (Paket Sipil 3.7) sementara tim di dalam melanjutkan pemasangan blok Hebel dinding sisi (Paket 3.6).'
+      },
+      {
+        id: 'photo-21-03',
+        url: '/progress/2026-11-21/3-tandon-nft-tertanam-plester-dan-hebel.jpeg',
+        caption: 'Tandon Air Nutrisi Utama Tertanam di Bak NFT, Plesteran & Hebel (08.33 WIB)',
+        narrative: 'Tandon air nutrisi utama berwarna oranye telah terpasang masuk ke dalam lubang bak penampungan NFT di balik dinding Hebel yang sudah diplester rapi (Paket 15.5 & Sipil 3.7).'
+      },
+      {
+        id: 'photo-21-04',
+        url: '/progress/2026-11-21/4-profil-kanal-insect-net-ruang-kontrol-dan-tandon.jpeg',
+        caption: 'Profil Kanal Penjepit Insect Net Ruang Kontrol & 2 Unit Tandon Air (08.34 WIB)',
+        narrative: 'Terpasang profil kanal aluminium penjepit kain insect net sepanjang bibir atas dinding ruang kontrol (Paket 6.2 & 8.1) beserta 2 unit tandon nutrisi utama NFT dan Drip yang sudah siap di lokasi.'
+      },
+      {
+        id: 'photo-21-05',
+        url: '/progress/2026-11-21/5-persiapan-kawat-klip-insect-net-dan-selang-drip.jpeg',
+        caption: 'Pemilahan Kawat Spring Clip Insect Net & Selang PE Irigasi Drip (08.35 WIB)',
+        narrative: 'Teknisi lapangan menyortir gulungan kawat pegas zigzag pengunci kain insect net/plastik UV (Paket 6.1 & 6.2) serta selang distribusi PE hitam sistem irigasi tetes/drip (Paket 14.1).'
+      },
+      {
+        id: 'photo-21-06',
+        url: '/progress/2026-11-21/6-fabrikasi-talang-galvanis-area-tengah.jpeg',
+        caption: 'Fabrikasi & Penyetelan Talang Air Galvanis Area Tengah (08.33 WIB)',
+        narrative: 'Pekerja memotong dan menyetel tekukan lembaran talang air seng galvanis (Paket Sipil 5.4) di area tengah greenhouse sembari persiapan pemasangan ke posisi rangka atap.'
+      },
+      {
+        id: 'photo-21-07',
+        url: '/progress/2026-11-21/7-koordinasi-pembagian-tugas-pagi-k3.jpeg',
+        caption: 'Koordinasi Pembagian Tugas Tim Plester, Hebel & Insect Net (09.19 WIB)',
+        narrative: 'Pengawas membagi zona kerja kepada seluruh 5 personel agar pengerjaan plesteran dinding, pasangan bata Hebel, fabrikasi talang, dan pemasangan insect net berjalan paralel tanpa hambatan.'
+      }
+    ],
     nextSteps: [
-      'Uji coba otomasi dosing pupuk A&B otomatis berbasis target PPM.',
-      'Kalibrasi relay pompa dan aktuasi ventilasi drum fan.',
-      'Penyusunan draft laporan Berita Acara Serah Terima (BAST).'
-    ]
+      'Lanjutan pemasangan kain insect net Mesh 50 pada rangka keliling dinding dan ruang kontrol (Paket Sipil 6.2 & 8.1).',
+      'Penutupan atap Plastik UV 200 micron pada rangka lengkung arch roof (Paket Sipil 6.1).',
+      'Penyelesaian plester/acian dinding hebel & pemasangan pipa distribusi hidroponik dari 2 tandon nutrisi (Paket 3.7–3.8 & 12.4).'
+    ],
+    localPurchases: [
+      'Pasir Pasang & Semen PC untuk Plesteran (Terpasang di Site)',
+      'Bata Ringan Hebel & Mortar Perekat (Terpasang)',
+      'Kawat Spring Clip & Profil Kanal Insect Net',
+      'Selang PE Hitam Irigasi Drip & 2 Unit Tandon'
+    ],
+    logisticsNotes: '2 unit tandon nutrisi kapasitas besar (NFT tertanam & Drip) beserta selang PE drip, profil kanal, dan kawat spring clip insect net telah berada di site.',
+    approvalNotes: 'Working Permit Inspekta No. 0018/70201000/XI/2026 AKTIF. Seluruh pekerja menggunakan APD lengkap selama aktivitas plesteran, fabrikasi & persiapan dinding insect net.',
+    briefingSchedule: 'Apel & Briefing K3 pagi rutin pukul 08.30–09.19 WIB untuk pembagian tugas 5 personel.'
   },
 
   // =========================================================================
-  // 20. FORWARD MILESTONE: 23 NOVEMBER 2026 (TESTING END-TO-END)
+  // 20. LAPORAN HARIAN 22 NOVEMBER 2026 (TERBARU & AKTIF + REKAP MINGGUAN 19-22 NOV)
+  // =========================================================================
+  {
+    id: 'report-2026-11-22',
+    cycleNumber: 20,
+    dateStr: '2026-11-22',
+    displayDate: '22 November 2026',
+    shortDate: '22 Nov',
+    isCompleted: true,
+    isLatestActive: true,
+    location: 'Site PLN UPDL Palembang / Udiklat Indralaya',
+    pipelineStage: 'iot_bast',
+    pipelineStageLabel: '5. Pemasangan Plastik UV Atap, Hebel & Rekap Mingguan (19–22 Nov)',
+    cumulativeProgress: 87.5,
+    progressDelta: 2.5,
+    civilProgress: 90.5,
+    iotProgress: 84.5,
+    status: 'ON-SCHEDULE',
+    weather: {
+      morning: 'Cerah Berawan',
+      afternoon: 'Berawan'
+    },
+    manpowerCount: 5,
+    manpowerRole: '5 Pekerja Lapangan (Pemasangan Plastik UV Atap, Hebel & Utilitas Tandon)',
+    executiveSummary: 'Rekapitulasi progres hingga Minggu, 22 November 2026 (Penutup Periode Mingguan 19–22 Nov 2026): lembaran atap Plastik UV 200 micron mulai terbentang terpasang di atas kuda-kuda lengkung arch roof (Paket Sipil 6.1), disertai lanjutan pemasangan bata ringan Hebel dinding keliling (Paket 3.6) dan penempatan lengkap 2 unit tandon air nutrisi berkapasitas besar di samping area greenhouse (Paket 14.3 & 15.5). Sepanjang periode mingguan 19–22 Nov 2026, progres fisik total melonjak +12,5% (dari 75,0% pada 18 Nov menjadi 87,5% pada 22 Nov; Sipil 90,5% & IoT-Hidroponik 84,5%).',
+    photos: [
+      {
+        id: 'photo-22-01',
+        url: '/progress/2026-11-22/1-pemasangan-plastik-uv-atap-hebel-dan-2-tandon.jpeg',
+        caption: 'Pemasangan Awal Plastik UV Atap 200 Micron, Lanjutan Hebel & 2 Tandon Nutrisi',
+        narrative: 'Lembaran Plastik UV 200 micron mulai terbentang terpasang di puncak kuda-kuda atap sebelah kanan (Paket 6.1), teknisi mengunci dudukan profil atap di ketinggian, pekerja di bawah menata stok bata ringan Hebel untuk dinding keliling (Paket 3.6), dan 2 unit tandon air nutrisi oranye berkapasitas besar telah siap terposisi di sisi greenhouse.'
+      }
+    ],
+    nextSteps: [
+      'Penuntasan bentangan penuh atap Plastik UV 200 micron & penutupan keliling dinding Insect Net Mesh 50 (Paket Sipil 6.1 & 6.2).',
+      'Finishing acian/pengecatan dinding Hebel, pemasangan 3 unit pintu akses, lantai weedmat/rumput sintetis, lampu & 4 drum fan (Paket 3.8–3.9, 4, 7, 9, 10).',
+      'Instalasi penuh pemipaan manifold NFT/Drip dari 2 tandon nutrisi, pemasangan fisik panel Web IoT smartfarmpln.com & uji coba otomasi fertigasi (Paket 12–16).'
+    ],
+    localPurchases: [
+      'Pasir Pasang, Semen PC & Mortar (Terpakai Aktif di Site)',
+      'Bata Ringan Hebel (Tumpukan Stok Siap Pasang Dinding Sisi)',
+      'Plastik UV 200 Micron & Kain Insect Net Mesh 50',
+      '2 Unit Tandon Nutrisi Kapasitas Besar (Tersedia di Posisi)'
+    ],
+    logisticsNotes: 'Plastik UV 200 micron mulai dipasang pada kuda-kuda atap; stok bata Hebel menumpuk siap tuntaskan dinding keliling; 2 tandon nutrisi sudah berada di posisi instalasi.',
+    approvalNotes: 'Working Permit Inspekta No. 0018/70201000/XI/2026 AKTIF. Dokumen PDF laporan tanggal 22 Nov digabungkan otomatis menjadi Laporan Progres Mingguan (19–22 Nov 2026, total 23 foto).',
+    briefingSchedule: 'Evaluasi mingguan periode 19–22 Nov 2026 (+12,5% kumulatif) menuju akselerasi penyelesaian 100% pada 28 Nov 2026.'
+  },
+
+  // =========================================================================
+  // 21. FORWARD MILESTONE: 23 NOVEMBER 2026 (TESTING END-TO-END)
   // =========================================================================
   {
     id: 'report-2026-11-23',
-    cycleNumber: 20,
+    cycleNumber: 21,
     dateStr: '2026-11-23',
     displayDate: '23 November 2026',
     shortDate: '23 Nov',
@@ -1267,7 +1375,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     pipelineStage: 'iot_bast',
     pipelineStageLabel: '5. Integrasi Hidroponik & Smart IoT BRAIN',
     cumulativeProgress: 94.2,
-    progressDelta: 5.0,
+    progressDelta: 6.7,
     civilProgress: 94.0,
     iotProgress: 94.5,
     status: 'ON-SCHEDULE',
@@ -1281,11 +1389,11 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 21. FORWARD MILESTONE: 25 NOVEMBER 2026 (TRAINING OPERATOR & SOP)
+  // 22. FORWARD MILESTONE: 25 NOVEMBER 2026 (TRAINING OPERATOR & SOP)
   // =========================================================================
   {
     id: 'report-2026-11-25',
-    cycleNumber: 21,
+    cycleNumber: 22,
     dateStr: '2026-11-25',
     displayDate: '25 November 2026',
     shortDate: '25 Nov',
@@ -1309,11 +1417,11 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 22. FORWARD MILESTONE: 28 NOVEMBER 2026 (BAST 100% SELESAI)
+  // 23. FORWARD MILESTONE: 28 NOVEMBER 2026 (BAST 100% SELESAI)
   // =========================================================================
   {
     id: 'report-2026-11-28',
-    cycleNumber: 22,
+    cycleNumber: 23,
     dateStr: '2026-11-28',
     displayDate: '28 November 2026',
     shortDate: '28 Nov',

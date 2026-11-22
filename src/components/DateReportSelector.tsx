@@ -249,6 +249,71 @@ export const DateReportSelector: React.FC<DateReportSelectorProps> = ({
         </div>
 
         {/* =========================================================================
+            WEEKLY SUMMARY CARD (19–22 NOV 2026) SHOWN WHEN VIEWING 22 NOV
+        ========================================================================= */}
+        {selectedReport.id === 'report-2026-11-22' && (() => {
+          const weeklyDates = ['2026-11-19', '2026-11-20', '2026-11-21', '2026-11-22'];
+          const weeklyItems = weeklyDates
+            .map((d) => reports.find((r) => r.dateStr === d))
+            .filter((r): r is BiDailyReport => Boolean(r));
+          const totalWeeklyPhotos = weeklyItems.reduce((sum, r) => sum + r.photos.length, 0);
+
+          return (
+            <div className="rounded-2xl bg-gradient-to-br from-slate-900 via-[#0A2540] to-[#003366] text-white p-5 sm:p-6 shadow-md border border-blue-900/50 space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div>
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-[10px] font-bold uppercase tracking-wider mb-1.5">
+                    <Sparkles className="w-3 h-3" />
+                    <span>Summary Progress Mingguan (19–22 November 2026)</span>
+                  </div>
+                  <h4 className="text-base sm:text-lg font-extrabold tracking-tight">
+                    Rekapitulasi Gabungan Siklus #17–#20 • Kenaikan +12,5% (75,0% → 87,5%)
+                  </h4>
+                  <p className="text-xs text-slate-300 mt-0.5">
+                    Download PDF pada tanggal 22 November otomatis menggabungkan Ringkasan Mingguan serta seluruh {totalWeeklyPhotos} foto periode 19–22 Nov 2026.
+                  </p>
+                </div>
+                <div className="flex items-center gap-2 shrink-0">
+                  <div className="bg-white/10 backdrop-blur-xs rounded-xl px-3.5 py-2 border border-white/15 text-center">
+                    <div className="text-[10px] text-slate-300 uppercase font-semibold">Total Foto Mingguan</div>
+                    <div className="text-lg font-black text-amber-300">{totalWeeklyPhotos} Foto</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                {weeklyItems.map((item) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    onClick={() => onSelectReport(item.id)}
+                    className="text-left rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 p-3.5 transition"
+                  >
+                    <div className="flex items-center justify-between text-xs font-bold">
+                      <span className="text-sky-300">{item.displayDate}</span>
+                      <span className="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-200 text-[10px]">
+                        {item.photos.length} Foto
+                      </span>
+                    </div>
+                    <div className="mt-1.5 flex items-baseline gap-2">
+                      <span className="text-xl font-black text-white">{item.cumulativeProgress.toFixed(1)}%</span>
+                      <span className="text-[11px] font-bold text-emerald-300">+{item.progressDelta.toFixed(1)}%</span>
+                    </div>
+                    <div className="text-[11px] text-slate-300 mt-1 line-clamp-2 leading-snug">
+                      {item.pipelineStageLabel.replace(/^\d+\.\s*/, '')}
+                    </div>
+                    <div className="mt-2 pt-2 border-t border-white/10 flex items-center justify-between text-[10px] text-slate-300">
+                      <span>Sipil: <strong className="text-white">{item.civilProgress.toFixed(1)}%</strong></span>
+                      <span>IoT: <strong className="text-emerald-300">{item.iotProgress.toFixed(1)}%</strong></span>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          );
+        })()}
+
+        {/* =========================================================================
             ADAPTIVE PHOTO DOCUMENTATION GRID
         ========================================================================= */}
         <div>
