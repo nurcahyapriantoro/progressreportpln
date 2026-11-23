@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { NavbarHeader } from './components/NavbarHeader';
+import { TopNoticeBanner } from './components/TopNoticeBanner';
 import { ExecutiveKpiCards } from './components/ExecutiveKpiCards';
 import { DateReportSelector } from './components/DateReportSelector';
 import { SCurveAndTimetable } from './components/SCurveAndTimetable';
@@ -147,11 +148,16 @@ export function App() {
 
       {/* 2. Main Executive Content Container */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 space-y-10">
-        {/* Executive Hero & 4 KPI Cards + 5-Stage Logistics Pipeline (No PDF button) */}
-        <ExecutiveKpiCards
-          report={selectedReport}
-          targetDaysRemaining={targetDaysRemaining}
-        />
+        <div className="space-y-6">
+          {/* Top Notes Banner (Extended Working Permit & Paving Block Layout) */}
+          <TopNoticeBanner />
+
+          {/* Executive Hero & 4 KPI Cards + 5-Stage Logistics Pipeline (No PDF button) */}
+          <ExecutiveKpiCards
+            report={selectedReport}
+            targetDaysRemaining={targetDaysRemaining}
+          />
+        </div>
 
         {/* 2-Day Reporting Cycle Selector & Adaptive Photo Documentation */}
         <DateReportSelector
