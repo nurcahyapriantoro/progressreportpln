@@ -89,19 +89,14 @@ export function App() {
   const handleDownloadPdf = async () => {
     if (isDownloadingPdf) return;
     setIsDownloadingPdf(true);
-    const isWeekly22Nov = selectedReport.id === 'report-2026-11-22';
     addToast(
       'info',
-      isWeekly22Nov
-        ? 'Menyiapkan PDF Laporan Progres Mingguan Gabungan (19–22 Nov 2026, 23 foto lengkap)...'
-        : selectedReport.photos.length > 6
-          ? 'Menyiapkan layout PDF eksekutif multi-halaman A4 (seluruh foto lengkap)...'
-          : 'Menyiapkan layout PDF eksekutif 1 lembar A4...'
+      selectedReport.photos.length > 6
+        ? 'Menyiapkan layout PDF eksekutif multi-halaman A4 (seluruh foto lengkap)...'
+        : 'Menyiapkan layout PDF eksekutif 1 lembar A4...'
     );
 
-    const filename = isWeekly22Nov
-      ? 'Laporan_Progres_Mingguan_19-22_Nov_2026_GH_PLN_Palembang.pdf'
-      : `Laporan_Progres_GH_PLN_Palembang_${selectedReport.dateStr}.pdf`;
+    const filename = `Laporan_Progres_GH_PLN_Palembang_${selectedReport.dateStr}.pdf`;
     const success = await downloadOnePagePdf('pdf-one-page-container', filename);
 
     setIsDownloadingPdf(false);
@@ -187,7 +182,7 @@ export function App() {
           }}
           aria-hidden="true"
         >
-          <PdfOnePageTemplate report={selectedReport} allReports={reports} />
+          <PdfOnePageTemplate report={selectedReport} />
         </div>
       </main>
 

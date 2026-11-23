@@ -1140,10 +1140,10 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     location: 'Site PLN UPDL Palembang / Udiklat Indralaya',
     pipelineStage: 'erection_palembang',
     pipelineStageLabel: '4. Pasang Besi Dudukan Plastik UV & Dinding Hebel Ruang Kontrol',
-    cumulativeProgress: 81.0,
-    progressDelta: 3.5,
-    civilProgress: 83.5,
-    iotProgress: 78.5,
+    cumulativeProgress: 78.2,
+    progressDelta: 0.7,
+    civilProgress: 79.2,
+    iotProgress: 77.2,
     status: 'ON-SCHEDULE',
     weather: {
       morning: 'Cerah Berawan',
@@ -1151,7 +1151,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     },
     manpowerCount: 5,
     manpowerRole: '5 Pekerja Lapangan (Teknisi Atap Full Body Harness & Tukang Pasangan Hebel)',
-    executiveSummary: 'Hari ini (Jumat, 20 November 2026) diawali apel pagi K3 pukul 08.18 WIB bersama 5 pekerja lapangan ber-APD lengkap termasuk teknisi ketinggian ber-full body harness (Paket 1.3). Pekerjaan difokuskan pada dua capaian utama: pemasangan besi hollow dudukan plastik UV pada struktur atas arch roof (Paket Sipil 5.2 & persiapan Paket 6.1) serta pengecoran rabatan lantai dasar dan pemasangan dinding bata ringan Hebel setinggi 3 lapis (~60 cm) pada ruang kontrol dan sisi samping bangunan (Paket Sipil 3.4, 3.6 & Paket 8). Lingkup Sipil menanjak signifikan menjadi 83,5% dan kesiapan ruang kontrol mendukung instalasi panel Web IoT smartfarmpln.com.',
+    executiveSummary: 'Hari ini (Jumat, 20 November 2026) diawali apel pagi K3 pukul 08.18 WIB bersama 5 pekerja lapangan ber-APD lengkap termasuk teknisi ketinggian ber-full body harness (Paket 1.3). Pekerjaan difokuskan pada dua capaian utama: pemasangan besi hollow dudukan plastik UV pada struktur atas arch roof (Paket Sipil 5.2 & persiapan Paket 6.1) serta pengecoran rabatan lantai dasar dan pemasangan dinding bata ringan Hebel setinggi 3 lapis (~60 cm) pada ruang kontrol dan sisi samping bangunan (Paket Sipil 3.4, 3.6 & Paket 8). Lingkup Sipil naik secara bertahap menjadi 79,2% dan kesiapan ruang kontrol mendukung instalasi panel Web IoT smartfarmpln.com.',
     photos: [
       {
         id: 'photo-20-01',
@@ -1238,10 +1238,10 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     location: 'Site PLN UPDL Palembang / Udiklat Indralaya',
     pipelineStage: 'erection_palembang',
     pipelineStageLabel: '4. Plester Hebel, Pasang Insect Net & Tandon NFT',
-    cumulativeProgress: 85.0,
-    progressDelta: 4.0,
-    civilProgress: 87.5,
-    iotProgress: 82.5,
+    cumulativeProgress: 79.0,
+    progressDelta: 0.8,
+    civilProgress: 80.5,
+    iotProgress: 77.5,
     status: 'ON-SCHEDULE',
     weather: {
       morning: 'Cerah Berawan',
@@ -1311,7 +1311,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 20. LAPORAN HARIAN 22 NOVEMBER 2026 (TERBARU & AKTIF + REKAP MINGGUAN 19-22 NOV)
+  // 20. LAPORAN HARIAN 22 NOVEMBER 2026 (TERBARU & AKTIF)
   // =========================================================================
   {
     id: 'report-2026-11-22',
@@ -1323,41 +1323,65 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     isLatestActive: true,
     location: 'Site PLN UPDL Palembang / Udiklat Indralaya',
     pipelineStage: 'iot_bast',
-    pipelineStageLabel: '5. Pemasangan Plastik UV Atap, Hebel & Rekap Mingguan (19–22 Nov)',
-    cumulativeProgress: 87.5,
-    progressDelta: 2.5,
-    civilProgress: 90.5,
-    iotProgress: 84.5,
+    pipelineStageLabel: '5. Pemasangan Plastik UV Atap & Sistem Hidroponik',
+    cumulativeProgress: 80.0,
+    progressDelta: 1.0,
+    civilProgress: 81.5,
+    iotProgress: 78.5,
     status: 'ON-SCHEDULE',
     weather: {
-      morning: 'Cerah Berawan',
-      afternoon: 'Berawan'
+      morning: 'Cerah (08.00–12.00)',
+      afternoon: 'Cerah (13.30–17.00)'
     },
-    manpowerCount: 5,
-    manpowerRole: '5 Pekerja Lapangan (Pemasangan Plastik UV Atap, Hebel & Utilitas Tandon)',
-    executiveSummary: 'Rekapitulasi progres hingga Minggu, 22 November 2026 (Penutup Periode Mingguan 19–22 Nov 2026): lembaran atap Plastik UV 200 micron mulai terbentang terpasang di atas kuda-kuda lengkung arch roof (Paket Sipil 6.1), disertai lanjutan pemasangan bata ringan Hebel dinding keliling (Paket 3.6) dan penempatan lengkap 2 unit tandon air nutrisi berkapasitas besar di samping area greenhouse (Paket 14.3 & 15.5). Sepanjang periode mingguan 19–22 Nov 2026, progres fisik total melonjak +12,5% (dari 75,0% pada 18 Nov menjadi 87,5% pada 22 Nov; Sipil 90,5% & IoT-Hidroponik 84,5%).',
+    manpowerCount: 10,
+    manpowerRole: '10 Pekerja Lapangan (Pemasangan Plastik UV Atap & Sistem Hidroponik)',
+    executiveSummary: 'Hari ini (Minggu, 22 November 2026) dalam kondisi cuaca cerah sepanjang hari (08.00–17.00 WIB), sebanyak 10 pekerja lapangan mengeksekusi pemasangan lembaran atap Plastik UV 200 micron pada satu sisi bentang kuda-kuda arch roof menggunakan penguncian kawat spring clip (Paket Sipil 6.1), disertai pemasangan talang air galvanis memanjang di bahu rangka, penyelesaian plesteran dinding samping, pemasangan dinding bata ringan Hebel sisi belakang dengan bukaan pintu kolam, serta pemasangan sistem hidroponik dan penempatan lengkap 2 unit tandon nutrisi berkapasitas besar (Paket 12, 14 & 15).',
     photos: [
       {
         id: 'photo-22-01',
         url: '/progress/2026-11-22/1-pemasangan-plastik-uv-atap-hebel-dan-2-tandon.jpeg',
         caption: 'Pemasangan Awal Plastik UV Atap 200 Micron, Lanjutan Hebel & 2 Tandon Nutrisi',
-        narrative: 'Lembaran Plastik UV 200 micron mulai terbentang terpasang di puncak kuda-kuda atap sebelah kanan (Paket 6.1), teknisi mengunci dudukan profil atap di ketinggian, pekerja di bawah menata stok bata ringan Hebel untuk dinding keliling (Paket 3.6), dan 2 unit tandon air nutrisi oranye berkapasitas besar telah siap terposisi di sisi greenhouse.'
+        narrative: 'Lembaran Plastik UV 200 micron mulai terbentang di puncak kuda-kuda atap sebelah kanan (Paket 6.1), teknisi mengunci dudukan profil di ketinggian, pekerja di bawah menata stok bata Hebel (Paket 3.6), dan 2 tandon nutrisi oranye terposisi di sisi greenhouse.'
+      },
+      {
+        id: 'photo-22-02',
+        url: '/progress/2026-11-22/2-bentangan-penuh-plastik-uv-atap-sisi-kiri-dan-tim-kerja.jpeg',
+        caption: 'Bentangan Penuh Plastik UV Atap Sisi Kiri & Instalasi Hidroponik (15.45 WIB)',
+        narrative: 'Perspektif bagian dalam greenhouse 8×25m menunjukkan seluruh bentang atap sisi kiri sudah tertutup Plastik UV 200 micron, sementara tim di lantai kerja mengeksekusi instalasi sistem hidroponik berlatar 2 tandon nutrisi.'
+      },
+      {
+        id: 'photo-22-03',
+        url: '/progress/2026-11-22/3-detail-penguncian-plastik-uv-kawat-spring-clip.jpeg',
+        caption: 'Detail Tarikan & Penguncian Plastik UV Atap dengan Spring Clip (15.46 WIB)',
+        narrative: 'Tampak dekat dari sisi bawah atap memperlihatkan lembaran Plastik UV 200 micron terpasang rata, kencang, dan terkunci kawat pegas spring clip sepanjang alur profil kanal atap lengkung (Paket Sipil 6.1).'
+      },
+      {
+        id: 'photo-22-04',
+        url: '/progress/2026-11-22/4-talang-galvanis-terpasang-plester-dinding-dan-teknisi-atap.jpeg',
+        caption: 'Talang Galvanis Terpasang, Plester Dinding Samping & Teknisi Atap (15.46 WIB)',
+        narrative: 'Talang air seng galvanis memanjang telah terpasang pada dudukan bahu rangka (Paket 5.4), teknisi atap melanjutkan penguncian sisi kanan atas, dan pekerja di bawah merampungkan plesteran dinding samping (Paket 3.7).'
+      },
+      {
+        id: 'photo-22-05',
+        url: '/progress/2026-11-22/5-dinding-hebel-belakang-dan-bukaan-pintu-akses-kolam.jpeg',
+        caption: 'Dinding Hebel Belakang 3 Lapis & Bukaan Pintu Akses Kolam (15.46 WIB)',
+        narrative: 'Pemasangan bata ringan Hebel setinggi 3 lapis (~60 cm) pada sisi belakang telah membentuk bukaan rangka pintu akses menuju area kolam belakang diiringi perapihan lantai tanah dalam (Paket 3.6 & 7.3).'
       }
     ],
     nextSteps: [
-      'Penuntasan bentangan penuh atap Plastik UV 200 micron & penutupan keliling dinding Insect Net Mesh 50 (Paket Sipil 6.1 & 6.2).',
-      'Finishing acian/pengecatan dinding Hebel, pemasangan 3 unit pintu akses, lantai weedmat/rumput sintetis, lampu & 4 drum fan (Paket 3.8–3.9, 4, 7, 9, 10).',
-      'Instalasi penuh pemipaan manifold NFT/Drip dari 2 tandon nutrisi, pemasangan fisik panel Web IoT smartfarmpln.com & uji coba otomasi fertigasi (Paket 12–16).'
+      'Pemasangan plastik lanjutan: penuntasan bentangan Plastik UV 200 micron pada sisi atap tersisa serta penutupan dinding Insect Net Mesh 50 (Paket Sipil 6.1 & 6.2).',
+      'Pemasangan bata lanjutan: penyelesaian sisa pasangan bata ringan Hebel keliling, plester/acian, serta pemasangan pintu akses (Paket Sipil 3.6–3.8 & 7.1–7.3).',
+      'Lanjutan instalasi sistem hidroponik NFT/Drip dari 2 tandon nutrisi serta integrasi fisik panel & sensor Web IoT smartfarmpln.com (Paket 12–15).'
     ],
     localPurchases: [
       'Pasir Pasang, Semen PC & Mortar (Terpakai Aktif di Site)',
-      'Bata Ringan Hebel (Tumpukan Stok Siap Pasang Dinding Sisi)',
-      'Plastik UV 200 Micron & Kain Insect Net Mesh 50',
-      '2 Unit Tandon Nutrisi Kapasitas Besar (Tersedia di Posisi)'
+      'Bata Ringan Hebel (Terpasang Sisi Samping, Kontrol & Belakang)',
+      'Plastik UV 200 Micron & Kawat Spring Clip (Terpasang Sisi Kiri)',
+      '2 Unit Tandon Nutrisi Kapasitas Besar (Siap Instalasi Hidroponik)'
     ],
-    logisticsNotes: 'Plastik UV 200 micron mulai dipasang pada kuda-kuda atap; stok bata Hebel menumpuk siap tuntaskan dinding keliling; 2 tandon nutrisi sudah berada di posisi instalasi.',
-    approvalNotes: 'Working Permit Inspekta No. 0018/70201000/XI/2026 AKTIF. Dokumen PDF laporan tanggal 22 Nov digabungkan otomatis menjadi Laporan Progres Mingguan (19–22 Nov 2026, total 23 foto).',
-    briefingSchedule: 'Evaluasi mingguan periode 19–22 Nov 2026 (+12,5% kumulatif) menuju akselerasi penyelesaian 100% pada 28 Nov 2026.'
+    logisticsNotes: 'Plastik UV 200 micron telah terpasang menutup satu sisi penuh atap; talang air galvanis terpasang di bahu rangka; 2 tandon nutrisi siap dihubungkan ke jaringan pipa hidroponik.',
+    approvalNotes: 'Working Permit Inspekta No. 0018/70201000/XI/2026 AKTIF. Pelaksanaan kerja lapangan oleh 10 personel dalam cuaca cerah berjalan lancar dan aman.',
+    briefingSchedule: 'Koordinasi 10 personel dibagi pada dua tim paralel: tim atap/sipil (plastik UV, talang & plester/hebel) serta tim instalasi sistem hidroponik.'
   },
 
   // =========================================================================
@@ -1375,7 +1399,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     pipelineStage: 'iot_bast',
     pipelineStageLabel: '5. Integrasi Hidroponik & Smart IoT BRAIN',
     cumulativeProgress: 94.2,
-    progressDelta: 6.7,
+    progressDelta: 14.2,
     civilProgress: 94.0,
     iotProgress: 94.5,
     status: 'ON-SCHEDULE',

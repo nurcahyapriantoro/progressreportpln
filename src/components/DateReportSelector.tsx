@@ -267,10 +267,10 @@ export const DateReportSelector: React.FC<DateReportSelectorProps> = ({
                     <span>Summary Progress Mingguan (19–22 November 2026)</span>
                   </div>
                   <h4 className="text-base sm:text-lg font-extrabold tracking-tight">
-                    Rekapitulasi Gabungan Siklus #17–#20 • Kenaikan +12,5% (75,0% → 87,5%)
+                    Rekapitulasi Mingguan Siklus #17–#20 • Kenaikan +5,0% (75,0% → 80,0%)
                   </h4>
                   <p className="text-xs text-slate-300 mt-0.5">
-                    Download PDF pada tanggal 22 November otomatis menggabungkan Ringkasan Mingguan serta seluruh {totalWeeklyPhotos} foto periode 19–22 Nov 2026.
+                    Ringkasan navigasi cepat periode 19–22 Nov 2026 (Ekspor PDF pada tiap tanggal tercetak sebagai laporan harian tersendiri).
                   </p>
                 </div>
                 <div className="flex items-center gap-2 shrink-0">

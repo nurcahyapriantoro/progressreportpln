@@ -1,7 +1,7 @@
 import { BiDailyReport } from '../types/project';
 import { INITIAL_PROGRESS_REPORTS } from '../data/progressReports';
 
-const STORAGE_KEY = 'gh_pln_progress_reports_v12';
+const STORAGE_KEY = 'gh_pln_progress_reports_v13';
 
 export function loadReportsFromStorage(): BiDailyReport[] {
   try {
