@@ -1311,7 +1311,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 20. LAPORAN HARIAN 22 NOVEMBER 2026 (TERBARU & AKTIF)
+  // 20. LAPORAN HARIAN 22 NOVEMBER 2026
   // =========================================================================
   {
     id: 'report-2026-11-22',
@@ -1320,7 +1320,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     displayDate: '22 November 2026',
     shortDate: '22 Nov',
     isCompleted: true,
-    isLatestActive: true,
+    isLatestActive: false,
     location: 'Site PLN UPDL Palembang / Udiklat Indralaya',
     pipelineStage: 'erection_palembang',
     pipelineStageLabel: '4. Erection Palembang (Plastik UV, Hebel & Sistem Hidroponik)',
@@ -1385,7 +1385,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 21. FORWARD MILESTONE: 23 NOVEMBER 2026 (TESTING END-TO-END)
+  // 21. LAPORAN HARIAN 23 NOVEMBER 2026 (TERBARU & AKTIF)
   // =========================================================================
   {
     id: 'report-2026-11-23',
@@ -1393,23 +1393,69 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     dateStr: '2026-11-23',
     displayDate: '23 November 2026',
     shortDate: '23 Nov',
-    isCompleted: false,
-    isLatestActive: false,
-    location: 'Site PLN UPDL Palembang',
-    pipelineStage: 'iot_bast',
-    pipelineStageLabel: '5. Integrasi Hidroponik & Smart IoT BRAIN',
-    cumulativeProgress: 94.2,
-    progressDelta: 14.2,
-    civilProgress: 94.0,
-    iotProgress: 94.5,
+    isCompleted: true,
+    isLatestActive: true,
+    location: 'Site PLN UPDL Palembang / Udiklat Indralaya',
+    pipelineStage: 'erection_palembang',
+    pipelineStageLabel: '4. Erection Palembang (Plastik UV, Rangka Pintu & Rakitan Drip)',
+    cumulativeProgress: 82.0,
+    progressDelta: 2.0,
+    civilProgress: 83.5,
+    iotProgress: 80.5,
     status: 'ON-SCHEDULE',
-    executiveSummary: 'Uji performa 48 jam nonstop otomasi irigasi fertigasi, stabilitas koneksi cloud IoT dashboard, dan penyelesaian instalasi kolam bioflok bulat D2 beserta kanopi pelindung.',
-    photos: [],
+    weather: {
+      morning: 'Cerah (08.00–12.00)',
+      afternoon: 'Cerah Berawan (13.30–17.00)'
+    },
+    manpowerCount: 6,
+    manpowerRole: '2 Pengawas HSE & 4 Pekerja Lapangan (Atap UV, Rangka Pintu & Irigasi Drip)',
+    executiveSummary: 'Hari ini (Senin, 23 November 2026) diawali dengan apel dan briefing K3 pagi lengkap APD bersama 2 pengawas HSE dan 4 pekerja lapangan (08.59 WIB). Pekerjaan fisik melanjutkan perluasan pemasangan atap Plastik UV 200 micron pada bentang sisi kanan dan atas rangka arch roof dengan penguncian profil serta talang galvanis (Paket Sipil 6.1 & 5.4), penyetelan dan pengikatan rangka hollow kusen pintu di atas dinding hebel yang telah diplester (Paket 7.1–7.3), penataan meja talang hidroponik NFT putih yang telah terakit di sisi luar, serta pra-perakitan manifold selang PE hitam lengkap grommet hijau, selang mikro putih, dan stick drip irigasi fertigasi (Paket 12–15).',
+    photos: [
+      {
+        id: 'photo-23-01',
+        url: '/progress/2026-11-23/1-pemasangan-plastik-uv-atap-kanan-scaffolding-tandon.jpeg',
+        caption: 'Lanjutan Pemasangan Plastik UV Atap Sisi Kanan, Scaffolding & Tandon (08.19 WIB)',
+        narrative: 'Dokumentasi pagi menunjukkan lembaran Plastik UV 200 micron mulai menutup bentang atap sisi kanan melengkapi sisi kiri, sementara scaffolding kerja berdiri di atas zona dinding hebel terplester dan tandon nutrisi oranye terposisi di sudut kanan.'
+      },
+      {
+        id: 'photo-23-02',
+        url: '/progress/2026-11-23/2-pemasangan-rangka-hollow-pintu-di-atas-dinding-hebel.jpeg',
+        caption: 'Penyetelan & Penguncian Rangka Hollow Pintu di Atas Dinding Hebel (08.57 WIB)',
+        narrative: 'Dua pekerja ber-APD lengkap menyetel ketegakan kusen rangka hollow galvanis menggunakan alat ukur waterpass/siku serta mengunci baut sambungan dasar tepat di atas ambang dinding hebel yang sudah diplester rapi (Paket Sipil 7.1–7.3).'
+      },
+      {
+        id: 'photo-23-03',
+        url: '/progress/2026-11-23/3-bentangan-plastik-uv-dua-sisi-talang-dan-meja-nft.jpeg',
+        caption: 'Bentangan Plastik UV Dua Sisi Atap, Talang Galvanis & Rangkaian Meja NFT (08.57 WIB)',
+        narrative: 'Tampak interior memperlihatkan Plastik UV 200 micron terbentang kencang di kedua sisi lengkung atap dengan talang air galvanis terpasang di bahu kiri, sementara jajaran meja hidroponik NFT putih telah selesai dirakit di sisi luar siap masuk ke area tanam.'
+      },
+      {
+        id: 'photo-23-04',
+        url: '/progress/2026-11-23/4-briefing-k3-pagi-pengawas-dan-pekerja-lengkap-apd.jpeg',
+        caption: 'Briefing K3 Pagi (Tool Box Meeting) Pengawas & Tim Lapangan (08.59 WIB)',
+        narrative: 'Dua pengawas lapangan memimpin briefing keselamatan kerja (SMK3) bersama empat pekerja lapangan mengenakan helm kuning, rompi visibilitas tinggi, sepatu boot karet, dan sarung tangan sebelum eksekusi kerja ketinggian dan fabrikasi.'
+      },
+      {
+        id: 'photo-23-05',
+        url: '/progress/2026-11-23/5-perakitan-manifold-selang-pe-dan-stick-drip-fertigasi.jpeg',
+        caption: 'Pra-Perakitan Manifold Selang PE, Grommet & Stick Drip Irigasi (09.18 WIB)',
+        narrative: 'Jalur pipa induk selang PE hitam selesai dilubangi dan dipasangi konektor grommet hijau, selang kapiler distribusi putih, serta stick emitter tetes (drip stick) sebagai bagian persiapan instalasi sistem fertigasi presisi (Paket 12–13).'
+      }
+    ],
     nextSteps: [
-      'Final touch-up pengecatan dan pembersihan area greenhouse.',
-      'Penyusunan as-built drawing final dan manual SOP pengoperasian IoT.',
-      'Persiapan serah terima parsial dan demonstrasi sistem kepada perwakilan PLN.'
-    ]
+      'Penuntasan penutupan atap Plastik UV 200 micron bagian tengah atas dan pemasangan dinding Insect Net Mesh 50 keliling serta ruang kontrol (Paket Sipil 6.1, 6.2 & 8.1).',
+      'Pemasangan lantai weedmat anti gulma dan hamparan rumput sintetis setelah perapihan tanah dalam rampung (Paket Sipil 4.1–4.2).',
+      'Pemasukan meja NFT terakit ke dalam greenhouse serta penyambungan jalur pipa PE & stick drip ke 2 tandon nutrisi dan panel Smart IoT (Paket 12–15).'
+    ],
+    localPurchases: [
+      'Material Plester & Bata Ringan Hebel (Terpasang & Terplester di Site)',
+      'Plastik UV 200 Micron, Kawat Spring Clip & Rangka Pintu Hollow Galvanis',
+      'Set Selang PE Hitam, Grommet Hijau, Selang Mikro & Stick Drip Fertigasi',
+      '2 Unit Tandon Nutrisi & Rangkaian Meja Gully NFT Putih'
+    ],
+    logisticsNotes: 'Meja hidroponik NFT putih telah terakit di sisi luar siap dimobilisasi masuk; rakitan selang PE dan stick drip fertigasi telah dirangkai di site.',
+    approvalNotes: 'Working Permit Inspekta No. 0018/70201000/XI/2026 AKTIF. Briefing K3 dan pengawasan APD dilaksanakan pukul 08.59 WIB sebelum pekerjaan berlangsung.',
+    briefingSchedule: 'Tool Box Meeting (TBM) pagi pukul 08.59 WIB dipimpin 2 pengawas HSE bersama tim kerja lapangan.'
   },
 
   // =========================================================================
@@ -1427,7 +1473,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     pipelineStage: 'iot_bast',
     pipelineStageLabel: '5. Integrasi Hidroponik & Smart IoT BRAIN',
     cumulativeProgress: 97.5,
-    progressDelta: 3.3,
+    progressDelta: 15.5,
     civilProgress: 97.0,
     iotProgress: 98.0,
     status: 'ON-SCHEDULE',
