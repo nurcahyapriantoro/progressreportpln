@@ -302,7 +302,151 @@ export const ExecutiveKpiCards: React.FC<ExecutiveKpiCardsProps> = ({
         </div>
 
         {/* Logistics Dropping & Coordination Alert with PLN Indralaya */}
-        {report.dateStr >= '2026-11-22' ? (
+        {report.dateStr >= '2026-11-26' ? (
+          <div className="mt-4 p-3.5 sm:p-4 rounded-xl bg-gradient-to-r from-blue-50/90 via-sky-50/70 to-emerald-50/80 border border-blue-200/80 shadow-2xs">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
+              <div className="flex items-start gap-3">
+                <div className="w-9 h-9 rounded-xl bg-pln-blue text-white flex items-center justify-center shrink-0 shadow-xs">
+                  <Truck className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="text-xs font-black text-slate-900 uppercase tracking-wide">
+                      Panel Kontrol IoT, Pompa &amp; Tandon, Lantai Weedmat Penuh &amp; Kanopi Belakang
+                    </span>
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-extrabold border border-emerald-300">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
+                      WP #0030 Aktif • Total 91,5%
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                    Seluruh lantai dalam greenhouse sudah terhampar <strong>Weedmat Anti Gulma</strong> lengkap riser pipa hidroponik, <strong>rangka kanopi belakang</strong> berdiri, serta di ruang kontrol sudah terpasang <strong>Panel Kontrol IoT, Pompa Pendorong &amp; Tandon 1200L/NFT</strong> (Sipil <strong>91,5%</strong> | IoT &amp; Hidroponik <strong>91,5%</strong> | Total <strong>91,5%</strong>).
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center sm:flex-col sm:items-end gap-2 shrink-0 border-t md:border-t-0 pt-2 md:pt-0 border-blue-200/60">
+                <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-emerald-200 shadow-2xs whitespace-nowrap">
+                  Working Permit: <strong className="text-emerald-700">#0030 (25 Nov–08 Des)</strong>
+                </div>
+                <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-blue-100 shadow-2xs whitespace-nowrap">
+                  Ruang Kontrol: <strong className="text-pln-blue">Panel IoT, Pompa &amp; Tandon</strong>
+                </div>
+                <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-amber-200 shadow-2xs whitespace-nowrap">
+                  Tenaga Kerja: <strong className="text-amber-800">10 Orang (Briefing 08.58 WIB)</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : report.dateStr >= '2026-11-25' ? (
+          <div className="mt-4 p-3.5 sm:p-4 rounded-xl bg-gradient-to-r from-blue-50/90 via-sky-50/70 to-emerald-50/80 border border-blue-200/80 shadow-2xs">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
+              <div className="flex items-start gap-3">
+                <div className="w-9 h-9 rounded-xl bg-pln-blue text-white flex items-center justify-center shrink-0 shadow-xs">
+                  <Truck className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="text-xs font-black text-slate-900 uppercase tracking-wide">
+                      Perpipaan Hidroponik Bawah Tanah &amp; Insect Net Pintu / Ruang Kontrol
+                    </span>
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-extrabold border border-emerald-300">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
+                      WP #0030 Hari Ke-1 • Total 87,5%
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                    Di bawah <strong>Working Permit #0030</strong> (berlaku mulai 25 Nov), 8 personel memasang <strong>jaringan pipa PVC bawah tanah distribusi hidroponik</strong> serta mengunci <strong>kain Insect Net Mesh 50 pada pintu akses &amp; sekat ruang kontrol</strong> (Sipil <strong>88,0%</strong> | IoT &amp; Hidroponik <strong>87,0%</strong> | Total <strong>87,5%</strong>).
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center sm:flex-col sm:items-end gap-2 shrink-0 border-t md:border-t-0 pt-2 md:pt-0 border-blue-200/60">
+                <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-emerald-200 shadow-2xs whitespace-nowrap">
+                  Working Permit: <strong className="text-emerald-700">#0030 Aktif (18 Personel)</strong>
+                </div>
+                <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-blue-100 shadow-2xs whitespace-nowrap">
+                  Hidroponik: <strong className="text-pln-blue">Pipa PVC Bawah Tanah</strong>
+                </div>
+                <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-amber-200 shadow-2xs whitespace-nowrap">
+                  Dinding &amp; Pintu: <strong className="text-amber-800">Insect Net Pintu &amp; Kontrol</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : report.dateStr >= '2026-11-24' ? (
+          <div className="mt-4 p-3.5 sm:p-4 rounded-xl bg-gradient-to-r from-blue-50/90 via-sky-50/70 to-emerald-50/80 border border-blue-200/80 shadow-2xs">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
+              <div className="flex items-start gap-3">
+                <div className="w-9 h-9 rounded-xl bg-pln-blue text-white flex items-center justify-center shrink-0 shadow-xs">
+                  <Truck className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="text-xs font-black text-slate-900 uppercase tracking-wide">
+                      Plastik UV Penuh, 4 Kipas Sirkulasi, Insect Net Keliling &amp; WP #0030 Approved
+                    </span>
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-extrabold border border-emerald-300">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
+                      8 Pekerja Aktif • Total 85,0%
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                    Dalam cuaca cerah pagi dan hujan sore, <strong>8 pekerja</strong> menuntaskan <strong>Plastik UV atap</strong>, pemasangan <strong>4 kipas drum fan</strong>, penutupan penuh <strong>Insect Net keliling &amp; pintu</strong>, serta pemasangan awal jalur PVC &amp; meja NFT (Sipil <strong>85,0%</strong> | IoT <strong>85,0%</strong> | Total <strong>85,0%</strong>).
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center sm:flex-col sm:items-end gap-2 shrink-0 border-t md:border-t-0 pt-2 md:pt-0 border-blue-200/60">
+                <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-emerald-200 shadow-2xs whitespace-nowrap">
+                  Approval Sore: <strong className="text-emerald-700">WP #0030 Disetujui (18.14 WIB)</strong>
+                </div>
+                <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-blue-100 shadow-2xs whitespace-nowrap">
+                  Selubung &amp; Kipas: <strong className="text-pln-blue">UV Penuh, Net &amp; 4 Fan</strong>
+                </div>
+                <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-amber-200 shadow-2xs whitespace-nowrap">
+                  Tenaga Kerja: <strong className="text-amber-800">8 Orang (Next: Hidroponik &amp; Kanopi)</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : report.dateStr >= '2026-11-23' ? (
+          <div className="mt-4 p-3.5 sm:p-4 rounded-xl bg-gradient-to-r from-blue-50/90 via-sky-50/70 to-emerald-50/80 border border-blue-200/80 shadow-2xs">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
+              <div className="flex items-start gap-3">
+                <div className="w-9 h-9 rounded-xl bg-pln-blue text-white flex items-center justify-center shrink-0 shadow-xs">
+                  <Truck className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="text-xs font-black text-slate-900 uppercase tracking-wide">
+                      Lanjutan Plastik UV Dua Sisi, Rangka Pintu Hollow &amp; Rakitan Irigasi Drip
+                    </span>
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-extrabold border border-emerald-300">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
+                      6 Personel • Total 82,0%
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                    Perluasan bentangan <strong>Plastik UV 200 micron</strong> di kedua sisi atap, penyetelan <strong>kusen rangka hollow pintu</strong> di atas dinding Hebel, jajaran meja NFT terakit di luar, serta pra-perakitan <strong>manifold PE &amp; stick drip</strong> (Sipil <strong>83,5%</strong> | IoT <strong>80,5%</strong> | Total <strong>82,0%</strong>).
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center sm:flex-col sm:items-end gap-2 shrink-0 border-t md:border-t-0 pt-2 md:pt-0 border-blue-200/60">
+                <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-emerald-200 shadow-2xs whitespace-nowrap">
+                  Atap &amp; Pintu: <strong className="text-emerald-700">UV Dua Sisi &amp; Kusen Hollow</strong>
+                </div>
+                <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-blue-100 shadow-2xs whitespace-nowrap">
+                  Hidroponik: <strong className="text-pln-blue">Manifold Stick Drip &amp; Meja NFT</strong>
+                </div>
+                <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-amber-200 shadow-2xs whitespace-nowrap">
+                  Kumulatif: <strong className="text-amber-800">82,0% (+2,0%)</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : report.dateStr >= '2026-11-22' ? (
           <div className="mt-4 p-3.5 sm:p-4 rounded-xl bg-gradient-to-r from-blue-50/90 via-sky-50/70 to-emerald-50/80 border border-blue-200/80 shadow-2xs">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
               <div className="flex items-start gap-3">

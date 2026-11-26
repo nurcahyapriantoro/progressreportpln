@@ -11,7 +11,8 @@ import {
   CloudRain,
   Users,
   Truck,
-  CheckCircle2
+  CheckCircle2,
+  ExternalLink
 } from 'lucide-react';
 import { BiDailyReport, ProgressPhoto } from '../types/project';
 
@@ -200,6 +201,17 @@ export const DateReportSelector: React.FC<DateReportSelectorProps> = ({
                   <p className="text-slate-800 font-medium mt-1.5 leading-snug">
                     {selectedReport.approvalNotes}
                   </p>
+                  {selectedReport.dateStr >= '2026-11-24' && (
+                    <a
+                      href="/documents/Working-Permit-0030-70201000-XI-2026.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-2.5 inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 text-[11px] font-bold transition-colors"
+                    >
+                      <span>Buka Dokumen Working Permit #0030 (PDF)</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  )}
                 </div>
               )}
 

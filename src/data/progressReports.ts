@@ -1385,7 +1385,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 21. LAPORAN HARIAN 23 NOVEMBER 2026 (TERBARU & AKTIF)
+  // 21. LAPORAN HARIAN 23 NOVEMBER 2026
   // =========================================================================
   {
     id: 'report-2026-11-23',
@@ -1394,7 +1394,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     displayDate: '23 November 2026',
     shortDate: '23 Nov',
     isCompleted: true,
-    isLatestActive: true,
+    isLatestActive: false,
     location: 'Site PLN UPDL Palembang / Udiklat Indralaya',
     pipelineStage: 'erection_palembang',
     pipelineStageLabel: '4. Erection Palembang (Plastik UV, Rangka Pintu & Rakitan Drip)',
@@ -1459,39 +1459,275 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 22. FORWARD MILESTONE: 25 NOVEMBER 2026 (TRAINING OPERATOR & SOP)
+  // 22. LAPORAN HARIAN 24 NOVEMBER 2026
   // =========================================================================
   {
-    id: 'report-2026-11-25',
+    id: 'report-2026-11-24',
     cycleNumber: 22,
-    dateStr: '2026-11-25',
-    displayDate: '25 November 2026',
-    shortDate: '25 Nov',
-    isCompleted: false,
+    dateStr: '2026-11-24',
+    displayDate: '24 November 2026',
+    shortDate: '24 Nov',
+    isCompleted: true,
     isLatestActive: false,
-    location: 'Site PLN UPDL Palembang',
+    location: 'Site PLN UPDL Palembang / Udiklat Indralaya',
     pipelineStage: 'iot_bast',
-    pipelineStageLabel: '5. Integrasi Hidroponik & Smart IoT BRAIN',
-    cumulativeProgress: 97.5,
-    progressDelta: 15.5,
-    civilProgress: 97.0,
-    iotProgress: 98.0,
+    pipelineStageLabel: '5. Pemasangan Plastik Greenhouse & Instalasi Hidroponik',
+    cumulativeProgress: 85.0,
+    progressDelta: 3.0,
+    civilProgress: 85.0,
+    iotProgress: 85.0,
     status: 'ON-SCHEDULE',
-    executiveSummary: 'Pelatihan teknis pengoperasian sistem Smart Greenhouse kepada perwakilan PLN UPDL Palembang, serah terima buku panduan pemeliharaan, serta penanaman bibit perdana pada meja NFT.',
-    photos: [],
+    weather: {
+      morning: 'Cerah (08.00–12.00)',
+      afternoon: 'Hujan (13.30–17.00)'
+    },
+    manpowerCount: 8,
+    manpowerRole: '8 Orang (Pemasangan Plastik UV, Insect Net & Sistem Hidroponik)',
+    executiveSummary: 'Kegiatan pekerjaan Selasa, 24 November 2026 dilaksanakan dengan melibatkan 8 tenaga kerja lapangan (2 pengawas HSE & 6 pekerja). Kondisi cuaca cerah pada pagi hari (08.00–12.00 WIB) dan turun hujan pada sore hari (13.30–17.00 WIB). Kegiatan difokuskan pada penuntasan atap Plastik UV 200 micron model sawtooth pada struktur greenhouse, pemasangan 4 unit kipas sirkulasi udara (drum fan) di rangka atas, penutupan dinding Insect Net Mesh 50 keliling beserta daun pintu akses, penanaman pipa PVC distribusi hidroponik, serta pemasukan meja & bibit hidroponik NFT pertama (Paket 6, 7, 10, 12 & 15). Pada sore hari pukul 18.14 WIB, Working Permit perpanjangan No. 0030/70201000/XI/2026 resmi disetujui digital oleh MUP UPDL Palembang (berlaku 25 Nov–08 Des 2026).',
+    photos: [
+      {
+        id: 'photo-24-01',
+        url: '/progress/2026-11-24/1-apel-pagi-k3-8-personel-lengkap-apd.jpeg',
+        caption: 'Apel & Briefing K3 Pagi 8 Personel Lengkap APD (08.05 WIB)',
+        narrative: 'Dua pengawas lapangan memimpin apel pagi K3 bersama enam pekerja berhelm proyek, rompi visibilitas tinggi, dan sepatu boot keselamatan di jalur akses tapak sebelum memulai pekerjaan pemasangan plastik UV, insect net, dan sistem hidroponik.'
+      },
+      {
+        id: 'photo-24-02',
+        url: '/progress/2026-11-24/2-kipas-sirkulasi-terpasang-insect-net-dan-meja-nft-bibit.jpeg',
+        caption: '4 Unit Kipas Sirkulasi Terpasang, Insect Net Samping & Meja NFT Pertama (08.16 WIB)',
+        narrative: 'Tampak interior memperlihatkan 4 unit kipas sirkulasi udara (drum fan) sudah terpasang di rangka lengkung atas, dinding sisi kanan tertutup lembaran selubung, dan 2 set meja talang NFT berisi bibit pakcoy sudah tertata di sisi dalam.'
+      },
+      {
+        id: 'photo-24-03',
+        url: '/progress/2026-11-24/3-tampak-samping-atap-plastik-uv-penuh-dan-meja-nft-siap-masuk.jpeg',
+        caption: 'Tampak Samping Atap Plastik UV Penuh & Jajaran Meja NFT Siap Masuk (08.22 WIB)',
+        narrative: 'Seluruh bentang atap sawtooth sisi memanjang 25 meter sudah tertutup lembaran Plastik UV 200 micron secara rapat, sementara rangkaian meja gully NFT putih berjajar di halaman samping siap dimobilisasi masuk.'
+      },
+      {
+        id: 'photo-24-04',
+        url: '/progress/2026-11-24/4-tampak-depan-plastik-uv-lengkap-2-tandon-dan-insect-net-kiri.jpeg',
+        caption: 'Tampak Depan Atap Plastik UV Lengkap & 2 Unit Tandon Nutrisi (08.23 WIB)',
+        narrative: 'Atap plastik UV lengkung dua bentang dan gable atas tampak tertutup lengkap dari fasad depan, dengan kedua tandon nutrisi oranye terposisi di kanan-kiri dinding Hebel yang sudah terplester rapi.'
+      },
+      {
+        id: 'photo-24-05',
+        url: '/progress/2026-11-24/5-jalur-pipa-pvc-hidroponik-galian-lantai-dan-plester-sore.jpeg',
+        caption: 'Penanaman Jalur Pipa PVC Hidroponik & Perapihan Plester Sore (16.06 WIB)',
+        narrative: 'Dua lajur pipa PVC putih distribusi nutrisi hidroponik mulai ditanam memanjang pada galian lantai dalam greenhouse, bersamaan dengan perapihan acian/plesteran dinding sisi kanan.'
+      },
+      {
+        id: 'photo-24-06',
+        url: '/progress/2026-11-24/6-dinding-insect-net-terpasang-rapat-dan-pipa-distribusi-hidroponik.jpeg',
+        caption: 'Dinding Insect Net Mesh 50 Terpasang Rapat Sisi Samping (16.06 WIB)',
+        narrative: 'Lembaran kain Insect Net Mesh 50 telah terkunci rapat sepanjang bentang rangka dinding samping kanan-kiri dari ambang dinding Hebel hingga talang atas, melindungi area tanam meja NFT.'
+      },
+      {
+        id: 'photo-24-07',
+        url: '/progress/2026-11-24/7-dinding-insect-net-depan-rangka-pintu-dan-rangka-meja-nft.jpeg',
+        caption: 'Penutupan Insect Net Dinding Gable, Rangka Pintu & Rangka Meja Dalam (16.06 WIB)',
+        narrative: 'Tampak dalam menuju fasad pintu memperlihatkan penutupan insect net dari dasar hingga puncak lengkung atap, rangka kusen pintu terpasang tegak, dan jajaran rangka meja hidroponik mulai dirakit di lantai dalam.'
+      },
+      {
+        id: 'photo-24-08',
+        url: '/progress/2026-11-24/8-tampak-depan-sore-greenhouse-tertutup-uv-insect-net-dan-pintu.jpeg',
+        caption: 'Tampak Depan Sore: Selubung Plastik UV, Insect Net & Daun Pintu Terpasang (17.48 WIB)',
+        narrative: 'Pandangan depan pada pukul 17.48 WIB menunjukkan seluruh bidang depan greenhouse telah tertutup Plastik UV dan Insect Net lengkap dengan daun pintu akses dan tandon nutrisi di depan dinding.'
+      },
+      {
+        id: 'photo-24-09',
+        url: '/progress/2026-11-24/9-detail-fasad-depan-greenhouse-sore-insect-net-dan-tandon.jpeg',
+        caption: 'Detail Fasad Depan Greenhouse Pasca Pemasangan Insect Net Penuh (17.48 WIB)',
+        narrative: 'Verifikasi kelurusan tarikan kawat pengunci dan kerapatan sambungan plastik UV serta insect net pada fasad utama sebelum tim mengakhiri pekerjaan hari Selasa.'
+      }
+    ],
     nextSteps: [
-      'Inspeksi akhir bersama (joint inspection) tim teknis BRAIN IPB dan PLN.',
-      'Verifikasi kelengkapan administrasi BAST I (100%).',
-      'Penandatanganan Berita Acara Serah Terima pekerjaan.'
-    ]
+      'Melanjutkan instalasi sistem hidroponik greenhouse (jaringan pipa PVC bawah tanah, rakitan meja NFT & irigasi drip).',
+      'Melanjutkan pengerjaan rangka kanopi belakang greenhouse area 3 unit kolam.',
+      'Penyelesaian sekat insect net pintu/ruang kontrol dan persiapan hamparan lantai weedmat.'
+    ],
+    localPurchases: [
+      'Plastik UV 200 Micron & Insect Net Mesh 50 (Terpasang Penuh Atap & Dinding)',
+      '4 Unit Kipas Sirkulasi Drum Fan (Terpasang di Rangka Atap)',
+      'Pipa PVC Distribusi Hidroponik, Meja NFT & 2 Unit Tandon Nutrisi',
+      'Material Plester/Acian & Profil Hollow Rangka Pintu'
+    ],
+    logisticsNotes: 'Plastik UV atap dan dinding Insect Net Mesh 50 terpasang hampir menyeluruh; 4 drum fan sirkulasi dan 2 meja NFT pertama sudah berada di posisi dalam greenhouse.',
+    approvalNotes: 'Working Permit Perpanjangan Inspekta No. 0030/70201000/XI/2026 RESMI APPROVED secara digital (24 Nov 2026 18.14 WIB oleh MUP Ibu Sri Wigati, berlaku 25 Nov–08 Des 2026 pukul 08.00–22.00 WIB, 18 personel terdaftar).',
+    briefingSchedule: 'Apel & Briefing K3 pagi pukul 08.05 WIB diikuti 8 personel (2 pengawas HSE & 6 pekerja lapangan lengkap APD).'
   },
 
   // =========================================================================
-  // 23. FORWARD MILESTONE: 28 NOVEMBER 2026 (BAST 100% SELESAI)
+  // 23. LAPORAN HARIAN 25 NOVEMBER 2026
+  // =========================================================================
+  {
+    id: 'report-2026-11-25',
+    cycleNumber: 23,
+    dateStr: '2026-11-25',
+    displayDate: '25 November 2026',
+    shortDate: '25 Nov',
+    isCompleted: true,
+    isLatestActive: false,
+    location: 'Site PLN UPDL Palembang / Udiklat Indralaya',
+    pipelineStage: 'iot_bast',
+    pipelineStageLabel: '5. Perpipaan Hidroponik Bawah Tanah & Insect Net Pintu/Ruang Kontrol',
+    cumulativeProgress: 87.5,
+    progressDelta: 2.5,
+    civilProgress: 88.0,
+    iotProgress: 87.0,
+    status: 'ON-SCHEDULE',
+    weather: {
+      morning: 'Cerah (08.00–12.00)',
+      afternoon: 'Cerah Berawan (13.30–17.00)'
+    },
+    manpowerCount: 8,
+    manpowerRole: '1 Pengawas HSE & 7 Pekerja Lapangan (Perpipaan Hidroponik & Insect Net Pintu)',
+    executiveSummary: 'Hari pertama berlakunya Working Permit perpanjangan No. 0030/70201000/XI/2026 (Rabu, 25 November 2026) diawali apel & briefing K3 pagi pukul 08.08 WIB oleh 8 personel (1 pengawas HSE & 7 pekerja). Tim memfokuskan pekerjaan pada penanaman jaringan pipa PVC putih distribusi dan cabang melintang di galian tanah dalam greenhouse (Paket 12 & 15), penguncian kain Insect Net Mesh 50 pada daun pintu utama dan rangka sekat ruang kontrol (Paket 7.1–7.2 & 8.1), perapihan selubung sisi samping bawah, serta persiapan selang irigasi drip dan rangkaian meja NFT putih di halaman luar.',
+    photos: [
+      {
+        id: 'photo-25-01',
+        url: '/progress/2026-11-25/1-tampak-depan-pagi-selubung-uv-insect-net-dan-pintu-utama.jpeg',
+        caption: 'Tampak Depan Pagi: Selubung UV, Insect Net & Pintu Utama Terpasang (08.02 WIB)',
+        narrative: 'Fasad depan greenhouse dalam kondisi cuaca pagi cerah sudah tertutup penuh Plastik UV atap dan Insect Net, disertai tandon nutrisi oranye serta pekerja melakukan finishing pintu masuk utama.'
+      },
+      {
+        id: 'photo-25-02',
+        url: '/progress/2026-11-25/2-panorama-samping-greenhouse-4-kipas-dan-meja-nft-luar.jpeg',
+        caption: 'Panorama Samping Greenhouse, 4 Kipas Sirkulasi & Jajaran Meja NFT (08.03 WIB)',
+        narrative: 'Tampak samping memanjang 25 meter memperlihatkan kerangka atap sawtooth tertutup Plastik UV penuh, 4 kipas sirkulasi tergantung simetris di dalam, dan deretan meja talang NFT siap masuk di halaman samping.'
+      },
+      {
+        id: 'photo-25-03',
+        url: '/progress/2026-11-25/3-tampak-belakang-rangka-bukaan-belakang-dan-meja-hidroponik-dalam.jpeg',
+        caption: 'Tampak Belakang Greenhouse, Rangka Gable & Aktivitas Dalam (08.05 WIB)',
+        narrative: 'Pandangan dari arah belakang memperlihatkan rangka baja area kolam belakang siap pemasangan kanopi, sementara di bagian dalam pekerja menata rangka meja hidroponik di antara bukaan pintu belakang.'
+      },
+      {
+        id: 'photo-25-04',
+        url: '/progress/2026-11-25/4-dinding-insect-net-samping-penuh-dan-rakitan-selang-drip.jpeg',
+        caption: 'Dinding Insect Net Samping Penuh & Gulungan Manifold Selang Drip (08.05 WIB)',
+        narrative: 'Dinding samping memanjang sudah terpasang kain Insect Net rapat hingga ambang plester dinding Hebel, sementara di sisi luar tampak gulungan rakitan selang PE drip siap diposisikan ke zona polybag.'
+      },
+      {
+        id: 'photo-25-05',
+        url: '/progress/2026-11-25/5-apel-pagi-k3-dalam-greenhouse-8-personel-working-permit-0030.jpeg',
+        caption: 'Apel K3 Pagi di Dalam Greenhouse (8 Personel • WP #0030 Berlaku) (08.08 WIB)',
+        narrative: 'Briefing keselamatan kerja pagi dipimpin 1 pengawas HSE berhelm putih bersama 7 pekerja berhelm biru/kuning, rompi reflektif, dan boot K3 di atas area jalur pipa sebelum pembagian zona kerja.'
+      },
+      {
+        id: 'photo-25-06',
+        url: '/progress/2026-11-25/6-briefing-pembagian-tugas-perpipaan-dan-pintu-insect-net.jpeg',
+        caption: 'Briefing Teknis Pembagian Tugas Perpipaan & Penutupan Pintu Net (08.08 WIB)',
+        narrative: 'Pengawas menyampaikan arahan urutan kerja harian terkait penyambungan pipa PVC hidroponik bawah tanah, pemasangan talang pembuangan, serta penguncian kain insect net pada bingkai pintu.'
+      },
+      {
+        id: 'photo-25-07',
+        url: '/progress/2026-11-25/7-pemasangan-jaringan-pipa-pvc-bawah-tanah-distribusi-hidroponik.jpeg',
+        caption: 'Pemasangan Jaringan Pipa PVC Bawah Tanah Distribusi Hidroponik (08.08 WIB)',
+        narrative: 'Tim menyambung dan meluruskan dua jalur utama pipa PVC memanjang beserta cabang T melintang di dalam parit galian lantai greenhouse untuk koneksi sirkulasi hidroponik sebelum ditimbun dan dilapisi weedmat.'
+      },
+      {
+        id: 'photo-25-08',
+        url: '/progress/2026-11-25/8-pemasangan-kain-insect-net-pintu-dan-sekat-ruang-kontrol.jpeg',
+        caption: 'Pemasangan Kain Insect Net pada Bingkai Pintu & Sekat Ruang Kontrol (08.08 WIB)',
+        narrative: 'Tiga pekerja memasang dan mengunci kain Insect Net Mesh 50 pada bingkai pintu akses serta rangka partisi ruang kontrol menggunakan profil kanal dan kawat pegas.'
+      }
+    ],
+    nextSteps: [
+      'Penghamparkan lantai weedmat anti gulma menyeluruh di atas jalur pipa tertanam dan penataan rangka serta talang NFT (Paket 4.2 & 15).',
+      'Ereksi rangka baja hollow kanopi belakang area kolam D2.',
+      'Pemasangan box panel kontrol listrik/IoT, pompa pendorong, serta penyambungan perpipaan 2 tandon nutrisi di ruang kontrol (Paket 9 & 14).'
+    ],
+    localPurchases: [
+      'Pipa PVC, Fitting Tee/Elbow & Lem Pipa Jaringan Hidroponik',
+      'Kawat Spring Clip & Kain Insect Net Mesh 50 Pintu/Ruang Kontrol',
+      'Gulungan Weedmat Lantai Anti Gulma Siap Pasang',
+      'Selang PE Manifold Drip & Meja Gully NFT Putih'
+    ],
+    logisticsNotes: 'Jaringan pipa PVC utama bawah tanah telah tertata di galian dalam greenhouse; seluruh meja NFT dan komponen ruang kontrol siap dirakit pada tahap akhir.',
+    approvalNotes: 'Working Permit Perpanjangan Inspekta No. 0030/70201000/XI/2026 AKTIF mulai 25 Nov 2026 08.00 WIB s.d. 08 Des 2026 22.00 WIB (18 personel terdaftar, disetujui digital MUP Ibu Sri Wigati 24 Nov 2026 18.14 WIB).',
+    briefingSchedule: 'Apel & Briefing K3 pagi pukul 08.08 WIB di dalam greenhouse dipimpin 1 pengawas HSE bersama 7 pekerja lapangan.'
+  },
+
+  // =========================================================================
+  // 24. LAPORAN HARIAN 26 NOVEMBER 2026 (TERBARU & AKTIF)
+  // =========================================================================
+  {
+    id: 'report-2026-11-26',
+    cycleNumber: 24,
+    dateStr: '2026-11-26',
+    displayDate: '26 November 2026',
+    shortDate: '26 Nov',
+    isCompleted: true,
+    isLatestActive: true,
+    location: 'Site PLN UPDL Palembang / Udiklat Indralaya',
+    pipelineStage: 'iot_bast',
+    pipelineStageLabel: '5. Panel Kontrol IoT, Pompa Tandon, Lantai Weedmat & Kanopi Belakang',
+    cumulativeProgress: 91.5,
+    progressDelta: 4.0,
+    civilProgress: 91.5,
+    iotProgress: 91.5,
+    status: 'ON-SCHEDULE',
+    weather: {
+      morning: 'Berawan / Pasca Hujan (08.00–12.00)',
+      afternoon: 'Cerah Berawan (13.30–17.00)'
+    },
+    manpowerCount: 10,
+    manpowerRole: '2 Pengawas HSE & 8 Pekerja Lapangan (Weedmat, Kanopi Belakang, Panel IoT & Pompa)',
+    executiveSummary: 'Kamis, 26 November 2026 mencatat lompatan progres signifikan menuju tahap integrasi akhir bersama 10 personel aktif (2 pengawas HSE & 8 pekerja lapangan, briefing K3 08.58 WIB) di bawah Working Permit No. 0030/70201000/XI/2026. Seluruh lantai dalam greenhouse 8×25m telah terhampar rapi Lantai Weedmat Anti Gulma (Paket Sipil 4.2) lengkap riser pipa vertikal hidroponik, dinding insect net keliling 4 sisi tertutup penuh, dan rangka meja beserta tumpukan talang gully NFT putih telah masuk ke dalam ruangan. Di area belakang, rangka hollow galvanis kanopi pelindung kolam telah berdiri. Di dalam ruang kontrol, box panel distribusi listrik & Smart IoT sudah terpasang pada rangka dinding, disusul instalasi pompa pendorong, katup ball valve & jaringan pipa ke tandon nutrisi 1200L serta penyambungan pipa return ke tandon NFT tertanam bawah lantai (Paket 9, 12, 14 & 15).',
+    photos: [
+      {
+        id: 'photo-26-01',
+        url: '/progress/2026-11-26/1-hamparan-weedmat-lantai-penuh-rangka-meja-dan-talang-nft.jpeg',
+        caption: 'Hamparan Penuh Lantai Weedmat, Riser Pipa & Talang NFT di Dalam GH (08.23 WIB)',
+        narrative: 'Seluruh area lantai dalam greenhouse 8×25m sudah tertutup rapi karpet weedmat anti gulma dengan titik riser pipa nutrisi muncul presisi; rangka meja hidroponik berdiri sejajar di sisi kiri dan tumpukan talang gully NFT putih siap dipasang di atasnya.'
+      },
+      {
+        id: 'photo-26-02',
+        url: '/progress/2026-11-26/2-ereksi-rangka-kanopi-belakang-area-kolam-dengan-scaffolding.jpeg',
+        caption: 'Ereksi Rangka Baja Hollow Kanopi Belakang Area Kolam D2 (08.24 WIB)',
+        narrative: 'Dua pekerja menggunakan scaffolding menyetel dan mengunci balok gording rangka atap baja hollow galvanis untuk kanopi pelindung area kolam budidaya di bagian belakang greenhouse.'
+      },
+      {
+        id: 'photo-26-03',
+        url: '/progress/2026-11-26/3-instalasi-panel-kontrol-iot-pompa-dan-tandon-nutrisi-ruang-kontrol.jpeg',
+        caption: 'Instalasi Panel Kontrol IoT, Pompa Pendorong & Tandon 1200L Ruang Kontrol (08.28 WIB)',
+        narrative: 'Di dalam ruang kontrol berlantai weedmat, box panel kontrol listrik/IoT dilengkapi tombol indikator dan sakelar kunci sudah terpasang pada rangka dinding, berdampingan dengan instalasi pompa pendorong air hijau, rangkaian pipa PVC & katup ball valve yang terhubung ke tandon nutrisi Grand 1200L.'
+      },
+      {
+        id: 'photo-26-04',
+        url: '/progress/2026-11-26/4-koneksi-pipa-return-tandon-nutrisi-nft-tertanam-bawah-lantai.jpeg',
+        caption: 'Koneksi Pipa Return ke Tandon Nutrisi NFT Tertanam Bawah Lantai (08.53 WIB)',
+        narrative: 'Detail bak tanam tandon nutrisi oranye bawah lantai ruang kontrol memperlihatkan sambungan pipa return PVC yang menembus rapi dinding bata ringan Hebel terpasang menuju lubang masuk tandon.'
+      },
+      {
+        id: 'photo-26-05',
+        url: '/progress/2026-11-26/5-briefing-k3-pagi-10-personel-working-permit-0030-aktif.jpeg',
+        caption: 'Briefing K3 Pagi 10 Personel Lengkap APD di Bawah WP #0030 (08.58 WIB)',
+        narrative: 'Dua pengawas lapangan berhelm putih memimpin briefing keselamatan kerja (SMK3) bersama delapan pekerja lapangan mengenakan helm biru/kuning, rompi reflektif, dan sepatu boot keselamatan sebelum melanjutkan penyambungan instalasi ruang kontrol, meja NFT, dan kanopi.'
+      }
+    ],
+    nextSteps: [
+      'Penataan lengkap seluruh talang gully NFT di atas rangka meja, pemasangan jalur drip & polybag, serta penyambungan kelistrikan panel Smart IoT dan sensor (Paket 9 & 12–15).',
+      'Penutupan atap plastik UV kanopi belakang, penempatan 3 kolam D2, finishing pengecatan dinding hebel & pemasangan rumput sintetis (Paket 3.9 & 4.1).',
+      'Uji fungsi sirkulasi pompa, otomasi dashboard IoT smartfarmpln.com, serta persiapan BAST utama 28 Nov 2026 (dilanjutkan pekerjaan paving block tambahan di bawah WP #0030 s.d. 08 Des 2026).'
+    ],
+    localPurchases: [
+      'Weedmat Hitam Anti Gulma (Terpasang Penuh Lantai Greenhouse & Ruang Kontrol)',
+      'Box Panel Kontrol Listrik/IoT, Pompa Pendorong, Ball Valve & Tandon Grand 1200L',
+      'Rangka Hollow Galvanis Kanopi Belakang & Sekrup Baja Ringan',
+      'Set Tandon NFT Tertanam, Pipa Return PVC & Talang Gully NFT Putih'
+    ],
+    logisticsNotes: 'Seluruh weedmat lantai, box panel kontrol IoT, pompa pendorong, tandon nutrisi ruang kontrol, dan komponen meja NFT sudah terpasang dan memasuki tahap interkoneksi akhir.',
+    approvalNotes: 'Working Permit Perpanjangan Inspekta No. 0030/70201000/XI/2026 AKTIF (berlaku 25 Nov–08 Des 2026 pukul 08.00–22.00 WIB, 18 personel terdaftar, disetujui digital MUP Ibu Sri Wigati 24 Nov 2026 18.14 WIB).',
+    briefingSchedule: 'Apel & Briefing K3 pagi pukul 08.58 WIB dipimpin 2 pengawas HSE bersama 8 pekerja lapangan lengkap APD.'
+  },
+
+  // =========================================================================
+  // 25. FORWARD MILESTONE: 28 NOVEMBER 2026 (BAST 100% SELESAI)
   // =========================================================================
   {
     id: 'report-2026-11-28',
-    cycleNumber: 23,
+    cycleNumber: 25,
     dateStr: '2026-11-28',
     displayDate: '28 November 2026',
     shortDate: '28 Nov',
@@ -1501,7 +1737,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     pipelineStage: 'iot_bast',
     pipelineStageLabel: '5. Integrasi Hidroponik & Smart IoT BRAIN',
     cumulativeProgress: 100.0,
-    progressDelta: 2.5,
+    progressDelta: 8.5,
     civilProgress: 100.0,
     iotProgress: 100.0,
     status: 'ON-SCHEDULE',

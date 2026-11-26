@@ -65,7 +65,12 @@ export const PdfOnePageTemplate: React.FC<PdfOnePageTemplateProps> = ({ report }
           </strong>
         </span>
         <span>
-          Kualifikasi K3: <strong className="text-emerald-700">Working Permit #0018 Approved • Lembur 08.00–22.00 WIB</strong>
+          Kualifikasi K3:{' '}
+          <strong className="text-emerald-700">
+            {report.dateStr >= '2026-11-25'
+              ? 'Working Permit #0030 Approved (25 Nov–08 Des) • 08.00–22.00 WIB'
+              : 'Working Permit #0018 Approved • Lembur 08.00–22.00 WIB'}
+          </strong>
         </span>
       </div>
 
