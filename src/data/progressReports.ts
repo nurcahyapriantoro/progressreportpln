@@ -1649,7 +1649,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 24. LAPORAN HARIAN 26 NOVEMBER 2026 (TERBARU & AKTIF)
+  // 24. LAPORAN HARIAN 26 NOVEMBER 2026
   // =========================================================================
   {
     id: 'report-2026-11-26',
@@ -1658,7 +1658,7 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
     displayDate: '26 November 2026',
     shortDate: '26 Nov',
     isCompleted: true,
-    isLatestActive: true,
+    isLatestActive: false,
     location: 'Site PLN UPDL Palembang / Udiklat Indralaya',
     pipelineStage: 'iot_bast',
     pipelineStageLabel: '5. Panel Kontrol IoT, Pompa Tandon, Lantai Weedmat & Kanopi Belakang',
@@ -1723,30 +1723,210 @@ export const INITIAL_PROGRESS_REPORTS: BiDailyReport[] = [
   },
 
   // =========================================================================
-  // 25. FORWARD MILESTONE: 28 NOVEMBER 2026 (BAST 100% SELESAI)
+  // 25. LAPORAN HARIAN 27 NOVEMBER 2026
+  // =========================================================================
+  {
+    id: 'report-2026-11-27',
+    cycleNumber: 25,
+    dateStr: '2026-11-27',
+    displayDate: '27 November 2026',
+    shortDate: '27 Nov',
+    isCompleted: true,
+    isLatestActive: false,
+    location: 'Site PLN UPDL Palembang / Udiklat Indralaya',
+    pipelineStage: 'iot_bast',
+    pipelineStageLabel: '5. Survey Toren Air, Kunjungan GSD, Koordinasi PLN & Finishing',
+    cumulativeProgress: 94.8,
+    progressDelta: 3.3,
+    civilProgress: 95.0,
+    iotProgress: 94.6,
+    status: 'ON-SCHEDULE',
+    weather: {
+      morning: 'Cerah (08.00–12.00)',
+      afternoon: 'Cerah Berawan (13.30–17.00)'
+    },
+    manpowerCount: 7,
+    manpowerRole: '2 Pengawas HSE & 5 Pekerja Lapangan (Finishing Cat, Kanopi UV, Vertikultur & Koordinasi)',
+    executiveSummary: 'Jumat, 27 November 2026 mencatat kegiatan koordinasi strategis sekaligus penyelesaian fisik utama bersama 7 personel (apel K3 pukul 08.53 WIB). Dilaksanakan survey dan pematokan titik penempatan toren air di luar greenhouse serta inspeksi fasilitas bersama Bu Henyta (PLN UPDL Palembang) pada pukul 09.42–09.46 WIB, dilanjutkan kunjungan lapangan Pak Dicky dan Pak Sahudin (PT Graha Sarana Duta / GSD) pukul 14.37–14.40 WIB untuk meninjau tanaman NFT, 3 menara vertikultur, dan zona drip, serta koordinasi sore bersama Bu Henyta (PLN), Pak Dicky, dan Pak Sahudin (GSD) pukul 15.15 WIB terkait persiapan paving block tambahan. Secara fisik, atap Plastik UV kanopi belakang sudah terpasang penuh, dinding keliling telah dicat putih rapi (Paket 3.9), 3 menara vertikultur & seluruh meja NFT terpasang, tatakan Hebel jalur drip tertata, router Wi-Fi IoT terpasang di atas panel kontrol, dan gulungan rumput sintetis serta material paving block tiba di site.',
+    photos: [
+      {
+        id: 'photo-27-01',
+        url: '/progress/2026-11-27/1-kanopi-belakang-plastik-uv-penuh-dan-dinding-putih.jpeg',
+        caption: 'Atap Plastik UV Kanopi Belakang Penuh & Dinding Cat Putih (08.07 WIB)',
+        narrative: 'Tampak belakang greenhouse memperlihatkan atap kanopi area kolam sudah tertutup penuh Plastik UV 200 micron di atas rangka baja hollow, sementara dinding keliling telah dicat putih rapi.'
+      },
+      {
+        id: 'photo-27-02',
+        url: '/progress/2026-11-27/2-tiga-menara-vertikultur-dan-meja-hidroponik-nft.jpeg',
+        caption: 'Instalasi 3 Menara Vertikultur & Meja Hidroponik NFT (08.08 WIB)',
+        narrative: 'Tiga unit menara vertikultur berlubang tanam lengkap wadah penampung bawah sudah terpasang sejajar di sisi kiri dalam greenhouse berdampingan dengan meja gully NFT.'
+      },
+      {
+        id: 'photo-27-03',
+        url: '/progress/2026-11-27/3-interior-meja-nft-tatakan-hebel-dan-jalur-selang-drip.jpeg',
+        caption: 'Penataan Meja NFT, Tatakan Hebel & Jalur Selang Drip (08.08 WIB)',
+        narrative: 'Seluruh meja NFT di sisi kiri dan dua lajur panjang tatakan bata ringan Hebel beserta selang mikro drip di sisi kanan sudah tertata rapi di atas hamparan lantai weedmat.'
+      },
+      {
+        id: 'photo-27-04',
+        url: '/progress/2026-11-27/4-ruang-kontrol-panel-iot-router-wifi-dan-gulungan-rumput-sintetis.jpeg',
+        caption: 'Ruang Kontrol Panel IoT, Router Wi-Fi & Gulungan Rumput Sintetis (08.34 WIB)',
+        narrative: 'Di ruang kontrol yang sudah dicat putih, box panel IoT terpasang lengkap dengan router Wi-Fi di atasnya; terlihat teknisi merapikan kabel serta tiga gulungan karpet rumput sintetis siap gelar.'
+      },
+      {
+        id: 'photo-27-05',
+        url: '/progress/2026-11-27/5-apel-pagi-k3-7-personel-lengkap-apd.jpeg',
+        caption: 'Apel & Briefing K3 Pagi 7 Personel Lengkap APD (08.53 WIB)',
+        narrative: 'Dua pengawas HSE berhelm putih memimpin apel pagi keselamatan kerja bersama lima pekerja ber-APD lengkap di jalur paving sebelum memulai aktivitas lapangan.'
+      },
+      {
+        id: 'photo-27-06',
+        url: '/progress/2026-11-27/6-survey-titik-penempatan-toren-air-bersama-bu-henyta-pln.jpeg',
+        caption: 'Survey Titik Penempatan Toren Air Bersama Bu Henyta PLN (09.42 WIB)',
+        narrative: 'Koordinasi lapangan bersama Bu Henyta (PT PLN UPDL Palembang) di sisi samping greenhouse untuk menentukan posisi pondasi toren air suplai yang aman dan efektif.'
+      },
+      {
+        id: 'photo-27-07',
+        url: '/progress/2026-11-27/7-pematokan-titik-toren-air-disaksikan-bu-henyta-pln.jpeg',
+        caption: 'Pematokan Titik Toren Air Disaksikan Bu Henyta PLN (09.42 WIB)',
+        narrative: 'Pekerja menancapkan patok penanda koordinat titik penempatan toren air di luar area greenhouse dengan disaksikan langsung oleh perwakilan PLN dan pengawas lapangan.'
+      },
+      {
+        id: 'photo-27-08',
+        url: '/progress/2026-11-27/8-peninjauan-jalur-drip-dan-meja-nft-bersama-bu-henyta-pln.jpeg',
+        caption: 'Peninjauan Jalur Drip & Meja NFT Bersama Bu Henyta PLN (09.46 WIB)',
+        narrative: 'Bu Henyta meninjau langsung progres penataan tatakan Hebel jalur irigasi drip, selang kapiler, dan deretan talang gully NFT di bagian dalam greenhouse.'
+      },
+      {
+        id: 'photo-27-09',
+        url: '/progress/2026-11-27/9-kunjungan-pak-dicky-dan-pak-sahudin-gsd-tinjau-tanaman-nft.jpeg',
+        caption: 'Kunjungan Pak Dicky & Pak Sahudin GSD Tinjau Tanaman NFT (14.37 WIB)',
+        narrative: 'Pak Dicky dan Pak Sahudin (PT Graha Sarana Duta / GSD) meninjau pertumbuhan tanaman selada hijau dan bayam merah di meja hidroponik NFT bersama pengawas lapangan.'
+      },
+      {
+        id: 'photo-27-10',
+        url: '/progress/2026-11-27/10-kunjungan-pak-dicky-dan-pak-sahudin-gsd-area-vertikultur-dan-polybag.jpeg',
+        caption: 'Kunjungan Pak Dicky & Pak Sahudin GSD Area Vertikultur & Polybag (14.40 WIB)',
+        narrative: 'Rombongan GSD meninjau instalasi tiga menara vertikultur, meja semai rockwool, serta persiapan tumpukan polybag putih yang akan dipasang pada jalur irigasi drip.'
+      },
+      {
+        id: 'photo-27-11',
+        url: '/progress/2026-11-27/11-koordinasi-sore-bu-henyta-pln-pak-dicky-dan-pak-sahudin-gsd.jpeg',
+        caption: 'Koordinasi Sore Bersama Bu Henyta PLN, Pak Dicky & Pak Sahudin GSD (15.15 WIB)',
+        narrative: 'Pertemuan koordinasi sore di depan greenhouse antara Bu Henyta (PLN), Pak Dicky & Pak Sahudin (GSD), dan pengawas proyek membahas penyelesaian finishing serta rencana pekerjaan tambahan.'
+      },
+      {
+        id: 'photo-27-12',
+        url: '/progress/2026-11-27/12-diskusi-teknis-pln-dan-gsd-area-material-paving-block.jpeg',
+        caption: 'Diskusi Teknis PLN & GSD di Dekat Material Paving Block (15.15 WIB)',
+        narrative: 'Koordinasi berlanjut di area depan dengan latar tumpukan material paving block tambahan dan rangka kanopi/kolam untuk menyelaraskan jadwal kerja di bawah WP #0030.'
+      }
+    ],
+    nextSteps: [
+      'Penuntasan pemasangan 4 lajur penuh polybag putih media tanam cocopeat beserta stick drip irigasi tetes (Paket 12).',
+      'Pemasangan karpet rumput sintetis eksekutif, pipa turun drainase talang 3 inch & lampu penerangan LED (Paket 4.1, 5.5 & 9.1).',
+      'Uji sirkulasi pompa menara vertikultur, meja semai rockwool & sistem Smart IoT menuju penyelesaian akhir.'
+    ],
+    localPurchases: [
+      'Cat Dinding Eksterior/Interior Putih (Terpasang Keliling)',
+      '3 Unit Menara Vertikultur & Tray Meja Semai Rockwool',
+      'Gulungan Rumput Sintetis Eksekutif & Material Paving Block Tambahan',
+      'Router Wi-Fi IoT & Perlengkapan Panel Kontrol Ruang Kontrol'
+    ],
+    logisticsNotes: 'Material rumput sintetis dan tumpukan paving block tambahan telah tiba di lokasi; titik penempatan toren air sudah disurvei dan dipatok bersama PLN.',
+    approvalNotes: 'Working Permit Perpanjangan Inspekta No. 0030/70201000/XI/2026 AKTIF (25 Nov–08 Des 2026, 08.00–22.00 WIB). Koordinasi lapangan & survey titik toren air dilaksanakan bersama Bu Henyta (PLN) serta kunjungan Pak Dicky & Pak Sahudin (GSD).',
+    briefingSchedule: 'Apel & Briefing K3 pagi pukul 08.53 WIB (7 personel), survey & koordinasi PLN pukul 09.42 WIB, kunjungan GSD pukul 14.37 WIB, dan koordinasi bersama PLN–GSD pukul 15.15 WIB.'
+  },
+
+  // =========================================================================
+  // 26. LAPORAN HARIAN 28 NOVEMBER 2026 (TERBARU & AKTIF)
   // =========================================================================
   {
     id: 'report-2026-11-28',
-    cycleNumber: 25,
+    cycleNumber: 26,
     dateStr: '2026-11-28',
     displayDate: '28 November 2026',
     shortDate: '28 Nov',
-    isCompleted: false,
-    isLatestActive: false,
-    location: 'Site PLN UPDL Palembang',
+    isCompleted: true,
+    isLatestActive: true,
+    location: 'Site PLN UPDL Palembang / Udiklat Indralaya',
     pipelineStage: 'iot_bast',
-    pipelineStageLabel: '5. Integrasi Hidroponik & Smart IoT BRAIN',
-    cumulativeProgress: 100.0,
-    progressDelta: 8.5,
-    civilProgress: 100.0,
-    iotProgress: 100.0,
+    pipelineStageLabel: '5. Finishing Polybag Drip Penuh, Rumput Sintetis, Drainase & Uji Hidroponik',
+    cumulativeProgress: 97.8,
+    progressDelta: 3.0,
+    civilProgress: 97.5,
+    iotProgress: 98.1,
     status: 'ON-SCHEDULE',
-    executiveSummary: 'Seluruh 17 paket pekerjaan Pembangunan Smart Greenhouse PLN UPDL Palembang telah rampung 100%. Fasilitas siap dimanfaatkan secara optimal untuk program pembelajaran purnabakti dan budidaya tanaman presisi tinggi.',
-    photos: [],
+    weather: {
+      morning: 'Cerah Berawan (08.00–12.00)',
+      afternoon: 'Cerah Berawan (13.30–17.00)'
+    },
+    manpowerCount: 6,
+    manpowerRole: '2 Pengawas HSE & 4 Pekerja Lapangan (Rumput Sintetis, Drip Polybag, Drainase & Uji Sistem)',
+    executiveSummary: 'Sabtu, 28 November 2026 mencapai progres kumulatif realistis 97,8% (Sipil 97,5% | IoT & Hidroponik 98,1%) bersama 6 personel lapangan (apel K3 pukul 08.52 WIB) di bawah Working Permit No. 0030/70201000/XI/2026. Instalasi seluruh 4 lajur panjang polybag putih 40×40 cm berisi media tanam cocopeat di atas tatakan Hebel lengkap ratusan selang kapiler & stick drip irigasi tetes telah rampung penuh (Paket 12), pipa turun drainase talang air PVC 3 inch dipasang di sudut depan (Paket 5.5–5.6), hamparan rumput sintetis eksekutif dipasang di lorong meja NFT yang telah berisi tanaman selada hijau & bayam merah (Paket 4.1 & 15), 3 menara vertikultur dan meja semai rockwool diuji sirkulasinya, media tanam di bawah kanopi belakang UV disiapkan, serta unit lampu LED Hannochs 10W siap dipasang (Paket 9.1). Sisa 2,2% mencakup penuntasan bentangan rumput sintetis, pemasangan titik lampu/panel akhir, penempatan kolam D2, serta kalibrasi akhir & pekerjaan paving block tambahan pasca 28 Nov di bawah WP #0030 (s.d. 08 Des 2026).',
+    photos: [
+      {
+        id: 'photo-28-01',
+        url: '/progress/2026-11-28/1-pemasangan-pipa-turun-drainase-talang-air-pvc-3-inch.jpeg',
+        caption: 'Pemasangan Pipa Turun Drainase Talang Air PVC 3 Inch (08.20 WIB)',
+        narrative: 'Pekerja memasang pipa turun drainase PVC 3 inch di sudut kanan luar greenhouse menuju sambungan talang air galvanis atap (Paket 5.5–5.6) agar aliran air hujan tersalurkan aman.'
+      },
+      {
+        id: 'photo-28-02',
+        url: '/progress/2026-11-28/2-tampak-pintu-utama-ruang-kontrol-panel-iot-dan-jalur-tanam.jpeg',
+        caption: 'Tampak Pintu Utama, Ruang Kontrol Panel IoT & Jalur Tanam (08.21 WIB)',
+        narrative: 'Pandangan lurus dari pintu masuk utama memperlihatkan ruang kontrol dengan panel Smart IoT di sisi kiri dan koridor tanam lengkap meja NFT serta jalur polybag drip yang sudah tertata rapi.'
+      },
+      {
+        id: 'photo-28-03',
+        url: '/progress/2026-11-28/3-persiapan-media-tanam-di-bawah-kanopi-belakang-uv-penuh.jpeg',
+        caption: 'Persiapan Media Tanam di Pintu Akses Belakang & Kanopi UV (08.25 WIB)',
+        narrative: 'Pekerja menyiapkan ember media tanam dan perlengkapan budidaya di area pintu belakang dengan latar atap kanopi belakang Plastik UV yang telah tertutup rapi.'
+      },
+      {
+        id: 'photo-28-04',
+        url: '/progress/2026-11-28/4-uji-sirkulasi-menara-vertikultur-dan-meja-semai-rockwool.jpeg',
+        caption: 'Uji Sirkulasi Menara Vertikultur & Meja Semai Rockwool (08.28 WIB)',
+        narrative: 'Teknisi bersama pengawas melakukan pengecekan kabel dan uji sirkulasi air pada 3 menara vertikultur serta meja semai berisi puluhan blok rockwool dengan bibit sayuran yang mulai tumbuh.'
+      },
+      {
+        id: 'photo-28-05',
+        url: '/progress/2026-11-28/5-apel-pagi-k3-6-personel-lengkap-apd-di-area-masuk.jpeg',
+        caption: 'Apel Pagi K3 6 Personel Lengkap APD di Area Masuk (08.52 WIB)',
+        narrative: 'Dua pengawas HSE berhelm putih dan empat pekerja lapangan berhelm proyek, rompi reflektif, serta sepatu boot keselamatan melaksanakan apel dan penghormatan K3 sebelum pekerjaan finishing.'
+      },
+      {
+        id: 'photo-28-06',
+        url: '/progress/2026-11-28/6-briefing-koordinasi-finishing-harian-tim-lapangan.jpeg',
+        caption: 'Briefing Koordinasi Pekerjaan Finishing Harian Tim Lapangan (08.52 WIB)',
+        narrative: 'Pengawas menyampaikan pembagian fokus kerja akhir meliputi penggelaran rumput sintetis lorong, pengecekan irigasi drip, penyambungan drainase talang, dan persiapan instalasi lampu LED.'
+      },
+      {
+        id: 'photo-28-07',
+        url: '/progress/2026-11-28/7-pemasangan-rumput-sintetis-eksekutif-lorong-meja-nft.jpeg',
+        caption: 'Pemasangan Rumput Sintetis Eksekutif pada Lorong Meja NFT (09.12 WIB)',
+        narrative: 'Pekerja menggelar dan merapikan karpet rumput sintetis hijau di bawah serta di sepanjang lorong meja NFT yang telah berisi tanaman selada hijau dan bayam merah (Paket Sipil 4.1).'
+      },
+      {
+        id: 'photo-28-08',
+        url: '/progress/2026-11-28/8-instalasi-penuh-4-lajur-polybag-stick-drip-dan-lampu-led.jpeg',
+        caption: 'Instalasi Penuh 4 Lajur Polybag Drip & Kesiapan Lampu LED 10W (09.36 WIB)',
+        narrative: 'Empat lajur panjang polybag putih 40×40 cm berisi media tanam di atas tatakan Hebel telah terpasang penuh lengkap stick drip di setiap polybag, disertai unit lampu LED Hannochs 10W siap pasang.'
+      }
+    ],
     nextSteps: [
-      'Penandatanganan resmi Berita Acara Serah Terima (BAST) 100%.',
-      'Memasuki masa pemeliharaan fasilitas selama 90 hari kalender.',
-      'Monitoring berkala performa sistem IoT dan fertigasi tanaman.'
-    ]
+      'Penuntasan hamparan rumput sintetis seluruh lorong & pemasangan titik lampu penerangan LED 10W beserta pengujian kelistrikan panel (Paket 4.1 & 9.1–9.4).',
+      'Penempatan 3 unit kolam D2 di bawah kanopi belakang UV & uji kalibrasi menyeluruh sensor/otomasi Web IoT smartfarmpln.com.',
+      'Pelaksanaan pengerjaan paving block tambahan & instalasi toren air sesuai titik survey di bawah Working Permit #0030 (berlaku s.d. 08 Des 2026) menuju BAST 100%.'
+    ],
+    localPurchases: [
+      'Polybag 40×40 cm & Media Tanam Cocopeat (Terpasang Penuh 4 Lajur)',
+      'Karpet Rumput Sintetis Eksekutif (Terpasang di Lorong Meja NFT)',
+      'Pipa PVC 3 Inch Drainase Talang & Fitting',
+      'Lampu LED Hannochs Genius 10W & Nutrisi Hidroponik Siap Pakai'
+    ],
+    logisticsNotes: 'Seluruh 4 lajur polybag drip, meja NFT lengkap sayuran, menara vertikultur, dan komponen lampu LED berada di site; material paving block tambahan sudah siap di depan greenhouse.',
+    approvalNotes: 'Working Permit Perpanjangan Inspekta No. 0030/70201000/XI/2026 AKTIF (berlaku 25 Nov–08 Des 2026 pukul 08.00–22.00 WIB, 18 personel terdaftar) untuk menuntaskan finishing akhir & pekerjaan paving block tambahan.',
+    briefingSchedule: 'Apel & Briefing K3 pagi pukul 08.52 WIB diikuti 6 personel (2 pengawas HSE & 4 pekerja lapangan) untuk koordinasi finishing rumput sintetis, drainase, dan uji hidroponik.'
   }
 ];

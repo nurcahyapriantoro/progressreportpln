@@ -273,7 +273,7 @@ export const PdfOnePageTemplate: React.FC<PdfOnePageTemplateProps> = ({ report }
                   {firstPagePhotos.map((p, idx) => (
                     <div key={p.id} className="bg-slate-50 rounded-xl p-2 border border-slate-200 flex flex-col justify-between">
                       <div
-                        className={`${isMultiPage ? 'h-[195px]' : 'h-[180px]'} w-full rounded-lg overflow-hidden bg-slate-100 border border-slate-200/60 shrink-0 flex items-center justify-center`}
+                        className={`${isMultiPage ? 'h-[168px]' : 'h-[180px]'} w-full rounded-lg overflow-hidden bg-slate-100 border border-slate-200/60 shrink-0 flex items-center justify-center`}
                       >
                         <img
                           src={p.url}
@@ -415,10 +415,12 @@ export const PdfOnePageTemplate: React.FC<PdfOnePageTemplateProps> = ({ report }
 
           // Optimal image height so 3 rows + footer always fit cleanly on A4 (1123px)
           const imgHeightClass = !isLastPage
-            ? 'h-[205px]'
+            ? 'h-[175px]'
             : chunk.length >= 5
-              ? 'h-[145px]'
-              : 'h-[195px]';
+              ? 'h-[140px]'
+              : chunk.length >= 3
+                ? 'h-[185px]'
+                : 'h-[230px]';
 
           return (
             <div

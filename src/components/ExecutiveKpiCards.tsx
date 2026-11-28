@@ -302,7 +302,79 @@ export const ExecutiveKpiCards: React.FC<ExecutiveKpiCardsProps> = ({
         </div>
 
         {/* Logistics Dropping & Coordination Alert with PLN Indralaya */}
-        {report.dateStr >= '2026-11-26' ? (
+        {report.dateStr >= '2026-11-28' ? (
+          <div className="mt-4 p-3.5 sm:p-4 rounded-xl bg-gradient-to-r from-blue-50/90 via-sky-50/70 to-emerald-50/80 border border-blue-200/80 shadow-2xs">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
+              <div className="flex items-start gap-3">
+                <div className="w-9 h-9 rounded-xl bg-pln-blue text-white flex items-center justify-center shrink-0 shadow-xs">
+                  <Truck className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="text-xs font-black text-slate-900 uppercase tracking-wide">
+                      4 Lajur Penuh Polybag Drip, Rumput Sintetis, Drainase 3&quot; &amp; Uji Hidroponik
+                    </span>
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-extrabold border border-emerald-300">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
+                      WP #0030 Aktif • Total 97,8%
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                    Seluruh <strong>4 lajur polybag &amp; stick drip</strong> terpasang penuh, <strong>rumput sintetis eksekutif</strong> mulai terhampar di lorong meja NFT, <strong>pipa turun drainase 3&quot;</strong> terpasang, 3 menara vertikultur &amp; meja semai rockwool diuji, serta lampu LED 10W siap pasang (Sipil <strong>97,5%</strong> | IoT <strong>98,1%</strong> | Total <strong>97,8%</strong>).
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center sm:flex-col sm:items-end gap-2 shrink-0 border-t md:border-t-0 pt-2 md:pt-0 border-blue-200/60">
+                <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-emerald-200 shadow-2xs whitespace-nowrap">
+                  Working Permit: <strong className="text-emerald-700">#0030 (s.d. 08 Des)</strong>
+                </div>
+                <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-blue-100 shadow-2xs whitespace-nowrap">
+                  Hidroponik &amp; Lantai: <strong className="text-pln-blue">4 Lajur Drip &amp; Rumput Sintetis</strong>
+                </div>
+                <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-amber-200 shadow-2xs whitespace-nowrap">
+                  Tenaga Kerja: <strong className="text-amber-800">6 Orang (Apel K3 08.52 WIB)</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : report.dateStr >= '2026-11-27' ? (
+          <div className="mt-4 p-3.5 sm:p-4 rounded-xl bg-gradient-to-r from-blue-50/90 via-sky-50/70 to-emerald-50/80 border border-blue-200/80 shadow-2xs">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
+              <div className="flex items-start gap-3">
+                <div className="w-9 h-9 rounded-xl bg-pln-blue text-white flex items-center justify-center shrink-0 shadow-xs">
+                  <Truck className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="text-xs font-black text-slate-900 uppercase tracking-wide">
+                      Survey Titik Toren Air (PLN), Kunjungan GSD &amp; Koordinasi Bersama
+                    </span>
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-extrabold border border-emerald-300">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
+                      WP #0030 Aktif • Total 94,8%
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                    Survey &amp; pematokan titik toren air bersama <strong>Bu Henyta (PLN)</strong>, kunjungan <strong>Pak Dicky &amp; Pak Sahudin (GSD)</strong>, koordinasi sore PLN–GSD, atap UV kanopi belakang penuh, dinding cat putih, 3 menara vertikultur &amp; router Wi-Fi IoT terpasang (Sipil <strong>95,0%</strong> | IoT <strong>94,6%</strong> | Total <strong>94,8%</strong>).
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center sm:flex-col sm:items-end gap-2 shrink-0 border-t md:border-t-0 pt-2 md:pt-0 border-blue-200/60">
+                <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-emerald-200 shadow-2xs whitespace-nowrap">
+                  Koordinasi PLN: <strong className="text-emerald-700">Bu Henyta (Titik Toren Air)</strong>
+                </div>
+                <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-blue-100 shadow-2xs whitespace-nowrap">
+                  Kunjungan GSD: <strong className="text-pln-blue">Pak Dicky &amp; Pak Sahudin</strong>
+                </div>
+                <div className="text-[11px] font-bold text-slate-600 bg-white px-2.5 py-1 rounded-lg border border-amber-200 shadow-2xs whitespace-nowrap">
+                  Material Tiba: <strong className="text-amber-800">Rumput Sintetis &amp; Paving Block</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : report.dateStr >= '2026-11-26' ? (
           <div className="mt-4 p-3.5 sm:p-4 rounded-xl bg-gradient-to-r from-blue-50/90 via-sky-50/70 to-emerald-50/80 border border-blue-200/80 shadow-2xs">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
               <div className="flex items-start gap-3">
